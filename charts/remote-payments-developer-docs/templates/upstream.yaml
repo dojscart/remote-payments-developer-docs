@@ -1,0 +1,10 @@
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  annotations:
+  name: '{{- printf "%s-%s-80" $.Release.Namespace $.Release.Name -}}'
+spec:
+  kube:
+    serviceName: '{{- .Release.Name -}}'
+    serviceNamespace: '{{- $.Release.Namespace -}}'
+    servicePort: 80
