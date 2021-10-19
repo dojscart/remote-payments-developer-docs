@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -31,12 +32,15 @@ namespace Remote.Payments.Developer.Docs.WebSite
             else
             {
                 app.UseExceptionHandler("/Error");
+                app.Use((context, next) =>
+                {
+                    context.Request.PathBase = new PathString($"/{env.EnvironmentName}");
+                    return next();
+                });
             }
 
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
