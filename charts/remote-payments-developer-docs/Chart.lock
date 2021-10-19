@@ -1,0 +1,6 @@
+dependencies:
+- name: common
+  repository: https://storage.googleapis.com/firefly-helm-charts
+  version: 0.1.0
+digest: sha256:8d82b36441b48aac385c387ef79dfe5b643c5811235796db0bd6008b3aacf59a
+generated: "2021-10-19T10:58:05.9041594+02:00"

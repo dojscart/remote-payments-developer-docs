@@ -3,7 +3,7 @@ team: flow
 replicaCount: 1
 
 nameOverride: ''
-fullnameOverride: 'remote-payments-website'
+fullnameOverride: 'remote-payments-developer-docs'
 
 serviceAccount:
   create: true
@@ -70,7 +70,3 @@ global:
   projectId: '$SERVICE_PROJECT_ID'
   environment: master
   buildId: '$SERVICE_BUILD_ID'
-
-workloadIdentity:
-  enabled: true
-  googleServiceAccount: remotepayments-pod-default
