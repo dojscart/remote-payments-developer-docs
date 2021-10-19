@@ -10,7 +10,7 @@ RUN dotnet tool install remote.payments.tools.settingsutil -g --configfile /app/
 #RUN export PATH="$PATH:/root/.dotnet/tools" \
     # && settingsutil check -p /app/src
 
-RUN dotnet publish /src/app/Remote.Payments.Developer.Docs.WebSite/Remote.Payments.Developer.Docs.WebSite.csproj --no-build -c Release -o /publish
+RUN dotnet publish /app/src/Remote.Payments.Developer.Docs.WebSite/Remote.Payments.Developer.Docs.WebSite.csproj --no-build -c Release -o /publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
