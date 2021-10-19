@@ -70,3 +70,6 @@ global:
   projectId: '$SERVICE_PROJECT_ID'
   environment: master
   buildId: '$SERVICE_BUILD_ID'
+
+routeTable:
+  prefix: "/{{ .Values.global.environment }}"
