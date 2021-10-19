@@ -1,0 +1,3 @@
+{{- include "common.podDisruptionBudget" (list . "remote-payments-developer-docs.podDisruptionBudget") -}}
+{{- define "remote-payments-developer-docs.podDisruptionBudget" -}}
+{{- end -}}

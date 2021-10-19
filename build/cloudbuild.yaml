@@ -1,0 +1,28 @@
+steps:
+- name: 'gcr.io/cloud-builders/gsutil'
+  id: "nexus-nuget-config"
+  args: ["cp", "gs://firefly-devops-2018-configuration/NuGet.config", "."]
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: "build-image"
+  entrypoint: 'bash'
+  args: ['-c', 'docker build -t eu.gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA -f ./build/Dockerfile .']
+
+- name: 'gcr.io/cloud-builders/docker'
+  id: "push-image"
+  args: ["push", "eu.gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA"]
+
+- name: 'eu.gcr.io/$PROJECT_ID/first-mate:3.0'
+  id: "helm deploy"
+  args: ["helm deploy"]
+  dir: '.'
+  env:
+  - 'CLOUDSDK_CONTAINER_CLUSTER=$_CLOUDSDK_CONTAINER_CLUSTER'
+  - 'CLOUDSDK_COMPUTE_ZONE=$_CLOUDSDK_COMPUTE_ZONE'
+  - 'CLOUDSDK_CORE_PROJECT=$_CLOUDSDK_CORE_PROJECT'
+  - 'SERVICE_PROJECT_ID=$_CLOUDSDK_CORE_PROJECT'
+  - 'HOST_PROJECT_ID=$PROJECT_ID'
+  - 'REPO_NAME=$REPO_NAME'
+  - 'SHORT_SHA=$SHORT_SHA'
+  - 'BRANCH_NAME=$BRANCH_NAME'
+  - 'AREA=remotepayments'

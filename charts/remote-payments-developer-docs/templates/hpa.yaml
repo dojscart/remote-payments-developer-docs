@@ -1,0 +1,3 @@
+{{- include "common.hpa" (list . "remote-payments-developer-docs.hpa") -}}
+{{- define "remote-payments-developer-docs.hpa" -}}
+{{- end -}}

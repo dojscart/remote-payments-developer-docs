@@ -1,0 +1,76 @@
+team: flow
+
+replicaCount: 1
+
+nameOverride: ''
+fullnameOverride: 'remote-payments-website'
+
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ''
+
+container:
+  image:
+    repository: 'eu.gcr.io/$HOST_PROJECT_ID/$REPO_NAME'
+    pullPolicy: IfNotPresent
+    tag: '$SHORT_SHA'
+  env:
+    - name: ASPNETCORE_ENVIRONMENT
+      value: '{{ .Values.global.environment }}'
+    - name: JAEGER_AGENT_HOST
+      value: jaeger-agent.jaeger.svc
+    - name: JAEGER_AGENT_PORT
+      value: '6831'
+    - name: JAEGER_SAMPLER_TYPE
+      value: remote
+    - name: JAEGER_SAMPLING_ENDPOINT
+      value: jaeger-agent.jaeger.svc:5778/sampling
+    - name: JAEGER_SERVICE_NAME
+      value: '{{ include "common.names.name" . }}-{{ .Values.global.environment }}'
+
+  ports:
+    - name: http
+      containerPort: 80
+      protocol: TCP
+  livenessProbe:
+    httpGet:
+      path: /api/health
+      port: http
+
+pod:
+  imagePullSecrets: []
+  annotations: {}
+  securityContext: {}
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+
+service:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
+  metrics: false
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 25
+  targetHttpRequests: 25
+  targetExternal:
+    enabled: false
+
+podDisruptionBudget:
+  enabled: false
+
+global:
+  projectId: '$SERVICE_PROJECT_ID'
+  environment: master
+  buildId: '$SERVICE_BUILD_ID'
+
+workloadIdentity:
+  enabled: true
+  googleServiceAccount: remotepayments-pod-default

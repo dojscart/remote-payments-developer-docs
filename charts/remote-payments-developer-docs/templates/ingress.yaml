@@ -1,0 +1,3 @@
+{{- include "common.ingress" (list . "remote-payments-developer-docs.ingress") -}}
+{{- define "remote-payments-developer-docs.ingress" -}}
+{{- end -}}

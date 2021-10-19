@@ -1,0 +1,3 @@
+{{- include "common.deployment" (list . "remote-payments-developer-docs.deployment") -}}
+{{- define "remote-payments-developer-docs.deployment" -}}
+{{- end -}}
