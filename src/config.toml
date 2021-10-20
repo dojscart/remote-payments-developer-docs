@@ -81,3 +81,5 @@ name = "Webhooks"
 url = "../webhooks.html"
 weight = 11
 
+relativeURLs  = true
+
