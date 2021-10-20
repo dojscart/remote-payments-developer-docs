@@ -3,8 +3,8 @@ FROM klakegg/hugo as builder
 ARG BRANCH_NAME
 
 ADD ./src /src
+ADD ./build /build
 
-ADD ./build/update-base-url.sh /build
 RUN chmod +x /build/update-base-url.sh
 RUN /build/update-base-url.sh $BRANCH_NAME
 
