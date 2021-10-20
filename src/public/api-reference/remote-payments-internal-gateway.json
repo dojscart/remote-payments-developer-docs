@@ -1,0 +1,918 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Remote.Payments.Internal.Gateway",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://remote-payments-internal-gateway-dev.dojo.dev"
+    }
+  ],
+  "paths": {
+    "/api/connecte_credentials": {
+      "get": {
+        "tags": [
+          "ConnecteCredentials"
+        ],
+        "parameters": [
+          {
+            "name": "locationId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Unique identifier for the location."
+          },
+          {
+            "name": "remoteId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            },
+            "description": "Unique identifier for the virtual terminal."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExternalAuthReponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExternalAuthReponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ExternalAuthReponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        },
+        "description": "Retrieves"
+      }
+    },
+    "/api/payment_intents/{paymentId}": {
+      "get": {
+        "tags": [
+          "PaymentIntents"
+        ],
+        "description": "Retrieves the details of a payment intent. Supply the unique payment ID from either a payment intent creation request.",
+        "parameters": [
+          {
+            "name": "paymentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                },
+                "examples": {}
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        },
+        "operationId": ""
+      }
+    },
+    "/api/payment_intents": {
+      "post": {
+        "tags": [
+          "PaymentIntents"
+        ],
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentIntentRequest"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentIntentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentIntentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePaymentIntentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/api/payment_intents/{paymentId}/refreshToken": {
+      "post": {
+        "tags": [
+          "PaymentIntents"
+        ],
+        "parameters": [
+          {
+            "name": "paymentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        }
+      }
+    },
+    "/api/payment_intents/{paymentId}/status": {
+      "get": {
+        "tags": [
+          "PaymentIntents"
+        ],
+        "parameters": [
+          {
+            "name": "paymentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PaymentIntent"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error"
+          }
+        },
+        "description": "Retrieves"
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Address": {
+        "type": "object",
+        "additionalProperties": false,
+        "description": "",
+        "x-examples": {
+          "example": {
+            "value": {
+              "address1": "The Brunel Building",
+              "address2": "2 Canalside Walk",
+              "address3": "",
+              "address4": "",
+              "city": "London",
+              "state": "",
+              "postcode": "W2 1DG",
+              "countryCode": "GB",
+              "locality": "",
+              "county": "UK"
+            }
+          }
+        },
+        "properties": {
+          "address1": {
+            "type": "string",
+            "description": "Address line 1 (for example, company name).",
+            "nullable": true
+          },
+          "address2": {
+            "type": "string",
+            "description": "Address line 2 (for example, street, apartment, or suite).",
+            "nullable": true
+          },
+          "address3": {
+            "type": "string",
+            "description": "Address line 3.",
+            "nullable": true
+          },
+          "address4": {
+            "type": "string",
+            "description": "Address line 4.",
+            "nullable": true
+          },
+          "city": {
+            "type": "string",
+            "description": "City, town, district, suburb, or village.",
+            "example": "London",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "description": "State, county, province, or region.",
+            "nullable": true
+          },
+          "postcode": {
+            "type": "string",
+            "description": "ZIP or postal code.",
+            "nullable": true
+          },
+          "countryCode": {
+            "type": "string",
+            "maxLength": 2,
+            "description": "Two-letter country code in [ISO 3166-1-alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+            "example": "GB",
+            "nullable": true
+          },
+          "locality": {
+            "type": "string",
+            "description": "Locality, can use in addition to city.\n",
+            "nullable": true
+          },
+          "county": {
+            "type": "string",
+            "description": "",
+            "nullable": true
+          }
+        }
+      },
+      "CreatePaymentIntentRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "title": "",
+        "properties": {
+          "locationId": {
+            "type": "string",
+            "description": "Unique identifier for the location.",
+            "nullable": true
+          },
+          "customerId": {
+            "type": "string",
+            "description": "Unique identifier for the merchant.",
+            "nullable": true
+          },
+          "remoteId": {
+            "type": "string",
+            "description": "Unique identifier for the virtual terminal.",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Sale",
+              "PreAuth"
+            ],
+            "description": "The type of the payment.",
+            "nullable": true
+          },
+          "cancelUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where the customer will be directed to when cancelling the payment.",
+            "nullable": true
+          },
+          "redirectUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "The URL where the customer will be directed to after the payment.",
+            "nullable": true
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int64",
+            "exclusiveMinimum": true,
+            "minimum": 0,
+            "description": "The payment amount in the minor unit, for example \"100\" for 1.00 GBP."
+          },
+          "currencyCode": {
+            "type": "string",
+            "description": "Three-digit currency code in (ISO-4217 format)[https://en.wikipedia.org/wiki/ISO_4217].",
+            "nullable": true
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order"
+          },
+          "userAgent": {
+            "type": "string",
+            "description": "The customer's browser agent.",
+            "nullable": true
+          },
+          "userIpAddress": {
+            "type": "string",
+            "description": "The customer's device IP address.",
+            "nullable": true
+          },
+          "billingAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "shippingAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "isNewTransaction": {
+            "type": "boolean"
+          },
+          "crossReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "transactionSource": {
+            "$ref": "#/components/schemas/TransactionSource"
+          },
+          "config": {
+            "$ref": "#/components/schemas/PaymentIntentConfig"
+          }
+        },
+        "required": [
+          "locationId",
+          "type",
+          "amount",
+          "currencyCode"
+        ],
+        "description": ""
+      },
+      "ExternalAuthReponse": {
+        "type": "object",
+        "properties": {
+          "jwtToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "gatewayUsername": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Order": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the order.",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the order for the customer.",
+            "nullable": true
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "PaymentIntent": {
+        "type": "object",
+        "additionalProperties": false,
+        "title": "",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the payment intent.",
+            "nullable": true
+          },
+          "type": {
+            "$ref": "#/components/schemas/TransactionType"
+          },
+          "transactionSource": {
+            "$ref": "#/components/schemas/TransactionSource"
+          },
+          "connecteToken": {
+            "type": "string",
+            "nullable": true
+          },
+          "connecteTokenExpirationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/PaymentStatus"
+          },
+          "redirectUrl": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "cancelUrl": {
+            "type": "string",
+            "format": "uri",
+            "nullable": true
+          },
+          "amount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "order": {
+            "$ref": "#/components/schemas/Order"
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          },
+          "billingAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "shippingAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "crossReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "config": {
+            "$ref": "#/components/schemas/PaymentIntentConfig"
+          }
+        }
+      },
+      "PaymentIntentConfig": {
+        "type": "object",
+        "properties": {
+          "userEmail": {
+            "$ref": "#/components/schemas/PaymentIntentConfigUserEmail"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentIntentConfigUserEmail": {
+        "type": "object",
+        "properties": {
+          "collectionRequired": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PaymentStatus": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "transactionDateTime": {
+            "type": "string",
+            "nullable": true
+          },
+          "statusCode": {
+            "$ref": "#/components/schemas/PaymentStatusCode"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "crossReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "authCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "cardNumber": {
+            "type": "string",
+            "description": "The card number.",
+            "nullable": true
+          },
+          "cardName": {
+            "type": "string",
+            "description": "The name of the cardholder.",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "description": "The expiry month and year. Format: MM/YY.",
+            "nullable": true
+          },
+          "cardType": {
+            "type": "string",
+            "description": "The card scheme.",
+            "nullable": true
+          },
+          "billingAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "userEmailAddress": {
+            "type": "string",
+            "description": "The customer's email address.",
+            "nullable": true
+          }
+        }
+      },
+      "PaymentStatusCode": {
+        "enum": [
+          0,
+          3,
+          4,
+          5,
+          20,
+          30
+        ],
+        "type": "integer",
+        "format": "int32",
+        "description": "The current status of the payment. Allowed values:\n\n* `0` - Successful.\n* `3` - Authorizing.\n* `4` - Referred.\n* `5` - Declined.\n* `20` - Duplicate Transaction.\n* `30` - Failed."
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": {},
+        "title": ""
+      },
+      "TransactionSource": {
+        "enum": [
+          0
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "TransactionType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "User": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "emailAddress": {
+            "type": "string",
+            "description": "The customer's email address.",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "The customer's phone number.",
+            "nullable": true
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "SA": {
+        "type": "apiKey",
+        "description": "JWT Authorization header using the SA scheme. Example: Authorization: SA {token}",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  }
+}
