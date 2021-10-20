@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Updating base url..."
 
 if [ "$1" != "" ]; then
