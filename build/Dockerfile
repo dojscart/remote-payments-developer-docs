@@ -1,7 +1,7 @@
 FROM klakegg/hugo as builder
 
 ADD ./src /src
-RUN hugo -b /cx-1039 --source=/src/ --destination=/public/
+RUN hugo --source=/src/ --destination=/public/
 
 
 FROM nginx:stable-alpine
