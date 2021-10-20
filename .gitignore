@@ -347,3 +347,6 @@ dotnet/.DS_Store
 common-*.tgz
 Chart.lock
 **/*.g.cs
+
+
+**/public/
