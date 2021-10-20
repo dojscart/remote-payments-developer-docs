@@ -16,8 +16,6 @@ container:
     pullPolicy: IfNotPresent
     tag: '$SHORT_SHA'
   env:
-    - name: ASPNETCORE_ENVIRONMENT
-      value: '{{ .Values.global.environment }}'
     - name: JAEGER_AGENT_HOST
       value: jaeger-agent.jaeger.svc
     - name: JAEGER_AGENT_PORT
