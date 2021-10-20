@@ -11,27 +11,31 @@ fi
 
 echo "Branch name: $BRANCH_NAME"
 
-if [ $BRANCH_NAME == "" ]; then
-    echo "No branch name provided!"
+if [ $DEV_ENV == "main" ]; then
+    exit 0
+fi
+
+DEV_ENV=$(echo $BRANCH_NAME | sed -n 's/.*\/\([^ ]\+\).*/\1/p' | cut -f1,2 -d'-')
+
+if [ $DEV_ENV == "" ]; then
+    echo "Could not parse dev environment!"
     exit 1
 fi
 
-if [ $BRANCH_NAME != "main" ]; then
-    filename="/src/config.toml"
-    
-    echo "Dev build detected! Updating '$filename' file..."
+filename="/src/config.toml"
 
-    if [ -f $filename ]; then
-        echo "$filename exists."
-    else
-        echo "File not found: $filename"
-        exit 1 
-    fi
-    
-    echo "baseURL=\"https://dev-api.dojo.dev/$BRANCH_NAME\"" >> $filename
-    echo "relativeURLs = true" >> $filename
-    echo "canonifyURLs = true" >> $filename
+echo "Dev build detected! Updating '$filename' file..."
 
-    cat $filename
+if [ -f $filename ]; then
+    echo "$filename exists."
+else
+    echo "File not found: $filename"
+    exit 1 
 fi
+
+echo "baseURL=\"https://dev-api.dojo.dev/$DEV_ENV\"" >> $filename
+echo "relativeURLs = true" >> $filename
+echo "canonifyURLs = true" >> $filename
+
+cat $filename
 
