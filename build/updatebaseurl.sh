@@ -37,7 +37,7 @@ fi
 
 sed -i "1irelativeURLs = true" $filename
 sed -i "1icanonifyURLs = true" $filename
-sed -i "1ibaseURL=\"https://dev-api.dojo.dev/$DEV_ENV/\"" $filename
+sed -i "1ibaseURL = \"https://dev-docs.dojo.dev/$DEV_ENV/\"" $filename
 
 cat $filename
 
