@@ -66,4 +66,4 @@ global:
   buildId: '$SERVICE_BUILD_ID'
 
 routeTable:
-  prefix: "/{{ .Values.global.environment }}/"
+  prefix: "/{{ .Values.global.environment }}"
