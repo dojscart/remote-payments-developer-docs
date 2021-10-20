@@ -1,4 +1,6 @@
 
+baseURL="https://dev-docs.dojo.dev/cx-1059/"
+
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Dojo Documentation Portal"
