@@ -11,7 +11,9 @@ fi
 
 echo "Branch name: $BRANCH_NAME"
 
-if [ $DEV_ENV == "main" ]; then
+
+if [ $BRANCH_NAME == "main" ]; then
+    echo "Skipped config updates for '$BRANCH_NAME' branch"
     exit 0
 fi
 
@@ -33,9 +35,9 @@ else
     exit 1 
 fi
 
-echo "baseURL=\"https://dev-api.dojo.dev/$DEV_ENV\"" >> $filename
-echo "relativeURLs = true" >> $filename
-echo "canonifyURLs = true" >> $filename
+sed -i "1irelativeURLs = true" $filename
+sed -i "1icanonifyURLs = true" $filename
+sed -i "1ibaseURL=\"https://dev-api.dojo.dev/$DEV_ENV/\"" $filename
 
 cat $filename
 
