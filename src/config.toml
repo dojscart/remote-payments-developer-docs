@@ -1,5 +1,5 @@
 
-baseURL="https://dev-docs.dojo.dev/cx-1059/"
+baseURL="/cx-1059/"
 relativeURLs = true
 canonifyURLs = true
 
