@@ -70,13 +70,17 @@ tabWidth = 2
 # top menu shotcuts
 #
 [[menu.shortcuts]]
-name = "API docs"
-identifier = "ds"
-url = "../api-reference.html"
+name = "Support"
+url = "https://support.dojo.tech/hc/en-gb"
 weight = 10
 
 [[menu.shortcuts]]
-name = "Webhooks"
-url = "../webhooks.html"
+name = "API Status"
+url = "https://status.dojo.tech/"
 weight = 11
+
+[[menu.shortcuts]]
+name = "Log in"
+url = "https://account.dojo.tech/login"
+weight = 12
 
