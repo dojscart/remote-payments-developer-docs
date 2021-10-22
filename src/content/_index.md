@@ -6,6 +6,3 @@ hide:
 weight: 1
 ---
 
-## Not a developer?
-
-You can use Dojo throught any numbers of third-parties without programming skills.
