@@ -1,0 +1,17 @@
+apiVersion: gateway.solo.io/v1
+kind: RouteTable
+metadata:                      
+  name: '{{- printf "%s-%s" .Values.global.environment .Values.fullnameOverride -}}'
+  labels:
+    domain: docs.dojo.tech              
+spec:                    
+  routes:                                                      
+    - matchers:
+      - prefix: '{{- tpl .Values.routeTable.prefix . -}}'
+      routeAction:
+        single:
+          upstream:
+            name: '{{- printf "%s-%s-80" .Release.Namespace .Values.fullnameOverride -}}'
+            namespace: '{{- $.Release.Namespace -}}'
+      options:
+        prefixRewrite: /

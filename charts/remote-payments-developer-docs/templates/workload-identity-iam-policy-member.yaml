@@ -1,3 +1,0 @@
-{{- include "common.workload-identity-iam-policy-member" (list . "remote-payments-developer-docs.workload-identity-iam-policy-member") -}}
-{{- define "remote-payments-developer-docs.workload-identity-iam-policy-member" -}}
-{{- end -}}

@@ -1,18 +1,24 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0 as builder
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS builder
 
-ADD ./src /app
+ARG BRANCH_NAME
 
-RUN dotnet restore /app  --configfile /app/NuGet.config
-RUN dotnet build /app -c Release --no-restore
+ENV HUGO_VERSION=0.88.1
+ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz /tmp/
+RUN tar -xf /tmp/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -C /usr/local/bin/
 
-RUN dotnet test /app --no-build -c Release --filter "Category=UnitTest|Category=IntegrationTest" -l "console;verbosity=detailed"
-RUN dotnet tool install remote.payments.tools.settingsutil -g --configfile /app/NuGet.config
-RUN export PATH="$PATH:/root/.dotnet/tools" \
-    && settingsutil check -p /app
+ADD ./src /src
+COPY ./build/updatebaseurl.sh /build/updatebaseurl.sh
 
-RUN dotnet publish /app/Remote.Payments.Developer.Docs.WebSite/Remote.Payments.Developer.Docs.WebSite.csproj --no-build -c Release -o /publish
+RUN chmod +x /build/updatebaseurl.sh
+RUN /build/updatebaseurl.sh $BRANCH_NAME
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0
-WORKDIR /app
-COPY --from=builder /publish .
-ENTRYPOINT [ "dotnet", "Remote.Payments.Developer.Docs.WebSite.dll" ]
+
+RUN hugo --source=/src/ --destination=/public/
+
+
+FROM nginx:stable-alpine
+
+COPY ./build/nginx.conf /etc/nginx/nginx.conf
+COPY --from=builder /public/ /usr/share/nginx/html/
+
+EXPOSE 80

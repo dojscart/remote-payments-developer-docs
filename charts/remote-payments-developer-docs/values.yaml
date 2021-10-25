@@ -3,7 +3,7 @@ team: flow
 replicaCount: 1
 
 nameOverride: ''
-fullnameOverride: 'remote-payments-website'
+fullnameOverride: 'remote-payments-developer-docs'
 
 serviceAccount:
   create: true
@@ -16,8 +16,6 @@ container:
     pullPolicy: IfNotPresent
     tag: '$SHORT_SHA'
   env:
-    - name: ASPNETCORE_ENVIRONMENT
-      value: '{{ .Values.global.environment }}'
     - name: JAEGER_AGENT_HOST
       value: jaeger-agent.jaeger.svc
     - name: JAEGER_AGENT_PORT
@@ -33,10 +31,6 @@ container:
     - name: http
       containerPort: 80
       protocol: TCP
-  livenessProbe:
-    httpGet:
-      path: /api/health
-      port: http
 
 pod:
   imagePullSecrets: []
@@ -71,6 +65,5 @@ global:
   environment: master
   buildId: '$SERVICE_BUILD_ID'
 
-workloadIdentity:
-  enabled: true
-  googleServiceAccount: remotepayments-pod-default
+routeTable:
+  prefix: "/{{ .Values.global.environment }}/"

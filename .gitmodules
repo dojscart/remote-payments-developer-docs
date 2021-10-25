@@ -1,6 +1,3 @@
-[submodule "docs/themes/ace-documentation"]
-	path = docs/themes/ace-documentation
-	url = https://github.com/vantagedesign/ace-documentation.git
-[submodule "src/Remote.Payments.Developer.Docs.WebSite/themes/ace-documentation"]
-	path = src/Remote.Payments.Developer.Docs.WebSite/themes/ace-documentation
+[submodule "src/themes/ace-documentation"]
+	path = src/themes/ace-documentation
 	url = https://github.com/vantagedesign/ace-documentation.git
