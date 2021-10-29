@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
-    <body>
+{{- partial "head.html" . -}}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
 
-        {{- partial "header.html" . -}}
+<body>
 
-        <div class="container-fluid">
-           
-            <redoc spec-url="remote-payments-internal-gateway-v2.json"></redoc>
-            <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js">
-            </script>
+    {{- partial "header.html" . -}}
 
-        </div> <!-- /end of container -->
+    <div class="container-fluid">
+        <redoc spec-url="openapi-with-examples.json"></redoc>
+        <script src="https://cdn.jsdelivr.net/npm/redoc@latest/bundles/redoc.standalone.js"></script>
 
-        {{- partial "footer.html" . -}}
+    </div> <!-- /end of container -->
 
-    </body>
+    {{- partial "footer.html" . -}}
+
+</body>
+
 </html>

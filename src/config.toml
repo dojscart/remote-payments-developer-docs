@@ -75,7 +75,7 @@ url = "https://support.dojo.tech/hc/en-gb"
 weight = 10
 
 [[menu.shortcuts]]
-name = "API Status"
+name = "System status"
 url = "https://status.dojo.tech/"
 weight = 11
 
