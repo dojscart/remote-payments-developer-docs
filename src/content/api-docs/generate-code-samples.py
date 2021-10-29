@@ -4,9 +4,9 @@ import sys
 
 setup = True
 
-docsWithSnippetFile = "openapi-with-examples.json"
-snippetFolder = ""
-apiFile = "remote-payments-internal-gateway-v2.json"
+docsWithSnippetFile = "/Users/marismirnova/Git/remote-payments-developer-docs/src/content/api-docs/openapi-with-examples.json"
+snippetFolder = "snippet"
+apiFile = "/Users/marismirnova/Git/remote-payments-developer-docs/src/content/api-docs/remote-payments-internal-gateway-v2.json"
 
 def cleanUp():
     try:

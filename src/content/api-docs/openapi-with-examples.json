@@ -108,10 +108,6 @@
                 "security": [],
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\npayload = \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\"\n\nheaders = { 'content-type': \"application/json\" }\n\nconn.request(\"POST\", \"/api/payment-intents\", payload, headers)\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'POST',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents',\n  headers: {'content-type': 'application/json'},\n  body: {\n    captureMode: 'Auto',\n    amount: {value: 0, currencyCode: 'string'},\n    reference: 'string',\n    description: 'string',\n    customer: {emailAddress: 'string', phoneNumber: 'string'},\n    billingAddress: {\n      address1: 'string',\n      address2: 'string',\n      address3: 'string',\n      address4: 'string',\n      city: 'London',\n      state: 'string',\n      postcode: 'string',\n      countryCode: 'GB',\n      locality: 'string',\n      county: 'string'\n    },\n    shippingDetails: {\n      name: 'string',\n      deliveryNotes: 'string',\n      address: {\n        address1: 'string',\n        address2: 'string',\n        address3: 'string',\n        address4: 'string',\n        city: 'London',\n        state: 'string',\n        postcode: 'string',\n        countryCode: 'GB',\n        locality: 'string',\n        county: 'string'\n      }\n    },\n    transactionSource: 'MOTO',\n    config: {\n      title: 'string',\n      redirectUrl: 'http://example.com',\n      cancelUrl: 'http://example.com',\n      customerEmail: {collectionRequired: true},\n      details: {showTotal: true},\n      billingAddress: {collectionRequired: true},\n      shippingDetails: {collectionRequired: true}\n    },\n    requestSecurity: {userAgent: 'string', ipAddress: 'string', device: 'string'},\n    itemLines: [\n      {\n        id: 'string',\n        quantity: 0,\n        caption: 'string',\n        amountTotal: {value: 0, currencyCode: 'string'}\n      }\n    ],\n    taxLines: [\n      {\n        id: 'string',\n        caption: 'string',\n        subCaption: 'string',\n        amountTotal: {value: 0, currencyCode: 'string'}\n      }\n    ],\n    actionLink: {\n      url: 'http://example.com',\n      action: 'DownloadFile',\n      label: 'string',\n      fileName: 'string'\n    },\n    paymentSource: 'string',\n    metadata: {property1: 'string', property2: 'string'}\n  },\n  json: true\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -120,40 +116,24 @@
                         "source": "curl --request POST \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents \\\n  --header 'content-type: application/json' \\\n  --data '{\"captureMode\":\"Auto\",\"amount\":{\"value\":0,\"currencyCode\":\"string\"},\"reference\":\"string\",\"description\":\"string\",\"customer\":{\"emailAddress\":\"string\",\"phoneNumber\":\"string\"},\"billingAddress\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"},\"shippingDetails\":{\"name\":\"string\",\"deliveryNotes\":\"string\",\"address\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"}},\"transactionSource\":\"MOTO\",\"config\":{\"title\":\"string\",\"redirectUrl\":\"http://example.com\",\"cancelUrl\":\"http://example.com\",\"customerEmail\":{\"collectionRequired\":true},\"details\":{\"showTotal\":true},\"billingAddress\":{\"collectionRequired\":true},\"shippingDetails\":{\"collectionRequired\":true}},\"requestSecurity\":{\"userAgent\":\"string\",\"ipAddress\":\"string\",\"device\":\"string\"},\"itemLines\":[{\"id\":\"string\",\"quantity\":0,\"caption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"taxLines\":[{\"id\":\"string\",\"caption\":\"string\",\"subCaption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"actionLink\":{\"url\":\"http://example.com\",\"action\":\"DownloadFile\",\"label\":\"string\",\"fileName\":\"string\"},\"paymentSource\":\"string\",\"metadata\":{\"property1\":\"string\",\"property2\":\"string\"}}'"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "echo '{\"captureMode\":\"Auto\",\"amount\":{\"value\":0,\"currencyCode\":\"string\"},\"reference\":\"string\",\"description\":\"string\",\"customer\":{\"emailAddress\":\"string\",\"phoneNumber\":\"string\"},\"billingAddress\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"},\"shippingDetails\":{\"name\":\"string\",\"deliveryNotes\":\"string\",\"address\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"}},\"transactionSource\":\"MOTO\",\"config\":{\"title\":\"string\",\"redirectUrl\":\"http://example.com\",\"cancelUrl\":\"http://example.com\",\"customerEmail\":{\"collectionRequired\":true},\"details\":{\"showTotal\":true},\"billingAddress\":{\"collectionRequired\":true},\"shippingDetails\":{\"collectionRequired\":true}},\"requestSecurity\":{\"userAgent\":\"string\",\"ipAddress\":\"string\",\"device\":\"string\"},\"itemLines\":[{\"id\":\"string\",\"quantity\":0,\"caption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"taxLines\":[{\"id\":\"string\",\"caption\":\"string\",\"subCaption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"actionLink\":{\"url\":\"http://example.com\",\"action\":\"DownloadFile\",\"label\":\"string\",\"fileName\":\"string\"},\"paymentSource\":\"string\",\"metadata\":{\"property1\":\"string\",\"property2\":\"string\"}}' |  \\\n  http POST https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents \\\n  content-type:application/json"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\npayload = \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\"\n\nheaders = { 'content-type': \"application/json\" }\n\nconn.request(\"POST\", \"/api/payment-intents\", payload, headers)\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"POST\",\n  CURLOPT_POSTFIELDS => \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\",\n  CURLOPT_HTTPHEADER => [\n    \"content-type: application/json\"\n  ],\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\");\nvar request = new RestRequest(Method.POST);\nrequest.AddHeader(\"content-type\", \"application/json\");\nrequest.AddParameter(\"application/json\", \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\", ParameterType.RequestBody);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents');\n$request->setMethod(HTTP_METH_POST);\n\n$request->setHeaders([\n  'content-type' => 'application/json'\n]);\n\n$request->setBody('{\"captureMode\":\"Auto\",\"amount\":{\"value\":0,\"currencyCode\":\"string\"},\"reference\":\"string\",\"description\":\"string\",\"customer\":{\"emailAddress\":\"string\",\"phoneNumber\":\"string\"},\"billingAddress\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"},\"shippingDetails\":{\"name\":\"string\",\"deliveryNotes\":\"string\",\"address\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"}},\"transactionSource\":\"MOTO\",\"config\":{\"title\":\"string\",\"redirectUrl\":\"http://example.com\",\"cancelUrl\":\"http://example.com\",\"customerEmail\":{\"collectionRequired\":true},\"details\":{\"showTotal\":true},\"billingAddress\":{\"collectionRequired\":true},\"shippingDetails\":{\"collectionRequired\":true}},\"requestSecurity\":{\"userAgent\":\"string\",\"ipAddress\":\"string\",\"device\":\"string\"},\"itemLines\":[{\"id\":\"string\",\"quantity\":0,\"caption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"taxLines\":[{\"id\":\"string\",\"caption\":\"string\",\"subCaption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"actionLink\":{\"url\":\"http://example.com\",\"action\":\"DownloadFile\",\"label\":\"string\",\"fileName\":\"string\"},\"paymentSource\":\"string\",\"metadata\":{\"property1\":\"string\",\"property2\":\"string\"}}');\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\"\n\npayload = {\n    \"captureMode\": \"Auto\",\n    \"amount\": {\n        \"value\": 0,\n        \"currencyCode\": \"string\"\n    },\n    \"reference\": \"string\",\n    \"description\": \"string\",\n    \"customer\": {\n        \"emailAddress\": \"string\",\n        \"phoneNumber\": \"string\"\n    },\n    \"billingAddress\": {\n        \"address1\": \"string\",\n        \"address2\": \"string\",\n        \"address3\": \"string\",\n        \"address4\": \"string\",\n        \"city\": \"London\",\n        \"state\": \"string\",\n        \"postcode\": \"string\",\n        \"countryCode\": \"GB\",\n        \"locality\": \"string\",\n        \"county\": \"string\"\n    },\n    \"shippingDetails\": {\n        \"name\": \"string\",\n        \"deliveryNotes\": \"string\",\n        \"address\": {\n            \"address1\": \"string\",\n            \"address2\": \"string\",\n            \"address3\": \"string\",\n            \"address4\": \"string\",\n            \"city\": \"London\",\n            \"state\": \"string\",\n            \"postcode\": \"string\",\n            \"countryCode\": \"GB\",\n            \"locality\": \"string\",\n            \"county\": \"string\"\n        }\n    },\n    \"transactionSource\": \"MOTO\",\n    \"config\": {\n        \"title\": \"string\",\n        \"redirectUrl\": \"http://example.com\",\n        \"cancelUrl\": \"http://example.com\",\n        \"customerEmail\": {\"collectionRequired\": True},\n        \"details\": {\"showTotal\": True},\n        \"billingAddress\": {\"collectionRequired\": True},\n        \"shippingDetails\": {\"collectionRequired\": True}\n    },\n    \"requestSecurity\": {\n        \"userAgent\": \"string\",\n        \"ipAddress\": \"string\",\n        \"device\": \"string\"\n    },\n    \"itemLines\": [\n        {\n            \"id\": \"string\",\n            \"quantity\": 0,\n            \"caption\": \"string\",\n            \"amountTotal\": {\n                \"value\": 0,\n                \"currencyCode\": \"string\"\n            }\n        }\n    ],\n    \"taxLines\": [\n        {\n            \"id\": \"string\",\n            \"caption\": \"string\",\n            \"subCaption\": \"string\",\n            \"amountTotal\": {\n                \"value\": 0,\n                \"currencyCode\": \"string\"\n            }\n        }\n    ],\n    \"actionLink\": {\n        \"url\": \"http://example.com\",\n        \"action\": \"DownloadFile\",\n        \"label\": \"string\",\n        \"fileName\": \"string\"\n    },\n    \"paymentSource\": \"string\",\n    \"metadata\": {\n        \"property1\": \"string\",\n        \"property2\": \"string\"\n    }\n}\nheaders = {\"content-type\": \"application/json\"}\n\nresponse = requests.request(\"POST\", url, json=payload, headers=headers)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\",\n  \"method\": \"POST\",\n  \"headers\": {\n    \"content-type\": \"application/json\"\n  },\n  \"processData\": false,\n  \"data\": \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\"\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = JSON.stringify({\n  \"captureMode\": \"Auto\",\n  \"amount\": {\n    \"value\": 0,\n    \"currencyCode\": \"string\"\n  },\n  \"reference\": \"string\",\n  \"description\": \"string\",\n  \"customer\": {\n    \"emailAddress\": \"string\",\n    \"phoneNumber\": \"string\"\n  },\n  \"billingAddress\": {\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"address3\": \"string\",\n    \"address4\": \"string\",\n    \"city\": \"London\",\n    \"state\": \"string\",\n    \"postcode\": \"string\",\n    \"countryCode\": \"GB\",\n    \"locality\": \"string\",\n    \"county\": \"string\"\n  },\n  \"shippingDetails\": {\n    \"name\": \"string\",\n    \"deliveryNotes\": \"string\",\n    \"address\": {\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"address3\": \"string\",\n      \"address4\": \"string\",\n      \"city\": \"London\",\n      \"state\": \"string\",\n      \"postcode\": \"string\",\n      \"countryCode\": \"GB\",\n      \"locality\": \"string\",\n      \"county\": \"string\"\n    }\n  },\n  \"transactionSource\": \"MOTO\",\n  \"config\": {\n    \"title\": \"string\",\n    \"redirectUrl\": \"http://example.com\",\n    \"cancelUrl\": \"http://example.com\",\n    \"customerEmail\": {\n      \"collectionRequired\": true\n    },\n    \"details\": {\n      \"showTotal\": true\n    },\n    \"billingAddress\": {\n      \"collectionRequired\": true\n    },\n    \"shippingDetails\": {\n      \"collectionRequired\": true\n    }\n  },\n  \"requestSecurity\": {\n    \"userAgent\": \"string\",\n    \"ipAddress\": \"string\",\n    \"device\": \"string\"\n  },\n  \"itemLines\": [\n    {\n      \"id\": \"string\",\n      \"quantity\": 0,\n      \"caption\": \"string\",\n      \"amountTotal\": {\n        \"value\": 0,\n        \"currencyCode\": \"string\"\n      }\n    }\n  ],\n  \"taxLines\": [\n    {\n      \"id\": \"string\",\n      \"caption\": \"string\",\n      \"subCaption\": \"string\",\n      \"amountTotal\": {\n        \"value\": 0,\n        \"currencyCode\": \"string\"\n      }\n    }\n  ],\n  \"actionLink\": {\n    \"url\": \"http://example.com\",\n    \"action\": \"DownloadFile\",\n    \"label\": \"string\",\n    \"fileName\": \"string\"\n  },\n  \"paymentSource\": \"string\",\n  \"metadata\": {\n    \"property1\": \"string\",\n    \"property2\": \"string\"\n  }\n});\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\");\nxhr.setRequestHeader(\"content-type\", \"application/json\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet headers = [\"content-type\": \"application/json\"]\nlet parameters = [\n  \"captureMode\": \"Auto\",\n  \"amount\": [\n    \"value\": 0,\n    \"currencyCode\": \"string\"\n  ],\n  \"reference\": \"string\",\n  \"description\": \"string\",\n  \"customer\": [\n    \"emailAddress\": \"string\",\n    \"phoneNumber\": \"string\"\n  ],\n  \"billingAddress\": [\n    \"address1\": \"string\",\n    \"address2\": \"string\",\n    \"address3\": \"string\",\n    \"address4\": \"string\",\n    \"city\": \"London\",\n    \"state\": \"string\",\n    \"postcode\": \"string\",\n    \"countryCode\": \"GB\",\n    \"locality\": \"string\",\n    \"county\": \"string\"\n  ],\n  \"shippingDetails\": [\n    \"name\": \"string\",\n    \"deliveryNotes\": \"string\",\n    \"address\": [\n      \"address1\": \"string\",\n      \"address2\": \"string\",\n      \"address3\": \"string\",\n      \"address4\": \"string\",\n      \"city\": \"London\",\n      \"state\": \"string\",\n      \"postcode\": \"string\",\n      \"countryCode\": \"GB\",\n      \"locality\": \"string\",\n      \"county\": \"string\"\n    ]\n  ],\n  \"transactionSource\": \"MOTO\",\n  \"config\": [\n    \"title\": \"string\",\n    \"redirectUrl\": \"http://example.com\",\n    \"cancelUrl\": \"http://example.com\",\n    \"customerEmail\": [\"collectionRequired\": true],\n    \"details\": [\"showTotal\": true],\n    \"billingAddress\": [\"collectionRequired\": true],\n    \"shippingDetails\": [\"collectionRequired\": true]\n  ],\n  \"requestSecurity\": [\n    \"userAgent\": \"string\",\n    \"ipAddress\": \"string\",\n    \"device\": \"string\"\n  ],\n  \"itemLines\": [\n    [\n      \"id\": \"string\",\n      \"quantity\": 0,\n      \"caption\": \"string\",\n      \"amountTotal\": [\n        \"value\": 0,\n        \"currencyCode\": \"string\"\n      ]\n    ]\n  ],\n  \"taxLines\": [\n    [\n      \"id\": \"string\",\n      \"caption\": \"string\",\n      \"subCaption\": \"string\",\n      \"amountTotal\": [\n        \"value\": 0,\n        \"currencyCode\": \"string\"\n      ]\n    ]\n  ],\n  \"actionLink\": [\n    \"url\": \"http://example.com\",\n    \"action\": \"DownloadFile\",\n    \"label\": \"string\",\n    \"fileName\": \"string\"\n  ],\n  \"paymentSource\": \"string\",\n  \"metadata\": [\n    \"property1\": \"string\",\n    \"property2\": \"string\"\n  ]\n] as [String : Any]\n\nlet postData = JSONSerialization.data(withJSONObject: parameters, options: [])\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"POST\"\nrequest.allHTTPHeaderFields = headers\nrequest.httpBody = postData as Data\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Post.new(url)\nrequest[\"content-type\"] = 'application/json'\nrequest.body = \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\"\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\"\n\n\tpayload := strings.NewReader(\"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\")\n\n\treq, _ := http.NewRequest(\"POST\", url, payload)\n\n\treq.Header.Add(\"content-type\", \"application/json\")\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"POST\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents\");\n\nstruct curl_slist *headers = NULL;\nheaders = curl_slist_append(headers, \"content-type: application/json\");\ncurl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);\n\ncurl_easy_setopt(hnd, CURLOPT_POSTFIELDS, \"{\\\"captureMode\\\":\\\"Auto\\\",\\\"amount\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"},\\\"reference\\\":\\\"string\\\",\\\"description\\\":\\\"string\\\",\\\"customer\\\":{\\\"emailAddress\\\":\\\"string\\\",\\\"phoneNumber\\\":\\\"string\\\"},\\\"billingAddress\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"},\\\"shippingDetails\\\":{\\\"name\\\":\\\"string\\\",\\\"deliveryNotes\\\":\\\"string\\\",\\\"address\\\":{\\\"address1\\\":\\\"string\\\",\\\"address2\\\":\\\"string\\\",\\\"address3\\\":\\\"string\\\",\\\"address4\\\":\\\"string\\\",\\\"city\\\":\\\"London\\\",\\\"state\\\":\\\"string\\\",\\\"postcode\\\":\\\"string\\\",\\\"countryCode\\\":\\\"GB\\\",\\\"locality\\\":\\\"string\\\",\\\"county\\\":\\\"string\\\"}},\\\"transactionSource\\\":\\\"MOTO\\\",\\\"config\\\":{\\\"title\\\":\\\"string\\\",\\\"redirectUrl\\\":\\\"http://example.com\\\",\\\"cancelUrl\\\":\\\"http://example.com\\\",\\\"customerEmail\\\":{\\\"collectionRequired\\\":true},\\\"details\\\":{\\\"showTotal\\\":true},\\\"billingAddress\\\":{\\\"collectionRequired\\\":true},\\\"shippingDetails\\\":{\\\"collectionRequired\\\":true}},\\\"requestSecurity\\\":{\\\"userAgent\\\":\\\"string\\\",\\\"ipAddress\\\":\\\"string\\\",\\\"device\\\":\\\"string\\\"},\\\"itemLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"quantity\\\":0,\\\"caption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"taxLines\\\":[{\\\"id\\\":\\\"string\\\",\\\"caption\\\":\\\"string\\\",\\\"subCaption\\\":\\\"string\\\",\\\"amountTotal\\\":{\\\"value\\\":0,\\\"currencyCode\\\":\\\"string\\\"}}],\\\"actionLink\\\":{\\\"url\\\":\\\"http://example.com\\\",\\\"action\\\":\\\"DownloadFile\\\",\\\"label\\\":\\\"string\\\",\\\"fileName\\\":\\\"string\\\"},\\\"paymentSource\\\":\\\"string\\\",\\\"metadata\\\":{\\\"property1\\\":\\\"string\\\",\\\"property2\\\":\\\"string\\\"}}\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$body = new http\\Message\\Body;\n$body->append('{\"captureMode\":\"Auto\",\"amount\":{\"value\":0,\"currencyCode\":\"string\"},\"reference\":\"string\",\"description\":\"string\",\"customer\":{\"emailAddress\":\"string\",\"phoneNumber\":\"string\"},\"billingAddress\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"},\"shippingDetails\":{\"name\":\"string\",\"deliveryNotes\":\"string\",\"address\":{\"address1\":\"string\",\"address2\":\"string\",\"address3\":\"string\",\"address4\":\"string\",\"city\":\"London\",\"state\":\"string\",\"postcode\":\"string\",\"countryCode\":\"GB\",\"locality\":\"string\",\"county\":\"string\"}},\"transactionSource\":\"MOTO\",\"config\":{\"title\":\"string\",\"redirectUrl\":\"http://example.com\",\"cancelUrl\":\"http://example.com\",\"customerEmail\":{\"collectionRequired\":true},\"details\":{\"showTotal\":true},\"billingAddress\":{\"collectionRequired\":true},\"shippingDetails\":{\"collectionRequired\":true}},\"requestSecurity\":{\"userAgent\":\"string\",\"ipAddress\":\"string\",\"device\":\"string\"},\"itemLines\":[{\"id\":\"string\",\"quantity\":0,\"caption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"taxLines\":[{\"id\":\"string\",\"caption\":\"string\",\"subCaption\":\"string\",\"amountTotal\":{\"value\":0,\"currencyCode\":\"string\"}}],\"actionLink\":{\"url\":\"http://example.com\",\"action\":\"DownloadFile\",\"label\":\"string\",\"fileName\":\"string\"},\"paymentSource\":\"string\",\"metadata\":{\"property1\":\"string\",\"property2\":\"string\"}}');\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents');\n$request->setRequestMethod('POST');\n$request->setBody($body);\n\n$request->setHeaders([\n  'content-type' => 'application/json'\n]);\n\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -226,10 +206,6 @@
                 "summary": "Retrieve a payment intent",
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"GET\", \"/api/payment-intents/%7BpaymentIntentId%7D\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'GET',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D'\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -238,40 +214,24 @@
                         "source": "curl --request GET \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "http GET https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"GET\", \"/api/payment-intents/%7BpaymentIntentId%7D\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"GET\",\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\");\nvar request = new RestRequest(Method.GET);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D');\n$request->setMethod(HTTP_METH_GET);\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\"\n\nresponse = requests.request(\"GET\", url)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\",\n  \"method\": \"GET\",\n  \"headers\": {}\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = null;\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"GET\"\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Get.new(url)\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\"\n\n\treq, _ := http.NewRequest(\"GET\", url, nil)\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"GET\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D');\n$request->setRequestMethod('GET');\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -361,10 +321,6 @@
                 "security": [],
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\npayload = \"{\\\"amount\\\":0}\"\n\nheaders = { 'content-type': \"application/json\" }\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/captures\", payload, headers)\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'POST',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures',\n  headers: {'content-type': 'application/json'},\n  body: {amount: 0},\n  json: true\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -373,40 +329,24 @@
                         "source": "curl --request POST \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures \\\n  --header 'content-type: application/json' \\\n  --data '{\"amount\":0}'"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "echo '{\"amount\":0}' |  \\\n  http POST https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures \\\n  content-type:application/json"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\npayload = \"{\\\"amount\\\":0}\"\n\nheaders = { 'content-type': \"application/json\" }\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/captures\", payload, headers)\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"POST\",\n  CURLOPT_POSTFIELDS => \"{\\\"amount\\\":0}\",\n  CURLOPT_HTTPHEADER => [\n    \"content-type: application/json\"\n  ],\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\");\nvar request = new RestRequest(Method.POST);\nrequest.AddHeader(\"content-type\", \"application/json\");\nrequest.AddParameter(\"application/json\", \"{\\\"amount\\\":0}\", ParameterType.RequestBody);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures');\n$request->setMethod(HTTP_METH_POST);\n\n$request->setHeaders([\n  'content-type' => 'application/json'\n]);\n\n$request->setBody('{\"amount\":0}');\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\"\n\npayload = {\"amount\": 0}\nheaders = {\"content-type\": \"application/json\"}\n\nresponse = requests.request(\"POST\", url, json=payload, headers=headers)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\",\n  \"method\": \"POST\",\n  \"headers\": {\n    \"content-type\": \"application/json\"\n  },\n  \"processData\": false,\n  \"data\": \"{\\\"amount\\\":0}\"\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = JSON.stringify({\n  \"amount\": 0\n});\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\");\nxhr.setRequestHeader(\"content-type\", \"application/json\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet headers = [\"content-type\": \"application/json\"]\nlet parameters = [\"amount\": 0] as [String : Any]\n\nlet postData = JSONSerialization.data(withJSONObject: parameters, options: [])\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"POST\"\nrequest.allHTTPHeaderFields = headers\nrequest.httpBody = postData as Data\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Post.new(url)\nrequest[\"content-type\"] = 'application/json'\nrequest.body = \"{\\\"amount\\\":0}\"\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\"\n\n\tpayload := strings.NewReader(\"{\\\"amount\\\":0}\")\n\n\treq, _ := http.NewRequest(\"POST\", url, payload)\n\n\treq.Header.Add(\"content-type\", \"application/json\")\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"POST\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures\");\n\nstruct curl_slist *headers = NULL;\nheaders = curl_slist_append(headers, \"content-type: application/json\");\ncurl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);\n\ncurl_easy_setopt(hnd, CURLOPT_POSTFIELDS, \"{\\\"amount\\\":0}\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$body = new http\\Message\\Body;\n$body->append('{\"amount\":0}');\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/captures');\n$request->setRequestMethod('POST');\n$request->setBody($body);\n\n$request->setHeaders([\n  'content-type' => 'application/json'\n]);\n\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -469,10 +409,6 @@
                 "description": "Updates a token.",
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'POST',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token'\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -481,40 +417,24 @@
                         "source": "curl --request POST \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "http POST https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"POST\",\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\");\nvar request = new RestRequest(Method.POST);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token');\n$request->setMethod(HTTP_METH_POST);\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\"\n\nresponse = requests.request(\"POST\", url)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\",\n  \"method\": \"POST\",\n  \"headers\": {}\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = null;\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"POST\"\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Post.new(url)\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\"\n\n\treq, _ := http.NewRequest(\"POST\", url, nil)\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"POST\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refresh-token');\n$request->setRequestMethod('POST');\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -577,10 +497,6 @@
                 "summary": "Retrieve a status",
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"GET\", \"/api/payment-intents/%7BpaymentIntentId%7D/status\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'GET',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status'\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -589,40 +505,24 @@
                         "source": "curl --request GET \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "http GET https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"GET\", \"/api/payment-intents/%7BpaymentIntentId%7D/status\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"GET\",\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\");\nvar request = new RestRequest(Method.GET);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status');\n$request->setMethod(HTTP_METH_GET);\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\"\n\nresponse = requests.request(\"GET\", url)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\",\n  \"method\": \"GET\",\n  \"headers\": {}\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = null;\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"GET\"\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Get.new(url)\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\"\n\n\treq, _ := http.NewRequest(\"GET\", url, nil)\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"GET\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/status');\n$request->setRequestMethod('GET');\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -684,10 +584,6 @@
                 "summary": "Retrieve a refund",
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"GET\", \"/api/payment-intents/refunds/%7BrefundId%7D\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'GET',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D'\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -696,40 +592,24 @@
                         "source": "curl --request GET \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "http GET https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"GET\", \"/api/payment-intents/refunds/%7BrefundId%7D\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"GET\",\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\");\nvar request = new RestRequest(Method.GET);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D');\n$request->setMethod(HTTP_METH_GET);\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\"\n\nresponse = requests.request(\"GET\", url)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\",\n  \"method\": \"GET\",\n  \"headers\": {}\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = null;\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"GET\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"GET\"\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Get.new(url)\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\"\n\n\treq, _ := http.NewRequest(\"GET\", url, nil)\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"GET\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/refunds/%7BrefundId%7D');\n$request->setRequestMethod('GET');\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -821,10 +701,6 @@
                 "security": [],
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\npayload = \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\"\n\nheaders = {\n    'content-type': \"application/json\",\n    'idempotencyKey': \"SOME_STRING_VALUE\"\n    }\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/refunds\", payload, headers)\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'POST',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds',\n  headers: {'content-type': 'application/json', idempotencyKey: 'SOME_STRING_VALUE'},\n  body: {amount: 100, refundReason: 'Duplicate transaction', notes: 'notes'},\n  json: true\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -833,40 +709,24 @@
                         "source": "curl --request POST \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds \\\n  --header 'content-type: application/json' \\\n  --header 'idempotencyKey: SOME_STRING_VALUE' \\\n  --data '{\"amount\":100,\"refundReason\":\"Duplicate transaction\",\"notes\":\"notes\"}'"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "echo '{\"amount\":100,\"refundReason\":\"Duplicate transaction\",\"notes\":\"notes\"}' |  \\\n  http POST https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds \\\n  content-type:application/json \\\n  idempotencyKey:SOME_STRING_VALUE"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\npayload = \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\"\n\nheaders = {\n    'content-type': \"application/json\",\n    'idempotencyKey': \"SOME_STRING_VALUE\"\n    }\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/refunds\", payload, headers)\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"POST\",\n  CURLOPT_POSTFIELDS => \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\",\n  CURLOPT_HTTPHEADER => [\n    \"content-type: application/json\",\n    \"idempotencyKey: SOME_STRING_VALUE\"\n  ],\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\");\nvar request = new RestRequest(Method.POST);\nrequest.AddHeader(\"content-type\", \"application/json\");\nrequest.AddHeader(\"idempotencyKey\", \"SOME_STRING_VALUE\");\nrequest.AddParameter(\"application/json\", \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\", ParameterType.RequestBody);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds');\n$request->setMethod(HTTP_METH_POST);\n\n$request->setHeaders([\n  'content-type' => 'application/json',\n  'idempotencyKey' => 'SOME_STRING_VALUE'\n]);\n\n$request->setBody('{\"amount\":100,\"refundReason\":\"Duplicate transaction\",\"notes\":\"notes\"}');\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\"\n\npayload = {\n    \"amount\": 100,\n    \"refundReason\": \"Duplicate transaction\",\n    \"notes\": \"notes\"\n}\nheaders = {\n    \"content-type\": \"application/json\",\n    \"idempotencyKey\": \"SOME_STRING_VALUE\"\n}\n\nresponse = requests.request(\"POST\", url, json=payload, headers=headers)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\",\n  \"method\": \"POST\",\n  \"headers\": {\n    \"content-type\": \"application/json\",\n    \"idempotencyKey\": \"SOME_STRING_VALUE\"\n  },\n  \"processData\": false,\n  \"data\": \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\"\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = JSON.stringify({\n  \"amount\": 100,\n  \"refundReason\": \"Duplicate transaction\",\n  \"notes\": \"notes\"\n});\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\");\nxhr.setRequestHeader(\"content-type\", \"application/json\");\nxhr.setRequestHeader(\"idempotencyKey\", \"SOME_STRING_VALUE\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet headers = [\n  \"content-type\": \"application/json\",\n  \"idempotencyKey\": \"SOME_STRING_VALUE\"\n]\nlet parameters = [\n  \"amount\": 100,\n  \"refundReason\": \"Duplicate transaction\",\n  \"notes\": \"notes\"\n] as [String : Any]\n\nlet postData = JSONSerialization.data(withJSONObject: parameters, options: [])\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"POST\"\nrequest.allHTTPHeaderFields = headers\nrequest.httpBody = postData as Data\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Post.new(url)\nrequest[\"content-type\"] = 'application/json'\nrequest[\"idempotencyKey\"] = 'SOME_STRING_VALUE'\nrequest.body = \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\"\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\"\n\n\tpayload := strings.NewReader(\"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\")\n\n\treq, _ := http.NewRequest(\"POST\", url, payload)\n\n\treq.Header.Add(\"content-type\", \"application/json\")\n\treq.Header.Add(\"idempotencyKey\", \"SOME_STRING_VALUE\")\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"POST\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds\");\n\nstruct curl_slist *headers = NULL;\nheaders = curl_slist_append(headers, \"content-type: application/json\");\nheaders = curl_slist_append(headers, \"idempotencyKey: SOME_STRING_VALUE\");\ncurl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);\n\ncurl_easy_setopt(hnd, CURLOPT_POSTFIELDS, \"{\\\"amount\\\":100,\\\"refundReason\\\":\\\"Duplicate transaction\\\",\\\"notes\\\":\\\"notes\\\"}\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$body = new http\\Message\\Body;\n$body->append('{\"amount\":100,\"refundReason\":\"Duplicate transaction\",\"notes\":\"notes\"}');\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/refunds');\n$request->setRequestMethod('POST');\n$request->setBody($body);\n\n$request->setHeaders([\n  'content-type' => 'application/json',\n  'idempotencyKey' => 'SOME_STRING_VALUE'\n]);\n\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
@@ -944,10 +804,6 @@
                 "security": [],
                 "x-codeSamples": [
                     {
-                        "lang": "Python + Python3",
-                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/reversal\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
-                    },
-                    {
                         "lang": "Node + Request",
                         "source": "const request = require('request');\n\nconst options = {\n  method: 'POST',\n  url: 'https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal'\n};\n\nrequest(options, function (error, response, body) {\n  if (error) throw new Error(error);\n\n  console.log(body);\n});\n"
                     },
@@ -956,40 +812,24 @@
                         "source": "curl --request POST \\\n  --url https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal"
                     },
                     {
+                        "lang": "Shell + Httpie",
+                        "source": "http POST https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal"
+                    },
+                    {
+                        "lang": "Python + Python3",
+                        "source": "import http.client\n\nconn = http.client.HTTPSConnection(\"remote-payments-internal-gateway-dev.dojo.dev\")\n\nconn.request(\"POST\", \"/api/payment-intents/%7BpaymentIntentId%7D/reversal\")\n\nres = conn.getresponse()\ndata = res.read()\n\nprint(data.decode(\"utf-8\"))"
+                    },
+                    {
                         "lang": "Php + Curl",
                         "source": "<?php\n\n$curl = curl_init();\n\ncurl_setopt_array($curl, [\n  CURLOPT_URL => \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\",\n  CURLOPT_RETURNTRANSFER => true,\n  CURLOPT_ENCODING => \"\",\n  CURLOPT_MAXREDIRS => 10,\n  CURLOPT_TIMEOUT => 30,\n  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,\n  CURLOPT_CUSTOMREQUEST => \"POST\",\n]);\n\n$response = curl_exec($curl);\n$err = curl_error($curl);\n\ncurl_close($curl);\n\nif ($err) {\n  echo \"cURL Error #:\" . $err;\n} else {\n  echo $response;\n}"
                     },
                     {
-                        "lang": "Csharp + Restsharp",
-                        "source": "var client = new RestClient(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\");\nvar request = new RestRequest(Method.POST);\nIRestResponse response = client.Execute(request);"
+                        "lang": "Php + Http1",
+                        "source": "<?php\n\n$request = new HttpRequest();\n$request->setUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal');\n$request->setMethod(HTTP_METH_POST);\n\ntry {\n  $response = $request->send();\n\n  echo $response->getBody();\n} catch (HttpException $ex) {\n  echo $ex;\n}"
                     },
                     {
-                        "lang": "Python + Requests",
-                        "source": "import requests\n\nurl = \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\"\n\nresponse = requests.request(\"POST\", url)\n\nprint(response.text)"
-                    },
-                    {
-                        "lang": "Javascript + Jquery",
-                        "source": "const settings = {\n  \"async\": true,\n  \"crossDomain\": true,\n  \"url\": \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\",\n  \"method\": \"POST\",\n  \"headers\": {}\n};\n\n$.ajax(settings).done(function (response) {\n  console.log(response);\n});"
-                    },
-                    {
-                        "lang": "Javascript + Xhr",
-                        "source": "const data = null;\n\nconst xhr = new XMLHttpRequest();\nxhr.withCredentials = true;\n\nxhr.addEventListener(\"readystatechange\", function () {\n  if (this.readyState === this.DONE) {\n    console.log(this.responseText);\n  }\n});\n\nxhr.open(\"POST\", \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\");\n\nxhr.send(data);"
-                    },
-                    {
-                        "lang": "Swift + Nsurlsession",
-                        "source": "import Foundation\n\nlet request = NSMutableURLRequest(url: NSURL(string: \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\")! as URL,\n                                        cachePolicy: .useProtocolCachePolicy,\n                                    timeoutInterval: 10.0)\nrequest.httpMethod = \"POST\"\n\nlet session = URLSession.shared\nlet dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in\n  if (error != nil) {\n    print(error)\n  } else {\n    let httpResponse = response as? HTTPURLResponse\n    print(httpResponse)\n  }\n})\n\ndataTask.resume()"
-                    },
-                    {
-                        "lang": "Ruby + Native",
-                        "source": "require 'uri'\nrequire 'net/http'\nrequire 'openssl'\n\nurl = URI(\"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\")\n\nhttp = Net::HTTP.new(url.host, url.port)\nhttp.use_ssl = true\nhttp.verify_mode = OpenSSL::SSL::VERIFY_NONE\n\nrequest = Net::HTTP::Post.new(url)\n\nresponse = http.request(request)\nputs response.read_body"
-                    },
-                    {
-                        "lang": "Go + Native",
-                        "source": "package main\n\nimport (\n\t\"fmt\"\n\t\"net/http\"\n\t\"io/ioutil\"\n)\n\nfunc main() {\n\n\turl := \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\"\n\n\treq, _ := http.NewRequest(\"POST\", url, nil)\n\n\tres, _ := http.DefaultClient.Do(req)\n\n\tdefer res.Body.Close()\n\tbody, _ := ioutil.ReadAll(res.Body)\n\n\tfmt.Println(res)\n\tfmt.Println(string(body))\n\n}"
-                    },
-                    {
-                        "lang": "C + Libcurl",
-                        "source": "CURL *hnd = curl_easy_init();\n\ncurl_easy_setopt(hnd, CURLOPT_CUSTOMREQUEST, \"POST\");\ncurl_easy_setopt(hnd, CURLOPT_URL, \"https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal\");\n\nCURLcode ret = curl_easy_perform(hnd);"
+                        "lang": "Php + Http2",
+                        "source": "<?php\n\n$client = new http\\Client;\n$request = new http\\Client\\Request;\n\n$request->setRequestUrl('https://remote-payments-internal-gateway-dev.dojo.dev/api/payment-intents/%7BpaymentIntentId%7D/reversal');\n$request->setRequestMethod('POST');\n$client->enqueue($request)->send();\n$response = $client->getResponse();\n\necho $response->getBody();"
                     }
                 ]
             }
