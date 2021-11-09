@@ -6,7 +6,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: "build-image"
   entrypoint: 'bash'
-  args: ['-c', 'docker build -t eu.gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA -f ./build/Dockerfile --build-arg="BRANCH_NAME=$BRANCH_NAME" --build-arg "CLOUDSDK_CONTAINER_CLUSTER=$CLOUDSDK_CONTAINER_CLUSTER" .']
+  args: ['-c', 'docker build -t eu.gcr.io/$PROJECT_ID/$REPO_NAME:$SHORT_SHA -f ./build/Dockerfile --build-arg="BRANCH_NAME=$BRANCH_NAME" .']
 
 - name: 'gcr.io/cloud-builders/docker'
   id: "push-image"
