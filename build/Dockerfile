@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS builder
 
 ARG BRANCH_NAME
+ARG CLOUDSDK_CONTAINER_CLUSTER
 
 ENV HUGO_VERSION=0.88.1
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz /tmp/
@@ -10,7 +11,7 @@ ADD ./src /src
 COPY ./build/updatebaseurl.sh /build/updatebaseurl.sh
 
 RUN chmod +x /build/updatebaseurl.sh
-RUN /build/updatebaseurl.sh $BRANCH_NAME
+RUN /build/updatebaseurl.sh $BRANCH_NAME $CLOUDSDK_CONTAINER_CLUSTER
 
 
 RUN hugo --source=/src/ --destination=/public/
