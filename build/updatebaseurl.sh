@@ -9,19 +9,11 @@ else
     exit 1
 fi
 
-if [ "$2" != "" ]; then
-    CLOUDSDK_CONTAINER_CLUSTER=$2
-else
-    echo "Cluster name is missing!"
-    exit 1
-fi
-
 echo "Branch name: $BRANCH_NAME"
-echo "Container name: $CLOUDSDK_CONTAINER_CLUSTER"
 
 
-if [ $CLOUDSDK_CONTAINER_CLUSTER == "production-remotepayments" ]; then
-    echo "Skipped config updates for '$CLOUDSDK_CONTAINER_CLUSTER' cluster. No updates required in prod!"
+if [ $BRANCH_NAME == "main" ]; then
+    echo "Skipped config updates for '$BRANCH_NAME' branch"
     exit 0
 fi
 
@@ -43,15 +35,9 @@ else
     exit 1 
 fi
 
-if [ $CLOUDSDK_CONTAINER_CLUSTER == "staging-remotepayments" ]; then
-    $devHostname = "staging-docs.dojo.dev"
-else
-    $devHostname = "dev-docs.dojo.dev"
-fi
-
 sed -i "1irelativeURLs = true" $filename
 sed -i "1icanonifyURLs = true" $filename
-sed -i "1ibaseURL = \"https://$devHostname/$DEV_ENV/\"" $filename
+sed -i "1ibaseURL = \"https://dev-docs.dojo.dev/$DEV_ENV/\"" $filename
 
 cat $filename
 
