@@ -7,9 +7,9 @@ icon: "ti-panel"
 
 Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls.
 
-When you make the first API request, use current data as a version to get the latest avalible version.
+When you make the first API request, use current data as a version to get the latest available version.
 
-The current version is 2021-10-22.
+The current version is `2021-10-22`.
 
 ## Breaking changes
 
@@ -27,7 +27,7 @@ Breaking or backwards-incompatible changes include:
 
 ## Non-breaking changes
 
-The following types of changes do not qualify as breaking changes, this list is not exhaustive:
+The following types of changes don't qualify as breaking changes, this list isn't exhaustive:
 
 - Adding new HTTP headers.
 - Adding new values to an enum if there is a default defined.
@@ -42,6 +42,7 @@ When we release a new API version, you can choose to upgrade to gain access to n
 When non-breaking changes are implemented into the current API version, these features will become available without needing an upgrade.
 
 ## Changelog
+
 ### YYYY-MM-DD
 
 - Change 1

@@ -8,9 +8,9 @@ Use the information on this page to test your integration.
 
 ## Test keys
 
-Our testing environment provides an excellent opportunity to make sure everything is working perfectly.
+Our testing environment provides an excellent opportunity to make sure everything is working.
 
-You can find your test keys ???, test keys use the prefix sk_test and pk_test.
+You can find your test keys ???, test keys use the prefix `sk_test` and `pk_test`.
 
 ## Test card numbers
 
