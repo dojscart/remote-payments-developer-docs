@@ -45,6 +45,7 @@ fi
 
 if [ $CLOUDSDK_CONTAINER_CLUSTER == "staging-remotepayments" ]; then
     devHostname="staging-docs.dojo.dev"
+    DEV_ENV="master"
 else
     devHostname="dev-docs.dojo.dev"
 fi
