@@ -644,8 +644,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "Payment receipt requested successfully."
           },
           "400": {
             "description": "Bad request",
