@@ -1191,7 +1191,7 @@
           "Captured",
           "Reversed",
           "Refunded",
-          "Cancelled"
+          "Canceled"
         ],
         "title": "PaymentIntentStatus",
         "x-examples": {},
@@ -1201,7 +1201,7 @@
           "Captured",
           "Reversed",
           "Refunded",
-          "Cancelled"
+          "Canceled"
         ]
       },
       "PaymentDetails": {
