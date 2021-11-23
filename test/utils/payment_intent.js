@@ -108,7 +108,7 @@ class PaymentIntent {
     }
 
     post() {
-        return axios.post(`http://localhost:5000/api/payment-intents`, JSON.stringify(this.postData),
+        return axios.post(`http://staging-api.dojo.dev/master/payment-intents`, JSON.stringify(this.postData),
             {headers: {"Content-Type": "application/json",
                     "Service-Account-Id": "remotepayments-pod-default@firefly-dev-2018.iam.gserviceaccount.com"
                 }})
