@@ -350,3 +350,6 @@ Chart.lock
 
 
 **/public/
+
+# Intellij config files
+*.iml
