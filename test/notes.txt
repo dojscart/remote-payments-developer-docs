@@ -1,0 +1,19 @@
+Notes:
+x-examples need adding to the following parameters:
+{paymentIntentId}
+{refundId}
+
+Response header for all requests content-type must be:
+application/json; charset=utf-8
+
+example field needs adding to:
+money.currencyCode
+money.value
+
+PaymentIntents_Delete - schema is expecting application/json for a 204 with empty body
+
+SearchPaymentIntentRequest - schema object requires example locationId
+
+Receipt_Create - requires example email
+
+Refunds_Create - idempotencyKey field is required

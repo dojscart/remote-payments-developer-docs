@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "dredd payment-intents-2-0.json http://127.0.0.1:5000 --hookfiles=./utils/hooks.js --reporter=html --reporter=apiary",
+    "test-only": "dredd payment-intents-2-0.json http://127.0.0.1:5000 --only=\"$TEST_API\" --hookfiles=./utils/hooks.js --reporter=html --reporter=apiary"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "dredd": "12.1.0"
   }
 }

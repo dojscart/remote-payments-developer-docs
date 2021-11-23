@@ -101,7 +101,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           }
         ],
         "responses": {
@@ -153,7 +154,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           }
         ],
         "responses": {
@@ -204,7 +206,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           }
         ],
         "responses": {
@@ -251,7 +254,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           }
         ],
         "responses": {
@@ -363,7 +367,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           },
           {
             "name": "Content-Type",
@@ -439,7 +444,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           },
           {
             "name": "Content-Type",
@@ -515,7 +521,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           },
           {
             "name": "Content-Type",
@@ -588,7 +595,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           },
           {
             "name": "idempotencyKey",
@@ -661,7 +669,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the refund."
+            "description": "Unique identifier for the refund.",
+            "x-example": "rf_1234"
           }
         ],
         "responses": {
@@ -708,7 +717,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           }
         ],
         "responses": {
@@ -765,7 +775,8 @@
             "in": "path",
             "required": true,
             "type": "string",
-            "description": "Unique identifier for the payment intent."
+            "description": "Unique identifier for the payment intent.",
+            "x-example": "pi_11111111111111111"
           },
           {
             "name": "Content-Type",

@@ -1,0 +1,13 @@
+export TEST_API="Payment intents > /api/payment-intents > PaymentIntents_CreatePaymentIntent > 200 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/{paymentIntentId} > PaymentIntents_Delete > 204 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/{paymentIntentId}/refresh-token > PaymentIntents_RefreshPaymentIntentToken > 200 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/{paymentIntentId}/status > PaymentIntents_GetPaymentIntentStatus > 200 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/search > PaymentIntents_Search > 200 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/{paymentIntentId}/tips-amount > PaymentIntents_SetTipsAmount > 200 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/{paymentIntentId}/amount > PaymentIntents_SetCustomAmount > 200 > application/json" && npm run test-only
+export TEST_API="Payment intents > /api/payment-intents/{paymentIntentId}/receipt > Receipt_Create > 204 > application/json" && npm run test-only
+export TEST_API="Refunds > /api/payment-intents/{paymentIntentId}/refunds > Refunds_Create > 200 > application/json" && npm run test-only
+export TEST_API="Refunds > /api/payment-intents/refunds/{refundId} > PaymentIntents_GetRefundById > 200 > application/json" && npm run test-only
+export TEST_API="Reversal > /api/payment-intents/{paymentIntentId}/reversal > Reversal_Create > 200 > application/json" && npm run test-only
+export TEST_API="Captures > /api/payment-intents/{paymentIntentId}/captures > Captures_Create > 200 > application/json" && npm run test-only
+
