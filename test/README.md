@@ -27,6 +27,8 @@ npm install
 
 ## Optional - run payments intent service locally
 
+Currently the tests run against the a local running version of payment intents, this is temporary until security credentials can be set up to hit the staging endpoints. Follow the set up process for the payment intents api and run on http://localhost:5000
+
 ```
 git clone git@github.com:Dojo-Engineering/remote-payments-payment-intents.git
 cd /remote-payments-payment-intent
@@ -37,11 +39,14 @@ dotnet run --project Dojo.RemotePayments.PaymentIntents
 
 All endpoints:
 ```
+cd /remote-payments-developer-docs/test
 npm test
 ```
 
 Single endpoint:
 ```
+cd /remote-payments-developer-docs/test
+
 export TEST_API="Api Name" && npm run test-only
 e.g export TEST_API="Payment intents > /api/payment-intents > PaymentIntents_CreatePaymentIntent > 200 > application/json" && npm run test-only
 ```
