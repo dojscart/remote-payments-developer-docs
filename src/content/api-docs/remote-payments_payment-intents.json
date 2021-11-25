@@ -1431,6 +1431,10 @@
           "showTotal": {
             "type": "boolean",
             "description": "If has the value `true` the total will be showed."
+          },
+          "showReference": {
+            "type": "boolean",
+            "description": "If has the value true the order id will be showed."
           }
         }
       },

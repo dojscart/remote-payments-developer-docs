@@ -4,9 +4,11 @@ import sys
 
 setup = True
 
-docsWithSnippetFile = "/Users/marismirnova/Git/remote-payments-developer-docs/src/content/api-docs/openapi-with-examples.json"
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+docsWithSnippetFile = f"{dir_path}/openapi-with-examples.json"
 snippetFolder = "snippet"
-apiFile = "/Users/marismirnova/Git/remote-payments-developer-docs/src/content/api-docs/remote-payments-internal-gateway-v2.json"
+apiFile = f"{dir_path}/remote-payments_payment-intents.json"
 
 def cleanUp():
     try:
