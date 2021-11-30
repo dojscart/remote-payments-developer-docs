@@ -5,6 +5,8 @@ theme = "ace-documentation"
 pygmentsCodeFences = true
 pygmentsStyle = "monokai"
 
+ignorefiles = [ "api-definitions/.*.md" ]
+
 
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
