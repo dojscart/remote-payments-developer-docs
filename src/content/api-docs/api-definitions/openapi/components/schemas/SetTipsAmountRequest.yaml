@@ -1,0 +1,11 @@
+description: 
+  $ref: ../../../prose/parameters/tipsAmount.md
+type: object
+properties:
+  tipsAmount:
+    oneOf:
+      - $ref: ./Money.yaml
+    description:   
+     $ref: ../../../prose/parameters/tipsAmount.md
+required:
+  - tipsAmount

@@ -1,0 +1,36 @@
+post:
+  tags:
+    - Payment intents
+  operationId: PaymentIntents_Search
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SearchPaymentIntentRequest.yaml
+    required: true
+    x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PagedPaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  parameters: []
+  summary: List all payment intents
+  description: 
+    $ref: ../../prose/endpoints/searchPaymentIntent.md

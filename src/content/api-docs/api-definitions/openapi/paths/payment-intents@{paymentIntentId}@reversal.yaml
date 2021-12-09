@@ -1,0 +1,42 @@
+post:
+  tags:
+    - Reversal
+  summary: Create a reversal
+  description:   
+   $ref: ../../prose/endpoints/createReversal.md
+  operationId: Reversal_Create
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      description:  
+       $ref: ../../prose/parameters/paymentIntentId.md
+      schema:
+        type: string
+      x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CreateReversalResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []

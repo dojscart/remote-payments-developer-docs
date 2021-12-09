@@ -1,0 +1,1 @@
+Cancels a payment intent. The payment intent can be canceled if it's in the `Created` status. After cancellation, the payment intent will change the status to `Canceled` and any operations on the payment intent will fail with an error.

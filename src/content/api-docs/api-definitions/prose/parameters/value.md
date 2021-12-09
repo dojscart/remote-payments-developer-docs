@@ -1,0 +1,1 @@
+The amount in the minor unit, for example "100" for 1.00 GBP.

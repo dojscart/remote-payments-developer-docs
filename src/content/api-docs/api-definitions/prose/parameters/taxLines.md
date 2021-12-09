@@ -1,0 +1,1 @@
+The taxes applied to the items.

@@ -1,0 +1,1 @@
+Creates a refund. Refund allows you to return a payment that has previously been created but not yet refunded. You can refund the full amount or a partial amount.

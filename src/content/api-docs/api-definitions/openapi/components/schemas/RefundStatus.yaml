@@ -1,0 +1,12 @@
+type: string
+title: RefundStatus
+enum:
+  - Created
+  - Successful
+  - Failed
+x-enumNames:
+  - Created
+  - Successful
+  - Failed
+description:   
+ $ref: ../../../prose/parameters/refundStatus.md

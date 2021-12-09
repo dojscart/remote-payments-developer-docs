@@ -1,0 +1,17 @@
+type: object
+description: The capture response object.
+additionalProperties: false
+title: CreateCaptureResponse
+properties:
+  status:
+    $ref: ./CaptureStatus.yaml
+  message:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/message.md
+    nullable: true
+  captureId:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/captureId.md
+    nullable: true

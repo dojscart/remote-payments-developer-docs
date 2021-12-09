@@ -1,0 +1,35 @@
+post:
+  tags:
+    - Payment intents
+  summary: Create a payment intent
+  description:    
+   $ref: ../../prose/endpoints/createPaymentIntent.md
+  operationId: PaymentIntents_CreatePaymentIntent
+  requestBody:
+    x-name: createPaymentIntentRequest
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CreatePaymentIntentRequest.yaml
+    required: true
+    x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []

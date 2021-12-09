@@ -1,0 +1,23 @@
+type: object
+additionalProperties: false
+description:      
+ $ref: ../../../prose/parameters/cursor.md
+properties:
+  limit:
+    type: integer
+    format: int32
+    minimum: 1
+    example: 20
+    default: 50
+    description:     
+     $ref: ../../../prose/parameters/limit.md
+  before:
+    type: string
+    description:      
+     $ref: ../../../prose/parameters/before.md
+    nullable: true
+  after:
+    type: string
+    description:      
+     $ref: ../../../prose/parameters/after.md
+    nullable: true

@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  showTotal:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/showTotal.md
+  showReference:
+    type: boolean
+    description :
+      $ref: ../../../prose/parameters/showReference.md

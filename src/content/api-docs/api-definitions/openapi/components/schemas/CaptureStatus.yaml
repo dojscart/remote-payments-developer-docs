@@ -1,0 +1,12 @@
+title: CaptureStatus
+type: string
+description:   
+ $ref: ../../../prose/parameters/captureStatus.md
+x-enumNames:
+  - Created
+  - Successful
+  - Failed
+enum:
+  - Created
+  - Successful
+  - Failed

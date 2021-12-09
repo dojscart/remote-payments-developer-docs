@@ -1,0 +1,1 @@
+The payment methods that customers can use to pay.

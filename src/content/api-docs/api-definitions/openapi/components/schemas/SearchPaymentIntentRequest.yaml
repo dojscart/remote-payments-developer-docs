@@ -1,0 +1,41 @@
+type: object
+additionalProperties: false
+description: ''
+properties:
+  locationId:
+    type: string
+    minLength: 1
+    description:       
+     $ref: ../../../prose/parameters/locationId.md
+  paymentSource:
+    type: string
+    description:       
+     $ref: ../../../prose/parameters/paymentSource.md
+    nullable: true
+  statuses:
+    type: array
+    description:      
+     $ref: ../../../prose/parameters/statuses.md
+    nullable: true
+    items:
+      $ref: ./PaymentIntentStatus.yaml
+  startDate:
+    type: string
+    format: date-time
+    description:     
+     $ref: ../../../prose/parameters/startDate.md
+    nullable: true
+  endDate:
+    type: string
+    format: date-time
+    description:     
+     $ref: ../../../prose/parameters/endDate.md
+    nullable: true
+  cursor:
+    nullable: true
+    oneOf:
+      - $ref: ./Cursor.yaml
+    description:     
+     $ref: ../../../prose/parameters/cursor.md
+required:
+  - locationId

@@ -1,0 +1,11 @@
+type: string
+title: ActionType
+x-enumNames:
+  - OpenLink
+  - DownloadFile
+description: 
+ $ref: ../../../prose/parameters/actionType.md
+enum:
+  - DownloadFile
+  - OpenLink
+default: OpenLink

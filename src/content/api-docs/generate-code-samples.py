@@ -8,7 +8,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 docsWithSnippetFile = f"{dir_path}/openapi-with-examples.json"
 snippetFolder = "snippet"
-apiFile = f"{dir_path}/remote-payments_payment-intents.json"
+apiFile = f"{dir_path}/api-definitions/bundled.yaml"
 
 def cleanUp():
     try:
@@ -21,7 +21,7 @@ def addSnippets():
     if setup: subprocess.run(f"mkdir {snippetFolder}", shell=True)
     if setup: subprocess.run(f"cd {snippetFolder} && npm install snippet-enricher-cli", shell=True)
     #subprocess.run(f"./{snippetFolder}/node_modules/.bin/snippet-enricher-cli --input={apiFile}", shell=True)
-    subprocess.run(f"npx snippet-enricher-cli --input={apiFile} --target go_native -t java -t c ", shell=True, stdout=docsWithSnippet)
+    subprocess.run(f"npx snippet-enricher-cli --input={apiFile} --targets='python_python3,node_request,shell_curl,php_curl,csharp_restsharp,python_requests,javascript_jquery,javascript_xhr,swift_nsurlsession,ruby_native,go_native,c_libcurl' ", shell=True, stdout=docsWithSnippet)
     return docsWithSnippet
 
 def main():

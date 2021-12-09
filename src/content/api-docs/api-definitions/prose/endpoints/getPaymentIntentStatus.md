@@ -1,0 +1,1 @@
+Retrieves the status of a previously created payment intent.

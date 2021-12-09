@@ -1,0 +1,27 @@
+type: object
+title: ActionLink
+additionalProperties: false
+description:  
+ $ref: ../../../prose/parameters/actionLink.md
+properties:
+  url:
+    type: string
+    format: uri
+    minLength: 1
+    description: 
+      $ref: ../../../prose/parameters/url.md
+  action:
+    $ref: ./ActionType.yaml
+  label:
+    type: string
+    minLength: 1
+    description: 
+      $ref: ../../../prose/parameters/label.md
+  fileName:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/fileName.md
+    nullable: true
+required:
+  - url
+  - label

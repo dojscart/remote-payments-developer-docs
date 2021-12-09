@@ -1,0 +1,8 @@
+type: object
+title: PaymentIntentConfigBillingAddress
+additionalProperties: false
+properties:
+  collectionRequired:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/collectionRequired.md

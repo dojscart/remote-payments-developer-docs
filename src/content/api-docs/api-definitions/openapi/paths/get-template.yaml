@@ -1,0 +1,36 @@
+get:
+  tags:
+    - Payment intents, Refunds or Reversal <-- Select one of the tags or add a new one
+  operationId: <-- Fill the preration ID, for example,  PaymentIntents_GetPaymentIntentStatus
+  parameters:
+    - name: paremeterName <-- Fill the name lowerCamelCase
+      in: path
+      required: true <-- Check it 
+      schema:
+        type: string <-- Check the type 
+      description: 
+        $ref:  <-- Add a link to the description, for example,  ../../prose/parameters/paymentIntentId.md 
+      x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref:  <-- Add a link to the response schema, for example ../components/schemas/PaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  description:   
+   $ref:  <-- Add a link to the description, for example, ../../prose/endpoints/getPaymentIntentStatus.md 
+  summary: Retrieve a something <-- Fill the summary

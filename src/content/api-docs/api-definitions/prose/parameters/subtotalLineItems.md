@@ -1,0 +1,1 @@
+The total amount after applying discounts and taxes.

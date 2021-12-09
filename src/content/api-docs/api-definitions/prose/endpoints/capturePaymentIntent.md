@@ -1,0 +1,1 @@
+Captures a payment intent that has previously been created but not yet refunded or reversed. You can capture the full amount or a partial amount.

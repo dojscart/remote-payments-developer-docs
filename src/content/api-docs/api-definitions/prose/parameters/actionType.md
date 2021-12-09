@@ -1,0 +1,1 @@
+The type of action associated with the link.

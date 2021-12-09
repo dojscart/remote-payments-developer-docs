@@ -1,0 +1,25 @@
+type: object
+title: ItemLine
+additionalProperties: false
+description: The item line object.
+properties:
+  id:
+    type: string
+    description:  
+     $ref: ../../../prose/parameters/id.md
+    nullable: true
+  quantity:
+    type: integer
+    format: int32
+    description:   
+     $ref: ../../../prose/parameters/quantity.md
+  caption:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/caption.md
+    nullable: true
+  amountTotal:
+    oneOf:
+      - $ref: ./Money.yaml
+    description:     
+     $ref: ../../../prose/parameters/amountTotal.md

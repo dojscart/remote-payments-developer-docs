@@ -1,0 +1,17 @@
+type: object
+description: The create refund response object.
+additionalProperties: false
+title: CreateRefundResponse
+properties:
+  status:
+    $ref: ./RefundStatus.yaml
+  message:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/message.md
+    nullable: true
+  refundId:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/refundId.md
+    nullable: true

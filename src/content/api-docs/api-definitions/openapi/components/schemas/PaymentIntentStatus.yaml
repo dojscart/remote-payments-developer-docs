@@ -1,0 +1,19 @@
+type: string
+description:   
+ $ref: ../../../prose/parameters/paymentIntentStatus.md
+x-enumNames:
+  - Created
+  - Authorized
+  - Captured
+  - Reversed
+  - Refunded
+  - Canceled
+title: PaymentIntentStatus
+x-examples: {}
+enum:
+  - Created
+  - Authorized
+  - Captured
+  - Reversed
+  - Refunded
+  - Canceled

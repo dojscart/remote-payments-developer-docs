@@ -1,0 +1,50 @@
+post:
+  tags:
+    - Payment intents
+  summary: Send a receipt
+  description:  
+   $ref: ../../prose/endpoints/sendReceipt.md
+  operationId: Receipt_Create
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      description:  
+       $ref: ../../prose/parameters/paymentIntentId.md
+      schema:
+        type: string
+      x-position: 1
+  responses:
+    '204':
+      description: Payment receipt requested successfully.
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/EmailReceiptRequest.yaml
+    description: ''
+parameters:
+  - schema:
+      type: string
+    name: paymentIntentId
+    in: path
+    required: true

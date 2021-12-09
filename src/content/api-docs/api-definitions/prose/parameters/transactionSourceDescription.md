@@ -1,0 +1,1 @@
+Information regarding the transaction source type.

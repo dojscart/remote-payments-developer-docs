@@ -1,0 +1,25 @@
+type: object
+additionalProperties: false
+properties:
+  paymentIntentId:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/paymentIntentId.md
+    nullable: true
+  refundId:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/refundId.md
+    nullable: true
+  refundReason:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/refundReason.md
+    nullable: true
+  notes:
+    type: string
+    description:     
+     $ref: ../../../prose/parameters/notes.md
+    nullable: true
+description: The refund response object.
+title: RefundResponse

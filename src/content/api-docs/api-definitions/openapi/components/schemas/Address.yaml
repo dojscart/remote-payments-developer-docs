@@ -1,0 +1,71 @@
+type: object
+additionalProperties: false
+x-examples:
+  example:
+    value:
+      address1: The Brunel Building
+      address2: 2 Canalside Walk
+      address3: ''
+      address4: ''
+      city: London
+      state: ''
+      postcode: W2 1DG
+      countryCode: GB
+      locality: ''
+      county: UK
+description:  
+  $ref: ../../../prose/parameters/address.md
+properties:
+  address1:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/address1.md
+    nullable: true
+  address2:
+    type: string
+    description:  
+     $ref: ../../../prose/parameters/address2.md
+    nullable: true
+  address3:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/address3.md
+    nullable: true
+  address4:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/address4.md
+    nullable: true
+  city:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/city.md
+    example: London
+    nullable: true
+  state:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/state.md
+    nullable: true
+  postcode:
+    type: string
+    description:
+      $ref: ../../../prose/parameters/postcode.md
+    nullable: true
+  countryCode:
+    type: string
+    description:
+      $ref: ../../../prose/parameters/countryCode.md
+    example: GB
+    nullable: true
+  locality:
+    type: string
+    description:
+     $ref: ../../../prose/parameters/locality.md
+    nullable: true
+  county:
+    type: string
+    description:
+      $ref: ../../../prose/parameters/county.md
+    nullable: true
+title: Address

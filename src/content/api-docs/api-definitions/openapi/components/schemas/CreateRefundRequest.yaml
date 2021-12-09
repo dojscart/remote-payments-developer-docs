@@ -1,0 +1,31 @@
+type: object
+description: The create refund request object.
+example:
+  amount: 100
+  refundReason: Duplicate transaction
+  notes: notes
+additionalProperties: false
+title: CreateRefundRequest
+properties:
+  amount:
+    type: integer
+    description:     
+     $ref: ../../../prose/parameters/amountRefund.md
+    format: int64
+  previousTransactionId:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/previousTransactionId.md
+    nullable: true
+  refundReason:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/refundReason.md
+    nullable: true
+  notes:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/notes.md
+    nullable: true
+required:
+  - amount

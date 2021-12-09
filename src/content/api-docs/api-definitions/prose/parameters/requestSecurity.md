@@ -1,0 +1,1 @@
+Customer's device information.

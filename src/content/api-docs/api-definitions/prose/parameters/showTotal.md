@@ -1,0 +1,1 @@
+If has the value `true` the total will be showed.

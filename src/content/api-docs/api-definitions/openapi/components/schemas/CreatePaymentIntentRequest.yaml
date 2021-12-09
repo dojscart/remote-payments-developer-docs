@@ -1,0 +1,94 @@
+type: object
+description: The payment intent request object.
+additionalProperties: false
+title: CreatePaymentIntentRequest
+properties:
+  captureMode:
+    description:   
+     $ref: ../../../prose/parameters/captureMode.md
+    oneOf:
+      - $ref: ./CaptureMode.yaml
+  amount:
+    description:    
+     $ref: ../../../prose/parameters/amount.md
+    oneOf:
+      - $ref: ./Money.yaml
+  reference:
+    type: string
+    minLength: 1
+    description:    
+     $ref: ../../../prose/parameters/reference.md
+  description:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/description.md
+    nullable: true
+  customer:
+    nullable: true
+    oneOf:
+      - $ref: ./Customer.yaml
+    description:     
+     $ref: ../../../prose/parameters/customer.md
+  billingAddress:
+    nullable: true
+    oneOf:
+      - $ref: ./Address.yaml
+    description:      
+     $ref: ../../../prose/parameters/billingAddress.md
+  shippingDetails:
+    nullable: true
+    oneOf:
+      - $ref: ./ShippingDetails.yaml
+    description:      
+     $ref: ../../../prose/parameters/shippingDetails.md
+  transactionSource:
+    nullable: true
+    oneOf:
+      - $ref: ./TransactionSource.yaml
+    description:      
+     $ref: ../../../prose/parameters/transactionSourceDescription.md
+  config:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentIntentConfig.yaml
+    description:      
+     $ref: ../../../prose/parameters/config.md
+  requestSecurity:
+    oneOf:
+      - $ref: ./RequestSecurity.yaml
+    description:       
+     $ref: ../../../prose/parameters/requestSecurity.md
+  itemLines:
+    type: array
+    description:        
+     $ref: ../../../prose/parameters/itemLines.md
+    nullable: true
+    items:
+      $ref: ./ItemLine.yaml
+  taxLines:
+    type: array
+    description:        
+     $ref: ../../../prose/parameters/taxLines.md
+    nullable: true
+    items:
+      $ref: ./TaxLine.yaml
+  actionLink:
+    oneOf:
+      - $ref: ./ActionLink.yaml
+    description:   
+      $ref: ../../../prose/parameters/actionLink.md
+  paymentSource:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/paymentSource.md
+    nullable: true
+  metadata:
+    type: object
+    additionalProperties:
+      type: string
+    description:     
+     $ref: ../../../prose/parameters/metadata.md
+    nullable: true
+required:
+  - amount
+  - reference

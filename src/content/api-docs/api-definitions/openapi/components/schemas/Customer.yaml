@@ -1,0 +1,16 @@
+type: object
+additionalProperties: false
+properties:
+  emailAddress:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/emailAddress.md
+    nullable: true
+  phoneNumber:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/phoneNumber.md
+    nullable: true
+description:   
+ $ref: ../../../prose/parameters/customer.md
+title: Customer

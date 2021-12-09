@@ -1,0 +1,1 @@
+The maximum number of results to be returned in a single page.

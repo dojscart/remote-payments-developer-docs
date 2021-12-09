@@ -1,0 +1,8 @@
+type: string
+description:
+   $ref: ../../../prose/parameters/transactionSource.md
+x-enumNames:
+  - MOTO
+enum:
+  - MOTO
+title: TransactionSource

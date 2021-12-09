@@ -1,0 +1,50 @@
+post:
+  tags:
+    - Payment intents
+  operationId: PaymentIntents_SetTipsAmount
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      description: 
+        $ref: ../../prose/parameters/paymentIntentId.md
+      schema:
+        type: string
+      x-position: 1
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SetTipsAmountRequest.yaml
+    required: true
+    x-position: 2
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '405':
+      description: Method not allowed
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  summary: Change tips amount
+  description:
+    $ref: ../../prose/endpoints/setTipsAmount.md

@@ -1,0 +1,12 @@
+type: object
+additionalProperties: false
+title: PaymentConfigDetails
+properties:
+  customAmountAllowed:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/customAmountAllowed.md
+  tipsAllowed:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/tipsAllowed.md

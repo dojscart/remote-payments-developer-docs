@@ -1,0 +1,36 @@
+post:
+  tags:
+    - Payment intents
+  operationId: PaymentIntents_RefreshPaymentIntentToken
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      schema:
+        type: string
+      description:  
+       $ref: ../../prose/parameters/paymentIntentId.md
+      x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  summary: Update a token
+  description:   
+   $ref: ../../prose/endpoints/refreshPaymentIntentToken.md

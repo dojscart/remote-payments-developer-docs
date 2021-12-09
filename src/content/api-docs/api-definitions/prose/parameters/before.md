@@ -1,0 +1,1 @@
+A cursor for use in pagination for the previous page. `before` and `after` are mutually exclusive - only one of these may be used.

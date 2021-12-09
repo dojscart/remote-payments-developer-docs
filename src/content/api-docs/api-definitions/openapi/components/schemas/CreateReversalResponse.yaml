@@ -1,0 +1,17 @@
+type: object
+description: The create reversal response object.
+additionalProperties: false
+title: CreateReversalResponse
+properties:
+  status:
+    $ref: ./ReversalStatus.yaml
+  message:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/message.md
+    nullable: true
+  reversalId:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/reversalId.md
+    nullable: true

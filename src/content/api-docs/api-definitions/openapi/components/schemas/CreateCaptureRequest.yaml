@@ -1,0 +1,12 @@
+type: object
+description: The capture request object.
+additionalProperties: false
+title: CreateCaptureRequest
+properties:
+  amount:
+    type: integer
+    description:   
+      $ref: ../../../prose/parameters/amountCapture.md
+    format: int64
+required:
+  - amount

@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+description: ''
+properties:
+  amount:
+    oneOf:
+      - $ref: ./Money.yaml
+    description:   
+     $ref: ../../../prose/parameters/amount.md
+required:
+  - amount

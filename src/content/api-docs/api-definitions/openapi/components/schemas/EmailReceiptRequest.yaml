@@ -1,0 +1,12 @@
+title: EmailReceiptRequest
+type: object
+properties:
+  emails:
+    type: array
+    description:   
+     $ref: ../../../prose/parameters/emailReceiptRequest.md
+    items:
+      type: string
+required:
+  - emails
+description: ''

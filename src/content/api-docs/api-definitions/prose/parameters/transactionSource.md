@@ -1,0 +1,1 @@
+`MOTO` if the source of the transaction is mail or phone. Otherwise, this field is null.

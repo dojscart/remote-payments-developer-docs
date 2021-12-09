@@ -1,0 +1,54 @@
+post:
+  tags:
+    - Refunds
+  summary: Create a refund
+  description:   
+   $ref: ../../prose/endpoints/createRefund.md
+  operationId: Refunds_Create
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      description:  
+       $ref: ../../prose/parameters/paymentIntentId.md
+      schema:
+        type: string
+      x-position: 1
+    - name: idempotencyKey
+      x-originalName: idempotencyKey
+      in: header
+      required: true
+      description:  
+        $ref: ../../prose/parameters/idempotencyKey.md
+      schema:
+        type: string
+      x-position: 2
+  requestBody:
+    x-name: createRefundRequest
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CreateRefundRequest.yaml
+    required: true
+    x-position: 3
+    description: ''
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CreateRefundResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []

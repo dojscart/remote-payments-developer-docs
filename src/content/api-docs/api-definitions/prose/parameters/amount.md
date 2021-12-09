@@ -1,0 +1,1 @@
+The amount intended to be collected by this payment intent.

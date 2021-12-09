@@ -1,0 +1,20 @@
+type: object
+title: ShippingDetails
+additionalProperties: false
+description: Details about the shipping.
+properties:
+  name:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/name.md
+    nullable: true
+  deliveryNotes:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/deliveryNotes.md
+    nullable: true
+  address:
+    oneOf:
+      - $ref: ./Address.yaml
+    description:   
+     $ref: ../../../prose/parameters/address.md

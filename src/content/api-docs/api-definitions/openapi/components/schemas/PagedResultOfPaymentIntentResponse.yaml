@@ -1,0 +1,19 @@
+type: object
+additionalProperties: false
+properties:
+  data:
+    type: array
+    nullable: true
+    description: ' '
+    items:
+      $ref: ./PaymentIntentResponse.yaml
+  before:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/before.md
+    nullable: true
+  after:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/after.md
+    nullable: true

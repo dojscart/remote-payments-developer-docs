@@ -1,0 +1,1 @@
+Details about the payment intent configuration.

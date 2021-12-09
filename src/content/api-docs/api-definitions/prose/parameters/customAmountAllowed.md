@@ -1,0 +1,1 @@
+If has the value `true` the amount of the payment intent can be changed.

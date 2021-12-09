@@ -348,6 +348,13 @@ common-*.tgz
 Chart.lock
 **/*.g.cs
 
+# Local linters (Vale)
+
+/src/styles/
+/src/.vale.ini
+
+.DS_Store
+
 
 **/public/
 snippet

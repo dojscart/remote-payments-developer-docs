@@ -1,0 +1,1 @@
+The list of email addresses to which the receipt should be sent.

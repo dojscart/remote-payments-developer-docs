@@ -1,0 +1,1 @@
+Sends a receipt to the email addresses you specified.

@@ -1,0 +1,10 @@
+type: object
+additionalProperties: false
+title: PaymentIntentConfigUserEmail
+description: ''
+properties:
+  collectionRequired:
+    type: boolean
+    description:    
+     $ref: ../../../prose/parameters/collectionRequired.md
+    default: false

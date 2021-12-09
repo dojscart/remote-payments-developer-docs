@@ -1,0 +1,50 @@
+post:
+  tags:
+    - Captures
+  summary: Captures a payment
+  description: 
+    $ref: ../../prose/endpoints/capturePaymentIntent.md
+  operationId: Captures_Create
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      description: 
+        $ref: ../../prose/parameters/paymentIntentId.md
+      schema:
+        type: string
+      x-position: 1
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/CreateCaptureRequest.yaml
+    required: true
+    x-position: 2
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/CreateCaptureResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []

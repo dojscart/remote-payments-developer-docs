@@ -1,0 +1,12 @@
+type: string
+title: ReversalStatus
+enum:
+  - Created
+  - Successful
+  - Failed
+x-enumNames:
+  - Created
+  - Successful
+  - Failed
+description:   
+ $ref: ../../../prose/parameters/reversalStatus.md

@@ -1,0 +1,85 @@
+get:
+  tags:
+    - Payment intents
+  operationId: PaymentIntents_Get
+  parameters:
+    - name: paymentIntentId
+      in: path
+      required: true
+      schema:
+        type: string
+      description: 
+        $ref: ../../prose/parameters/paymentIntentId.md
+      x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  description:
+    $ref: ../../prose/endpoints/createPaymentIntent.md
+  summary: Retrieve a payment intent
+delete:
+  tags:
+    - Payment intents
+  operationId: PaymentIntents_Delete
+  parameters:
+    - name: paymentIntentId
+      description: 
+        $ref: ../../prose/parameters/paymentIntentId.md
+      in: path
+      required: true
+      schema:
+        type: string
+      x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/PaymentIntentResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: []
+  summary: Cancel a PaymentIntent
+  description: 
+    $ref: ../../prose/endpoints/createPaymentIntent.md
+    

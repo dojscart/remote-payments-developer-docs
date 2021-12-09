@@ -1,0 +1,25 @@
+type: object
+title: TaxLine
+additionalProperties: false
+description: The tax line object.
+properties:
+  id:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/id.md
+    nullable: true
+  caption:
+    type: string
+    description:     
+     $ref: ../../../prose/parameters/captionTax.md
+    nullable: true
+  subCaption:
+    type: string
+    description:     
+     $ref: ../../../prose/parameters/subCaption.md
+    nullable: true
+  amountTotal:
+    oneOf:
+      - $ref: ./Money.yaml
+    description:     
+     $ref: ../../../prose/parameters/amountTotalTax.md

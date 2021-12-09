@@ -1,0 +1,1 @@
+The date that the Connect-e token will expire.

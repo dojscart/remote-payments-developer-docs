@@ -1,0 +1,1 @@
+A cursor for use in pagination. 

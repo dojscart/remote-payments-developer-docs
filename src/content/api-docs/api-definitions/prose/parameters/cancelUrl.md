@@ -1,0 +1,1 @@
+The URL where the customer will be directed to when canceling the payment.

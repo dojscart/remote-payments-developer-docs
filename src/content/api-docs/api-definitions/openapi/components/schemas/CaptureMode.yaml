@@ -1,0 +1,11 @@
+type: string
+title: CaptureMode
+x-enumNames:
+  - Auto
+  - Manual
+enum:
+  - Auto
+  - Manual
+description:   
+  $ref: ../../../prose/parameters/captureMode.md
+default: Auto

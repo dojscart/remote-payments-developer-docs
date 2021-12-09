@@ -1,0 +1,40 @@
+type: object
+additionalProperties: false
+description: The payment details object.
+title: PaymentDetails
+properties:
+  transactionDateTime:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/transactionDateTime.md
+    nullable: true
+  message:
+    type: string
+    description:  
+     $ref: ../../../prose/parameters/message.md
+    nullable: true
+  authCode:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/authCode.md
+    nullable: true
+  cardNumber:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/cardNumber.md
+    nullable: true
+  cardName:
+    type: string
+    description:  
+     $ref: ../../../prose/parameters/cardName.md
+    nullable: true
+  expiryDate:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/expiryDate.md
+    nullable: true
+  cardType:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/cardType.md
+    nullable: true

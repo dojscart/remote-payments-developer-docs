@@ -1,0 +1,8 @@
+type: object
+title: PaymentIntentConfigShippingDetails
+additionalProperties: false
+properties:
+  collectionRequired:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/collectionRequired.md

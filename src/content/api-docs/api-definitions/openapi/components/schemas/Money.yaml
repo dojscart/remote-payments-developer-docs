@@ -1,0 +1,16 @@
+title: Money
+type: object
+properties:
+  value:
+    type: integer
+    description:    
+      $ref: ../../../prose/parameters/value.md
+    format: int64
+  currencyCode:
+    type: string
+    description:    
+     $ref: ../../../prose/parameters/currencyCode.md
+    minLength: 1
+required:
+  - value
+  - currencyCode

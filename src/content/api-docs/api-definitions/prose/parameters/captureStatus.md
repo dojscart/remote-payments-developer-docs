@@ -1,0 +1,1 @@
+Current capture status.

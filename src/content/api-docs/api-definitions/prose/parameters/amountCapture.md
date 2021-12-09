@@ -1,0 +1,1 @@
+The amount to capture. You can capture the full amount or a partial amount.

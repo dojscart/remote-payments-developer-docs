@@ -1,0 +1,1 @@
+Retrieves the details of a payment intent.

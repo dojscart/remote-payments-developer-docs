@@ -1,0 +1,1 @@
+The type of capture for the payment.

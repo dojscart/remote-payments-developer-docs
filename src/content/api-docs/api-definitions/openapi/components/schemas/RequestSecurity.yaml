@@ -1,0 +1,21 @@
+type: object
+additionalProperties: false
+title: RequestSecurity
+description:   
+ $ref: ../../../prose/parameters/requestSecurity.md
+properties:
+  userAgent:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/userAgent.md
+    nullable: true
+  ipAddress:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/ipAddress.md
+    nullable: true
+  device:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/device.md
+    nullable: true

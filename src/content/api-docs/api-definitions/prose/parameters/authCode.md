@@ -1,0 +1,1 @@
+The acquirer authorization code.

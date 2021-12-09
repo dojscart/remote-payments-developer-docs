@@ -1,0 +1,142 @@
+type: object
+additionalProperties: false
+description: The PaymentIntentResponse object.
+title: PaymentIntentResponse
+x-examples: {}
+properties:
+  id:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/paymentIntentId.md
+    nullable: true
+  captureMode:
+    $ref: ./CaptureMode.yaml
+  transactionSource:
+    nullable: true
+    oneOf:
+      - $ref: ./TransactionSource.yaml
+    description:        
+     $ref: ../../../prose/parameters/transactionSourceDescription.md
+  connecteToken:
+    type: string
+    description:        
+     $ref: ../../../prose/parameters/connecteToken.md
+    nullable: true
+  connecteTokenExpirationDate:
+    type: string
+    description:       
+     $ref: ../../../prose/parameters/connecteTokenExpirationDate.md
+    format: date-time
+  paymentDetails:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentDetails.yaml
+    description:      
+     $ref: ../../../prose/parameters/paymentDetails.md
+  status:
+    $ref: ./PaymentIntentStatus.yaml
+  paymentMethods:
+    type: array
+    description:      
+     $ref: ../../../prose/parameters/paymentMethod.md
+    nullable: true
+    items:
+      $ref: ./PaymentMethod.yaml
+  amount:
+    oneOf:
+      - $ref: ./Money.yaml
+    description:            
+     $ref: ../../../prose/parameters/amount.md
+  tipsAmount:
+    nullable: true
+    oneOf:
+      - $ref: ./Money.yaml
+    description:           
+     $ref: ../../../prose/parameters/tipsAmount.md
+  requestedAmount:
+    nullable: true
+    oneOf:
+      - $ref: ./Money.yaml
+    description:          
+     $ref: ../../../prose/parameters/requestedAmount.md
+  totalAmount:
+    nullable: true
+    oneOf:
+      - $ref: ./Money.yaml
+    description:         
+     $ref: ../../../prose/parameters/subtotalLineItems.md
+  customer:
+    nullable: true
+    oneOf:
+      - $ref: ./Customer.yaml
+    description:        
+     $ref: ../../../prose/parameters/customer.md
+  requestSecurity:
+    oneOf:
+      - $ref: ./RequestSecurity.yaml
+    description:       
+     $ref: ../../../prose/parameters/requestSecurity.md
+  billingAddress:
+    nullable: true
+    oneOf:
+      - $ref: ./Address.yaml
+    description:      
+     $ref: ../../../prose/parameters/billingAddress.md
+  shippingDetails:
+    nullable: true
+    oneOf:
+      - $ref: ./ShippingDetails.yaml
+    description:      
+     $ref: ../../../prose/parameters/shippingDetails.md
+  reference:
+    type: string
+    description:     
+     $ref: ../../../prose/parameters/reference.md
+    nullable: true
+  description:
+    type: string
+    description:     
+     $ref: ../../../prose/parameters/description.md
+    nullable: true
+  subtotalLineItems:
+    oneOf:
+      - $ref: ./Money.yaml
+    description:     
+     $ref: ../../../prose/parameters/subtotalLineItems.md
+  itemLines:
+    type: array
+    description:    
+     $ref: ../../../prose/parameters/itemLines.md
+    nullable: true
+    items:
+      $ref: ./ItemLine.yaml
+  taxLines:
+    type: array
+    description:   
+     $ref: ../../../prose/parameters/taxLines.md
+    nullable: true
+    items:
+      $ref: ./TaxLine.yaml
+  actionLink:
+    oneOf:
+      - $ref: ./ActionLink.yaml
+    description:   
+     $ref: ../../../prose/parameters/actionLink.md
+  config:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentIntentConfig.yaml
+    description:  
+     $ref: ../../../prose/parameters/config.md
+  paymentSource:
+    type: string
+    description: 
+      $ref: ../../../prose/parameters/paymentSource.md
+    nullable: true
+  metadata:
+    type: object
+    additionalProperties:
+      type: string
+    description:
+       $ref: ../../../prose/parameters/metadata.md
+    nullable: true

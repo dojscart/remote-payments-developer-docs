@@ -1,0 +1,1 @@
+A set of key-value pairs that you can use for storing additional information.

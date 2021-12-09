@@ -1,0 +1,51 @@
+type: object
+additionalProperties: false
+description: Details about the payment intent configurations.
+title: PaymentIntentConfig
+properties:
+  title:
+    type: string
+    description:  
+     $ref: ../../../prose/parameters/title.md
+    nullable: true
+  redirectUrl:
+    type: string
+    format: uri
+    description:   
+     $ref: ../../../prose/parameters/redirectUrl.md
+    nullable: true
+  cancelUrl:
+    type: string
+    format: uri
+    description:   
+     $ref: ../../../prose/parameters/cancelUrl.md
+    nullable: true
+  customerEmail:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentIntentConfigUserEmail.yaml
+    description:   
+     $ref: ../../../prose/parameters/customerEmail.md
+  details:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentIntentConfigDetails.yaml
+    description: ' '
+  billingAddress:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentIntentConfigBillingAddress.yaml
+    description:   
+     $ref: ../../../prose/parameters/billingAddressConfig.md
+  shippingDetails:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentIntentConfigShippingDetails.yaml
+    description:   
+     $ref: ../../../prose/parameters/shippingDetailsConfig.md
+  payment:
+    nullable: true
+    oneOf:
+      - $ref: ./PaymentConfigDetails.yaml
+    description:   
+     $ref: ../../../prose/parameters/payment.md
