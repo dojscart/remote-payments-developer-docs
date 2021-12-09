@@ -1,4 +1,14 @@
 steps:
+- name: 'gcr.io/cloud-builders/git'
+  entrypoint: '/bin/sh'
+  args:
+  - '-c'
+  - |
+    THEME_URL=$(git config -f .gitmodules --get-regexp '^submodule\..*\.url$' | awk '{ print $2 }')
+    THEME_DIR=$(git config -f .gitmodules --get-regexp '^submodule\..*\.path$' | awk '{ print $2 }')
+    rm -rf themes
+    git clone $$THEME_URL $$THEME_DIR
+
 - name: 'gcr.io/cloud-builders/gsutil'
   id: "nexus-nuget-config"
   args: ["cp", "gs://firefly-devops-2018-configuration/NuGet.config", "."]
