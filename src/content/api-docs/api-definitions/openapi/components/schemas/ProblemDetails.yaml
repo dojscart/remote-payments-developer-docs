@@ -24,6 +24,3 @@ properties:
     type: object
     additionalProperties: {}
     nullable: true
-    properties:
-      '':
-        type: string

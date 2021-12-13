@@ -36,12 +36,12 @@ info:
 
     |402| Request Failed | Over plan quota on this endpoint. |
 
-    |404| Not found | The resource does not exist. |
+    |404| Not found | The resource doesn't exist. |
 
-    |405| Method Not Allowed| The used request method is not supported by that
-    resource, e.g. using a POST on a resource that requires a GET.
+    |405| Method Not Allowed| The used request method isn't supported by that
+    resource, for example using a POST on a resource that requires a GET.
 
-    |409| Conflict | The request could not be completed because it conflicted
+    |409| Conflict | The request couldn't be completed because it conflicted
     with another request or the server's configuration. |
 
     |50X| Internal Server Error | An error occurred with our API.|
@@ -105,7 +105,7 @@ info:
 
     When we make [breaking
     changes](../development-resources/versioning-overview/#breaking-changes) to
-    the API, we release new dated versions. 
+    the API, we release new dated versions.
 
 
     The current version is 2021-10-22. Check the last updates out in the
@@ -617,10 +617,7 @@ paths:
           x-originalName: idempotencyKey
           in: header
           required: true
-          description: >-
-            An optional idempotency key to recognize subsequent retries of the
-            same request. How you generate the idempotency key is up to you.
-            Must be unique for each new refund for the payment intent.
+          description: ' An optional idempotency key to recognize subsequent retries of the same request. How you generate the idempotency key is up to you. Must be unique for each new refund for the payment intent.'
           schema:
             type: string
           x-position: 2
@@ -1021,7 +1018,7 @@ components:
         amountTotal:
           oneOf:
             - $ref: '#/components/schemas/Money'
-          description: Total amout of taxes.
+          description: Total amount of taxes.
     ActionType:
       type: string
       title: ActionType
@@ -1353,9 +1350,6 @@ components:
           type: object
           additionalProperties: {}
           nullable: true
-          properties:
-            '':
-              type: string
     CreateCaptureRequest:
       type: object
       description: The capture request object.
