@@ -273,8 +273,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/ProblemDetails'
       security: []
-      summary: Cancel a PaymentIntent
-      description: Creates a payment intent.
+      summary: Cancel a payment intent
+      description: >-
+        Cancels a payment intent. The payment intent can be canceled if it's in
+        the `Created` status. After cancellation, the payment intent will change
+        the status to `Canceled` and any operations on the payment intent will
+        fail with an error.
   /payment-intents/{paymentIntentId}/captures:
     post:
       tags:

@@ -79,7 +79,7 @@ delete:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
   security: []
-  summary: Cancel a PaymentIntent
+  summary: Cancel a payment intent
   description: 
-    $ref: ../../prose/endpoints/createPaymentIntent.md
+    $ref: ../../prose/endpoints/cancelPaymentIntent.md
     
