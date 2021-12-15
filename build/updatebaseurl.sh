@@ -54,5 +54,7 @@ sed -i "1irelativeURLs = true" $filename
 sed -i "1icanonifyURLs = true" $filename
 sed -i "1ibaseURL = \"https://$devHostname/$DEV_ENV/\"" $filename
 
+echo "Dumping $filename"
+echo "*****************"
 cat $filename
 
