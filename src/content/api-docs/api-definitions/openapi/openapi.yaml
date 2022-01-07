@@ -2,7 +2,7 @@ x-generator: NSwag v13.12.1.0 (NJsonSchema v10.4.6.0 (Newtonsoft.Json v12.0.0.0)
 openapi: 3.0.0
 info:
   title: Payment Service
-  version: 2022-01-03
+  version: 2.0.0
   description:
     $ref: ../prose/info.md
   termsOfService: https://dojo.tech/legal/
@@ -67,7 +67,4 @@ paths:
   /payment-intents/{paymentIntentId}/reversal:
     $ref: paths/payment-intents@{paymentIntentId}@reversal.yaml
 components:
-  securitySchemes:
-    BasicAuth: 
-      scheme: "basic"
-      type: "http"
+  securitySchemes: {}

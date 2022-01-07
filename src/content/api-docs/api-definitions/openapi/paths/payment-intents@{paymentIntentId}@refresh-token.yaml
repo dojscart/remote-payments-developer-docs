@@ -3,15 +3,6 @@ post:
     - Payment intents
   operationId: PaymentIntents_RefreshPaymentIntentToken
   parameters:
-    - name: version
-      in: header
-      required: true
-      schema: 
-        type: string 
-        format: date
-      example: '2022-01-03'
-      description:
-        $ref: ../../prose/parameters/version.md
     - name: paymentIntentId
       in: path
       required: true
@@ -39,8 +30,7 @@ post:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security:
-    - BasicAuth: []
+  security: []
   summary: Update a token
   description:   
    $ref: ../../prose/endpoints/refreshPaymentIntentToken.md

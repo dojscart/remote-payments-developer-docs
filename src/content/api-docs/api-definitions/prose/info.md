@@ -3,30 +3,9 @@
 The Dojo API is RESTful. It returns HTTP response codes to indicate errors. It also
 accepts and returns JSON in the HTTP body.
 
-## Base URLs
+## Authentication
 
-Use the following base URLs when making requests to the APIs:
-
-| Environment  | URL |
-|---------|----------------|
-|Testing| https://api.sandbox.dojo.tech/ |
-|Production|  https://api.dojo.tech/ |
-
-## Looking for no-code solutions?
-
-TBA
-
-# Authentication
-
-The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). Your API key must be included in the header of all requests made to the API. API requests without authentication will fail.
-
-You can use the same keys for testing and production.
-
-You can generate new API keys or find your existing ones in the [Dojo Dashboard](https://account.dojo.tech/login?redirectTo=%2Ftransactions).
-
-<SecurityDefinitions />
-
-# HTTP Responses
+## HTTP Responses
 
 The API returns HTTP responses on each request to indicate the success or otherwise of API requests. The various HTTP status codes we might return are listed below.
 
@@ -41,11 +20,11 @@ The API returns HTTP responses on each request to indicate the success or otherw
 |409| Conflict | The request couldn't be completed because it conflicted with another request or the server's configuration. |
 |50X| Internal Server Error | An error occurred with our API.|
 
-# Errors
+## Errors
 
 Dojo follows the error response format proposed in [RFC 7807](https://tools.ietf.org/html/rfc7807) also known as Problem Details for HTTP APIs. All errors are returned in the form of JSON.
 
-## Error Schema
+### Error Schema
 
 In case of an error, the response object contains the following fields:
 
@@ -73,15 +52,15 @@ The following example shows a possible error response:
 }
 ```
 
-# Versioning
+## Versioning
 
 Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls.
 
 When we make [breaking changes](../development-resources/versioning-overview/#breaking-changes) to the API, we release new dated versions.
 
-The current version is 2022-01-03. Check the last updates out in the [changelog](../development-resources/versioning-overview/#changelog).
+The current version is 2021-10-22. Check the last updates out in the [changelog](../development-resources/versioning-overview/#changelog).
 
-# Postman collection
+## Postman collection
 
 You can run the API collection in Postman:
 

@@ -3,15 +3,6 @@ get:
     - Payment intents
   operationId: PaymentIntents_GetPaymentIntentStatus
   parameters:
-    - name: version
-      in: header
-      required: true
-      schema: 
-        type: string 
-        format: date
-      example: '2022-01-03'
-      description:
-       $ref: ../../prose/parameters/version.md
     - name: paymentIntentId
       in: path
       required: true
@@ -39,8 +30,7 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security: 
-    - BasicAuth: []
+  security: []
   description:   
    $ref: ../../prose/endpoints/getPaymentIntentStatus.md
   summary: Retrieve a status

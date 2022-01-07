@@ -1,1 +1,0 @@
-API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. 

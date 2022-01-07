@@ -11,15 +11,6 @@ get:
       description: 
         $ref: ../../prose/parameters/paymentIntentId.md
       x-position: 1
-    - name: version
-      in: header
-      required: true
-      schema: 
-        type: string 
-        format: date
-      example: '2022-01-03'
-      description:
-        $ref: ../../prose/parameters/version.md
   responses:
     '200':
       description: OK
@@ -45,8 +36,7 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security:
-     - BasicAuth: []
+  security: []
   description:
     $ref: ../../prose/endpoints/createPaymentIntent.md
   summary: Retrieve a payment intent
@@ -55,15 +45,6 @@ delete:
     - Payment intents
   operationId: PaymentIntents_Delete
   parameters:
-    - name: version
-      in: header
-      required: true
-      schema: 
-        type: string 
-        format: date
-      example: '2022-01-03'
-      description:
-        $ref: ../../prose/parameters/version.md
     - name: paymentIntentId
       description: 
         $ref: ../../prose/parameters/paymentIntentId.md
@@ -97,8 +78,7 @@ delete:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security:
-      - BasicAuth: []
+  security: []
   summary: Cancel a payment intent
   description: 
     $ref: ../../prose/endpoints/cancelPaymentIntent.md
