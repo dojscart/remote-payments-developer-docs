@@ -2,6 +2,16 @@ post:
   tags:
     - Payment intents, Refunds or Reversal <-- Select one of the tags or add a new one
   summary: Create a something <-- Fill the summary
+  parameters: 
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
   description:    
    $ref: <-- Add a link to the description, for example,  ../../prose/endpoints/createPaymentIntent.md 
    x-position: 1
@@ -33,4 +43,5 @@ post:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security: []
+  security:
+    - BasicAuth: []

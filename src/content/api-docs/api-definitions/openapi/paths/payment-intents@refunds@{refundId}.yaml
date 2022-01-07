@@ -3,6 +3,15 @@ get:
     - Refunds
   operationId: PaymentIntents_GetRefundById
   parameters:
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
     - name: refundId
       in: path
       required: true
@@ -30,7 +39,8 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security: []
+  security: 
+    - BasicAuth: []
   description:    
    $ref: ../../prose/endpoints/getRefund.md
   summary: Retrieve a refund

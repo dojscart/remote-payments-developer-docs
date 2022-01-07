@@ -3,6 +3,15 @@ get:
     - Payment intents, Refunds or Reversal <-- Select one of the tags or add a new one
   operationId: <-- Fill the preration ID, for example,  PaymentIntents_GetPaymentIntentStatus
   parameters:
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
     - name: paremeterName <-- Fill the name lowerCamelCase
       in: path
       required: true <-- Check it 
@@ -30,7 +39,8 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security: []
+  security:
+    - BasicAuth: []
   description:   
    $ref:  <-- Add a link to the description, for example, ../../prose/endpoints/getPaymentIntentStatus.md 
   summary: Retrieve a something <-- Fill the summary
