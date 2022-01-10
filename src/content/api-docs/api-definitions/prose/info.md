@@ -49,13 +49,14 @@ Dojo follows the error response format proposed in [RFC 7807](https://tools.ietf
 
 In case of an error, the response object contains the following fields:
 
-| Field | Type| Required| Description |
-|---------|----------------|----------------|---------------|
-|errors| Object || Returns an explanation of errors.|
-|type| String || Returns the type of error that was encountered.|
-|title| String|| Returns a short summary of errors. |
-|status| Integer | | Returns the HTTP status code.|
-|traceId| String ||The unique identifier of the failing request.|
+| Field | Type|  Description |
+|---------|----------------|---------------|
+|errors| object | A human-readable explanation of errors.|
+|type| string | A URI reference [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) that identifies the problem type.|
+|title| string| A short, human-readable summary of the error. |
+|status| integer  | The [HTTP status code](#section/HTTP-Responses). |
+|traceId| string | The unique identifier of the failing request.|
+|detail| string | A human-readable message giving more details about the error. Not always present.|
 
 The following example shows a possible error response:
 
@@ -69,7 +70,8 @@ The following example shows a possible error response:
     "type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
     "title": "One or more validation errors occurred.",
     "status": 400,
-    "traceId": "00-a405f077df056a498323ffbcec05923f-aa63e6f4dbbc734a-01"
+    "traceId": "00-a405f077df056a498323ffbcec05923f-aa63e6f4dbbc734a-01",
+    
 }
 ```
 

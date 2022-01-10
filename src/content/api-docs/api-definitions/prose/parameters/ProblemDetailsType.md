@@ -1,0 +1,1 @@
+A URI reference [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) that identifies the problem type.
