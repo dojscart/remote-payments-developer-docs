@@ -29,8 +29,20 @@ post:
         application/json:
           schema:
             $ref: ../components/schemas/ProblemDetails.yaml
-  security: []
-  parameters: []
+  security: [
+    BasicAuth: [
+      ]
+    ]
+  parameters: 
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
   summary: List all payment intents
   description: 
     $ref: ../../prose/endpoints/searchPaymentIntent.md
