@@ -1,31 +1,26 @@
 type: object
+additionalProperties:
+  nullable: true
 title: ProblemDetails
 description: ''
 properties:
   type:
     type: string
-    description: 
-      $ref: ../../../prose/parameters/ProblemDetailsType.md
+    nullable: true
   title:
     type: string
-    description: 
-      $ref: ../../../prose/parameters/ProblemDetailsTitle.md
+    nullable: true
   status:
     type: integer
     format: int32
-    description:
-      $ref: ../../../prose/parameters/ProblemDetailsStatus.md
+    nullable: true
   detail:
     type: string
     nullable: true
-    description: 
-      $ref: ../../../prose/parameters/ProblemDetailsDetail.md
-  traceId:
+  instance:
     type: string
-    description: 
-      $ref: ../../../prose/parameters/ProblemDetailsTraceId.md
-  errors:
+    nullable: true
+  extensions:
     type: object
-    description:
-      $ref: ../../../prose/parameters/ProblemDetailsErrors.md
     additionalProperties: {}
+    nullable: true

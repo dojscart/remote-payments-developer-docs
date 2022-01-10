@@ -1,1 +1,0 @@
-The [HTTP status code](#section/HTTP-Responses).
