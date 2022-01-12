@@ -1,8 +1,9 @@
 ---
-title: "Getting started"
+title: "Payments"
 icon: "ti-panel"
 hide: 
   - toc
-weight: 1
+weight: 3
 ---
+
 {{< childpages >}}

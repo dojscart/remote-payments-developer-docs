@@ -1,6 +1,7 @@
 ---
 title: "Versioning"
-weight: 1
+date: 2017-03-02T12:00:00-05:00
+icon: "ti-panel"
 
 ---
 
@@ -8,7 +9,7 @@ Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the ver
 
 When you make the first API request, use current data as a version to get the latest available version.
 
-The current version is `2022-01-03`.
+The current version is `2021-10-22`.
 
 ## Breaking changes
 

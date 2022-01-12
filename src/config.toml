@@ -10,7 +10,6 @@ ignorefiles = [ "api-definitions/.*.md" ]
 
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
-disableReadmoreNav = true
 
 
 # [Languages]
@@ -39,28 +38,6 @@ menushortcutsnewtab = false # set true to open shortcuts links to a new tab/wind
 #editURL = "https://github.com/vjeantet/hugo-theme-docport/edit/master/exampleSite/content/"
 editWithNetlifyCMSURL = "admin/#/collections/pages/entries/"
 enableGitInfo = true
-
-copyright = "Paymentsense Limited. All rights reserved. Paymentsense Limited is authorised and regulated by the Financial Conduct Authority (FCA FRN 738728) and under the Electronic Money Regulations 2011 (FCA FRN 900925) for the issuing of electronic money and provision of payment services."
-privacy_policy = "https://dojo.tech/legal/privacy/"
-
-[params.links]
-# End user relevant links. These will show up on left side of footer and in the community page if you have one.
-[[params.links.user]]
-	name ="GitHub Discussions"
-	url = "https://github.com/dojo-engineering/remote-payments-developer-docs/discussions"
-	icon = "fab fa-github"
-        desc = "Discussion and help from your fellow users"
-[[params.links.user]]
-	name = "Support"
-	url = "https://support.dojo.tech/hc/en-gb"
-	icon = "fa fa-envelope"
-        desc = "Our support team always happy to help with any questions you have"
-[[params.links.user]]
-	name = "Stack Overflow"
-	url = "https://stackoverflow.com/tags/dojo.tech"
-	icon = "fab fa-stack-overflow"
-        desc = "Practical questions and curated answers"
-
 
 [mediaTypes]
   [mediaTypes."application/netlifyconfig"]
@@ -108,10 +85,4 @@ weight = 11
 name = "Log in"
 url = "https://account.dojo.tech/login"
 weight = 12
-
-[Edit-this-page]
-other = "Improve this page"
-
-
-gitURL = "https://github.com/dojo-engineering/remote-payments-developer-docs"
 
