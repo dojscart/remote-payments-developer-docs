@@ -1,12 +1,13 @@
 ---
-title: "Development resources"
+title: "Manage payments"
 icon: "ti-panel"
-weight: 6
+hide: 
+  - toc
+weight: 3
 disableReadmoreNav: true
 ---
 
-{{< lead >}} This section provides resources to help developers build integrations with Dojo API. {{< /lead >}}
-
+{{< lead >}} Learn how to capture or reverse payments, retrieve payment details or change payments amount.{{< /lead >}}
 <div class="container"> 
 <div class="row py-3 mb-5">
 	<div class="col-md-4">
@@ -16,9 +17,9 @@ disableReadmoreNav: true
 			  </div>
 			<div class="card-body pl-2">
 				<h5 class="card-title">
-					<a href="../api-docs/">API Reference</a>
+					<a href="capture/">Capture a payment</a>
 				</h5>
-				<p class="card-text text-muted">Learn about API and integrate with API endpoints.
+				<p class="card-text text-muted">Manually collect an authorized payment.
 				</p>
          <p class="text-right">
             <span class="fas fa-2x text-primary"><svg width="30" height="24" viewBox="0 0 30 24" class="Iconsstyles__StyledIcon-sc-1u9v6a9-0 jisNmM"><path d="M0 11.7654L28.75 11.7654M28.75 11.7654L17.4846 23.0307M28.75 11.7654L17.4846 0.5" stroke="currentColor"></path></svg>
@@ -29,13 +30,13 @@ disableReadmoreNav: true
 	<div class="col-md-4">
 		<div class="card flex-row border-0">
 			<div class="mt-3">
-				<span class="fas fa-2x text-primary"><img src="/images/dojo-icons/push-notifications.svg" width="100"></span>
+				<span class="fas fa-2x text-primary"><img src="/images/dojo-icons/icons-50-px-sim.svg" width="100"></span>
 			</div>
 			<div class="card-body pl-2">
 				<h5 class="card-title">
-					<a href="https://app.getpostman.com/run-collection/16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295?action=collection%2Ffork&collection-url=entityId%3D16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523">Postman collection</a>
+					<a href="change-amount/">Change amount</a>
 				</h5>
-				<p class="card-text text-muted">You can run the API collection in Postman.
+				<p class="card-text text-muted">Modify a payment amount manually.
 				</p>
         <p class="text-right">
             <span class="fas fa-2x text-primary"><svg width="30" height="24" viewBox="0 0 30 24" class="Iconsstyles__StyledIcon-sc-1u9v6a9-0 jisNmM"><path d="M0 11.7654L28.75 11.7654M28.75 11.7654L17.4846 23.0307M28.75 11.7654L17.4846 0.5" stroke="currentColor"></path></svg>
@@ -46,13 +47,13 @@ disableReadmoreNav: true
 	<div class="col-md-4">
 		<div class="card flex-row border-0">
 			<div class="mt-3">
-				<span class="fas fa-2x text-primary"><img src="/images/dojo-icons/icons-50-px-business-development.svg" width="100"></span>
+				<span class="fas fa-2x text-primary"><img src="/images/dojo-icons/icons-50-px-sim.svg" width="100"></span>
 			</div>
 			<div class="card-body pl-2">
 				<h5 class="card-title">
-					<a href="webhooks/">Webhooks</a>
+					<a href="send-receipt/">Send a receipt</a>
 				</h5>
-				<p class="card-text text-muted">Subscribe to events in your account.
+				<p class="card-text text-muted">Send the receipt to your customer when the payment is made.
 				</p>
         <p class="text-right">
             <span class="fas fa-2x text-primary"><svg width="30" height="24" viewBox="0 0 30 24" class="Iconsstyles__StyledIcon-sc-1u9v6a9-0 jisNmM"><path d="M0 11.7654L28.75 11.7654M28.75 11.7654L17.4846 23.0307M28.75 11.7654L17.4846 0.5" stroke="currentColor"></path></svg>
@@ -71,10 +72,10 @@ disableReadmoreNav: true
 			  </div>
 			  <div class="card-body pl-2">
 			  	<h5 class="card-title">
-			       <a href="https://github.com/dojo-engineering">Sample integrations</a>
+			       <a href="reversal/">Reverse a payment</a>
 				  </h5>
 				  <p class="card-text text-muted">
-          Clone working samples from our GitHub.
+          Return money to your customers in part or in full.
 				  </p>
           <p class="text-right">
             <span class="fas fa-2x text-primary"><svg width="30" height="24" viewBox="0 0 30 24" class="Iconsstyles__StyledIcon-sc-1u9v6a9-0 jisNmM"><path d="M0 11.7654L28.75 11.7654M28.75 11.7654L17.4846 23.0307M28.75 11.7654L17.4846 0.5" stroke="currentColor"></path></svg>
@@ -82,22 +83,6 @@ disableReadmoreNav: true
 			  </div>
 		  </div>
 	  </div>
-	  <div class="col-md-4">
-		  <div class="card flex-row border-0">
-		  	<div class="mt-3">
-			  	<span class="fas fa-2x text-primary"><img src="/images/dojo-icons/icons-50-px-sim.svg" width="100"></span>
-			  </div>
-			  <div class="card-body pl-2">
-				  <h5 class="card-title">
-			       <a href="https://stackoverflow.com/tags/dojo.tech">Stack Overflow</a>
-				  </h5>
-			  	<p class="card-text text-muted">Practical questions and curated answers.</p>
-          <p class="text-right">
-            <span class="fas fa-2x text-primary"><svg width="30" height="24" viewBox="0 0 30 24" class="Iconsstyles__StyledIcon-sc-1u9v6a9-0 jisNmM"><path d="M0 11.7654L28.75 11.7654M28.75 11.7654L17.4846 23.0307M28.75 11.7654L17.4846 0.5" stroke="currentColor"></path></svg>
-        </p>
-		  	</div>
-		  </div>
-    </div>
 	  <div class="col-md-4">
 		  <div class="card flex-row border-0">
 			  <div class="mt-3">

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Insights</title>
+    <g id="Insights" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(2.000000, 9.000000)">
+            <rect id="Rectangle" fill="#1D1D1D" x="0" y="34" width="46" height="2"></rect>
+            <rect id="Rectangle-Copy-12" fill="#00A699" x="32" y="6" width="14" height="14"></rect>
+            <path d="M0,27 C6.66666667,20.3333333 10,17 10,17 C10,17 13.3333333,20.3333333 20,27 L43,4" id="Line-4" stroke="#1D1D1D" stroke-width="0.5"></path>
+            <path d="M0,22.5 C6.66666667,15.8333333 10,12.5 10,12.5 C10,12.5 13.3333333,15.8333333 20,22.5 L42,1" id="Line-4-Copy" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,2"></path>
+            <line x1="30" y1="4" x2="43" y2="4" id="Line" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="square"></line>
+            <line x1="43" y1="17" x2="43" y2="4" id="Line-Copy" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="square"></line>
+            <line x1="30" y1="0.5" x2="43" y2="0.5" id="Line-Copy-2" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0,2"></line>
+        </g>
+    </g>
+</svg>
