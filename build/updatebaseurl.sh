@@ -27,7 +27,7 @@ fi
 
 DEV_ENV=$(echo $BRANCH_NAME | sed -n 's/.*\/\([^ ]\+\).*/\1/p' | cut -f1,2 -d'-')
 
-if [ "$DEV_ENV" == "" ]; then
+if [ $BRANCH_NAME != "master" && "$DEV_ENV" == "" ]; then
     echo "Could not parse dev environment!"
     exit 1
 fi
