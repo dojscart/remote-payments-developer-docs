@@ -72,6 +72,13 @@ properties:
     nullable: true
     items:
       $ref: ./TaxLine.yaml
+  paymentMethods:
+    type: array
+    description:      
+      $ref: ../../../prose/parameters/paymentMethod.md
+    nullable: true
+    items:
+      $ref: ./PaymentMethod.yaml
   actionLink:
     oneOf:
       - $ref: ./ActionLink.yaml

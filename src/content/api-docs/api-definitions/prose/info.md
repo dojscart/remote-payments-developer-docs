@@ -5,12 +5,7 @@ accepts and returns JSON in the HTTP body.
 
 ## Base URLs
 
-Use the following base URLs when making requests to the APIs:
-
-| Environment  | URL |
-|---------|----------------|
-|Testing| https://api.sandbox.dojo.tech/ |
-|Production|  https://api.dojo.tech/ |
+Use the following base URL when making requests to the API:  https://api.dojo.tech/
 
 ## Looking for no-code solutions?
 
@@ -18,11 +13,20 @@ TBA
 
 # Authentication
 
-The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). Your API key must be included in the header of all requests made to the API. API requests without authentication will fail.
+The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). You can generate new API keys or find your existing ones in the [Dojo Dashboard](https://account.dojo.tech/login?redirectTo=%2Ftransactions).
+Secret keys for the test environment have the prefix `sk_test_` and for production have the prefix `sk_`.
 
-You can use the same keys for testing and production.
+You must include your secret API key in the header of all requests, for example:
 
-You can generate new API keys or find your existing ones in the [Dojo Dashboard](https://account.dojo.tech/login?redirectTo=%2Ftransactions).
+``` curl
+curl
+  --header 'content-type: application/json' \
+  --header 'Authorization: Basic sk_your_key' \
+...
+    
+```
+
+API requests without authentication will fail.
 
 <SecurityDefinitions />
 
@@ -77,7 +81,15 @@ The following example shows a possible error response:
 
 # Versioning
 
-Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls.
+Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls, for example:
+
+``` curl
+curl
+  --header 'content-type: application/json' \
+  --header 'Authorization: Basic sk_your_key' \
+  --header 'version: 2022-01-03' \
+    
+```
 
 When we make [breaking changes](../development-resources/versioning-overview/#breaking-changes) to the API, we release new dated versions.
 
