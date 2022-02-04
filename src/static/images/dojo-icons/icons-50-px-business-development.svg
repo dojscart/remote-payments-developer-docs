@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+    <defs>
+        <path id="p4yxi4p4ta" d="M0 0H50V50H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g transform="translate(-953 -4820) translate(0 4588) translate(80 120) translate(0 112) translate(872) translate(1)">
+                                <mask id="o1hgza3k2b" fill="#fff">
+                                    <use xlink:href="#p4yxi4p4ta"/>
+                                </mask>
+                                <use fill="#FFF" xlink:href="#p4yxi4p4ta"/>
+                                <path stroke="#1D1D1D" stroke-width=".5" d="M18 34H33V49H18z" mask="url(#o1hgza3k2b)"/>
+                                <path fill="#00A699" d="M39 33V17c-4.418 0-8 3.582-8 8s3.582 8 8 8z" mask="url(#o1hgza3k2b)" transform="rotate(-120 35 25)"/>
+                                <path fill="#00A699" d="M20 33V17c-4.418 0-8 3.582-8 8s3.582 8 8 8z" mask="url(#o1hgza3k2b)" transform="rotate(-60 16 25)"/>
+                                <path fill="#00A699" d="M33 19V3c-4.418 0-8 3.582-8 8s3.582 8 8 8z" mask="url(#o1hgza3k2b)" transform="rotate(-180 29 11)"/>
+                                <path stroke="#1D1D1D" stroke-dasharray="0 2.4" stroke-linecap="round" stroke-width=".6" d="M25 6c2.761 0 5 2.239 5 5s-2.239 5-5 5-5-2.239-5-5 2.239-5 5-5z" mask="url(#o1hgza3k2b)"/>
+                                <path stroke="#1D1D1D" stroke-linecap="square" stroke-width=".5" d="M25.5 33.5L25.5 17.5" mask="url(#o1hgza3k2b)"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

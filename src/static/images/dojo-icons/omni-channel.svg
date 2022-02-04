@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>Omni channel</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Omni-channel" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#00A699" x="5" y="2" width="11" height="11"></rect>
+        <path d="M10,19 L11,19 C13.7614237,19 16,21.2385763 16,24 L16,25 C16,27.7614237 13.7614237,30 11,30 L10,30 C7.23857625,30 5,27.7614237 5,25 L5,24 C5,21.2385763 7.23857625,19 10,19 Z" id="Rectangle-Copy-13" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="0,2.5"></path>
+        <path d="M39,2 L40,2 C42.7614237,2 45,4.23857625 45,7 L45,8 C45,10.7614237 42.7614237,13 40,13 L39,13 C36.2385763,13 34,10.7614237 34,8 L34,7 C34,4.23857625 36.2385763,2 39,2 Z" id="Rectangle-Copy-15" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="round" stroke-dasharray="0,2.5"></path>
+        <rect id="Rectangle-Copy-11" fill="#D8D8D8" x="34" y="19" width="11" height="11"></rect>
+        <rect id="Rectangle-Copy-3" fill="#D8D8D8" x="5" y="36" width="11" height="11"></rect>
+        <rect id="Rectangle-Copy-12" fill="#00A699" x="34" y="36" width="11" height="11"></rect>
+        <polyline id="Line" stroke="#1D1D1D" stroke-width="0.5" points="18 8 25 8 25 41 32 41"></polyline>
+    </g>
+</svg>

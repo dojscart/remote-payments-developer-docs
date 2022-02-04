@@ -1,0 +1,19 @@
+type: object
+example:
+  events:
+    - payment_intent.created
+    - order.created
+additionalProperties: false
+properties:
+  events:
+    type: array
+    description:   
+     $ref: ../../../prose/parameters/events.md
+    items:
+      type: string
+  url:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/urlWebhook.md
+    format: uri
+    pattern: ^https://*.+

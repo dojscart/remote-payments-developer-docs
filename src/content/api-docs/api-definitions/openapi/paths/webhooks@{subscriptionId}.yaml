@@ -1,0 +1,116 @@
+patch:
+  tags:
+    - Webhooks
+  operationId: Webhooks_SubscribeUpdate
+  security: 
+    - BasicAuth: []
+  summary: 'Update a webhook'
+  description: 
+    $ref: ../../prose/endpoints/updateSubscription.md
+  parameters:
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
+    - name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+      x-position: 1
+      description:
+        $ref: ../../prose/parameters/subscriptionId.md
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SubscriptionUpdateRequest.yaml
+    required: true
+    x-position: 1
+  responses:
+    '204':
+      description: No Content
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+delete:
+  tags:
+    - Webhooks
+  operationId: Webhooks_DeleteSubscriptions
+  security: 
+    - BasicAuth: []
+  summary: 'Delete a subscription'
+  description: 
+    $ref: ../../prose/endpoints/deleteSubscription.md
+  parameters:
+    - name: subscriptionId
+      in: path
+      required: true
+      schema:
+        type: string
+      x-position: 1
+      description:
+        $ref: ../../prose/parameters/subscriptionId.md
+    - name: version
+      in: header
+      required: true
+      schema: 
+         type: string 
+         format: date
+      example: '2022-01-03'
+      description:
+          $ref: ../../prose/parameters/version.md
+  responses:
+    '204':
+      description: No Content
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml

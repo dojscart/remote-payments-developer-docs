@@ -1,0 +1,6 @@
+extends: spelling
+message: "'%s' is a typo!"
+
+ignore:
+  # Located at Styles
+  - ignore_names.txt

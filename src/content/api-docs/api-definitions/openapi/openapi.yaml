@@ -16,22 +16,21 @@ tags:
     description: |-
       Allows you to take and manage payments.
 
-      **Documentation**: [Payments](../payments)
+      **Documentation**: [Payments](../../accept-payments/)
   - name: Refunds
     description: |-
       Allows you to manage a refund for payments.
 
-      **Documentation**: [Refunds](../payments)
+      **Documentation**: [Refunds](../../manage-payments/cancellation/refund/)
   - name: Reversal
     description: |-
-
-
-      **Documentation**: [Reversal](../payments)
+      **Documentation**: [Reversal](../../manage-payments/cancellation/reversal/)
   - name: Captures
     description: |-
-
-
-      **Documentation**: [Captures](../payments)
+      **Documentation**: [Captures](../../manage-payments/capture/)
+  - name: Webhooks
+    description: |-
+        Dojo webhooks notify you when a specific event has occurred. To learn more about webhook implementation, check our [Webhooks guide](../../development-resources/webhooks/).
 x-tagGroup:
   - name: Payments
     tags:
@@ -40,7 +39,8 @@ x-tagGroup:
       - Reversal
       - Captures
   - name: Notifications
-    tags: ''
+    tags: 
+      - Webhooks
 paths:
   /payment-intents:
     $ref: paths/payment-intents.yaml
@@ -66,6 +66,18 @@ paths:
     $ref: paths/payment-intents@refunds@{refundId}.yaml
   /payment-intents/{paymentIntentId}/reversal:
     $ref: paths/payment-intents@{paymentIntentId}@reversal.yaml
+  /webhooks/events:
+    $ref: paths/webhooks@events.yaml
+  /webhooks:
+    $ref: paths/webhooks.yaml
+  /webhooks/{subscriptionId}/secrets:
+    $ref: paths/webhooks@{subscriptionId}@secrets.yaml
+  /webhooks/{subscriptionId}/secrets/{secretId}/activate:
+    $ref: paths/webhooks@{subscriptionId}@secrets@{secretId}@activate.yaml
+  /webhooks/{subscriptionId}/secrets/{secretId}:
+    $ref: paths/webhooks@{subscriptionId}@secrets@{secretId}.yaml
+  /webhooks/{subscriptionId}:
+    $ref: paths/webhooks@{subscriptionId}.yaml
 components:
   securitySchemes:
     BasicAuth: 

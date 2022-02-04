@@ -1,0 +1,29 @@
+type: object
+additionalProperties: false
+required:
+  - events
+  - url
+properties:
+  id:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/subscriptionId.md
+  events:
+    type: array
+    description:   
+     $ref: ../../../prose/parameters/events.md
+    items:
+      type: string
+  url:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/urlWebhook.md
+    format: uri
+    minLength: 1
+    pattern: ^https://*.+
+  secrets:
+    type: array
+    description:   
+     $ref: ../../../prose/parameters/secrets.md
+    items:
+      $ref: ./SubscriptionSecret.yaml

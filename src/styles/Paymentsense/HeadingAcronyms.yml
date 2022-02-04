@@ -1,0 +1,6 @@
+extends: existence
+message: "Avoid using acronyms in a title or heading."
+level: warning
+scope: heading
+tokens:
+  - '[A-Z]{2,4}'

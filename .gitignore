@@ -350,8 +350,8 @@ Chart.lock
 
 # Local linters (Vale)
 
-/src/styles/
-/src/.vale.ini
+#/src/styles/
+#/src/.vale.ini
 
 .DS_Store
 

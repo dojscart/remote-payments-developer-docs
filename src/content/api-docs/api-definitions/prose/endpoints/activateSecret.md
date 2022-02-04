@@ -1,0 +1,1 @@
+Activates a secret.

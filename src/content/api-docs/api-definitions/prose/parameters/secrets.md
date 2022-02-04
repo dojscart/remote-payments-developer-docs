@@ -1,0 +1,1 @@
+The list of subscription’s secrets, used to generate signatures.

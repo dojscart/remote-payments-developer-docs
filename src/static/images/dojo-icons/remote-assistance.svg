@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Remote assistance</title>
+    <g id="Remote-assistance" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(12.000000, 1.000000)">
+            <path d="M3,48 L25,48 C26.6568542,48 28,46.6568542 28,45 L28,3 C28,1.34314575 26.6568542,-3.04359188e-16 25,0 L3,0 C1.34314575,3.04359188e-16 -2.02906125e-16,1.34314575 0,3 L0,45 C2.02906125e-16,46.6568542 1.34314575,48 3,48 Z" id="Stroke-1" stroke="#1D1D1D" stroke-width="0.5" stroke-linecap="round"></path>
+            <path d="M14,16 C18.418278,16 22,19.6288499 22,24.1052632 C22,27.0895386 19.3333333,31.7211176 14,38 C8.66666667,31.7211176 6,27.0895386 6,24.1052632 C6,19.6288499 9.581722,16 14,16 Z M14,19 C11.2385763,19 9,21.2385763 9,24 C9,26.7614237 11.2385763,29 14,29 C16.7614237,29 19,26.7614237 19,24 C19,21.2385763 16.7614237,19 14,19 Z" id="Combined-Shape" fill="#00A699"></path>
+            <circle id="Oval" fill="#1D1D1D" cx="14" cy="4" r="1"></circle>
+            <rect id="Rectangle-Copy-4" fill="#1D1D1D" x="1" y="7" width="26" height="2"></rect>
+        </g>
+    </g>
+</svg>

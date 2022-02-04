@@ -1,0 +1,3 @@
+Refund means when transaction happens and confirmed by industry network,  bank and is posted as original transaction to ledgers. Customer initiates a return of good/ services due to any reason he/she believe and ask for return of funds which bank agree to payback.
+
+While Reversal in simple term can be explained as transaction which can be either complete full transaction lifecycle from initiation to posting or can be made due to error of system which got broke in due course of transaction flow, customer may or may not ask for return of money.  It can be done on the same day or hours.

@@ -1,0 +1,51 @@
+get:
+  tags:
+    - Webhooks
+  operationId: Webhooks_GetAllWebhooks
+  security: 
+    - BasicAuth: []
+  summary: 'List all webhooks'
+  description: 
+    $ref: ../../prose/endpoints/getAllEvents.md
+  parameters:
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/WebhookViewModel.yaml
+          example:
+            - model: PaymentIntent
+              events:
+                - payment_intent.created
+                - payment_intent.updated
+            - model: Payment
+              events:
+                - payment.successful
+            - model: Order
+              events:
+                - order.created
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml

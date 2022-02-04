@@ -1,0 +1,141 @@
+get:
+  tags:
+    - Webhooks
+  operationId: Webhooks_GetAlSubscriptions
+  security: 
+    - BasicAuth: []
+  summary: 'List all subscriptions'
+  description: 
+    $ref: ../../prose/endpoints/getAllSubscriptions.md
+  parameters:
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: ../components/schemas/Subscription.yaml
+          example:
+            - id: sub_aNkU6yob0vOMxUlghg2oynUw
+              events:
+                - payment_intent.created
+                - payment_intent.status_updated
+              url: https://example.com.com/incoming-events
+              secrets:
+                - id: sst_qNkU6yob0vOMxUlb2oynUw
+                  value: >-
+                    U3Vic2NyaXB0aW9uUmVzcG9uc2VFeGFtcGxlIDogSUV4YW1wbGVQcm92aWRlcjxTdWJ
+                  createdAt: 2021-12-13T14:15:01
+                  lastUsedAt: 2021-12-16T13:44:03.3242202Z
+                  isActive: true
+            - id: sub_bNkU6yob0vOMxUlghg2oynUw
+              events:
+                - payment_intent.send-receipt
+              url: https://example.com/incoming-events
+              secrets:
+                - id: sst_qNkU6yob0vOMxUlb2oynUw
+                  value: >-
+                    U3Vic2NyaXB0aW9uUmVzcG9uc2VFeGFtcGxlIDogSUV4YW1wbGVQcm92aWRlcjxTdWJ
+                  createdAt: 2021-12-13T14:15:01
+                  lastUsedAt: 2021-12-16T13:44:03.324537Z
+                  isActive: true
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+post:
+  tags:
+    - Webhooks
+  operationId: Webhooks_Subscribe
+  security: 
+    - BasicAuth: []
+  summary: 'Subscribe to an event'
+  description: 
+    $ref: ../../prose/endpoints/createSubscription.md
+  parameters:
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
+  requestBody:
+    x-name: request
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SubscriptionRequest.yaml
+    required: true
+    x-position: 1
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/SecretsResponse.yaml
+          example:
+            secrets:
+              - id: sst_qNkU6yob0vOMxUlb2oynUw
+                value: >-
+                  U3Vic2NyaXB0aW9uUmVzcG9uc2VFeGFtcGxlIDogSUV4YW1wbGVQcm92aWRlcjxTdWJ
+                createdAt: 2021-12-13T14:15:01
+                lastUsedAt: 2021-12-16T13:44:03.3533309Z
+                isActive: true
+              - id: sst_zNkU6yob0vOMxUlb2oynUw
+                value: FGswesdsaXB0aW9uUmVzcG9wbGVQcm92aWRlcjxTdWJ
+                createdAt: 2020-12-13T14:15:01
+                lastUsedAt: 2021-12-02T13:58:03.3533322Z
+                isActive: false
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '401':
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '403':
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml

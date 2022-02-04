@@ -1,0 +1,1 @@
+The timestamp of the created date, in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601).

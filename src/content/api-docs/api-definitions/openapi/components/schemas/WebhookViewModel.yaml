@@ -1,0 +1,11 @@
+type: object
+additionalProperties: false
+properties:
+  model:
+    type: string
+  events:
+    type: array
+    description:
+      $ref: ../../../prose/parameters/events.md
+    items:
+      type: string
