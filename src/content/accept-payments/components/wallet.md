@@ -37,6 +37,12 @@ Step-by-step guide:
 Before you begin to integrate, make sure you have followed the [Getting started guide](/getting-started/) and get your API keys.
 For the test environment use your secret key with the prefix `sk_test_`.
 
+**Terms and Conditions**
+
+- By integrating Apple Pay, you adhere to the [Apple Pay APIs Acceptable Use Policy](https://developer.apple.com/apple-pay/acceptable-use-guidelines-for-websites/) and accept the terms and conditions defined in the [Apple Pay Web Merchant Terms and Conditions](https://developer.apple.com/apple-pay/terms/apple-pay-web/).
+
+- By integrating Google Pay, you adhere to the [Google Pay APIs Acceptable Use Policy](https://payments.developers.google.com/terms/aup) and accept the terms defined in the [Google Pay API Terms of Service](https://payments.developers.google.com/terms/sellertos).
+
 ### Step 1. Add the wallet component to your checkout page
 
 Include the Dojo.js script on your checkout page. This script must always load directly from `connect.paymentsense.cloud` to remain PCI compliant—you can’t include it in a bundle or host a copy of it yourself.
@@ -164,16 +170,23 @@ If you haven't set up webhooks yet, review our [webhooks guide](../../../develop
 
 ### Step 5. Test and go live
 
-Before going live, test your integration using the test card numbers:
+Before going live, test your integration. When you are ready to go live, switch your secret key to production one with the prefix `sk_`.
 
-{{< table style="table-hover" >}}
-|Card Name | Card type | Test credit number | Expiry Date | CVV | 3D security|
-|-----|-----|-----|-----|-----|-----|
-|Test Cardholder|Visa | 4111 1111 1111 1111 |12/25|123|12345678|
-|Test Cardholder|Master Card | 5555 5555 5555 5599 |12/24|123|-|
-{{< /table >}}
+#### Testing Apple Pay
 
-When you are ready to go live, switch your secret key to production one with the prefix `sk_`.
+To enable test cards for Apple Pay, you must have an Apple Sandbox Tester Account, then you will be able to add test cards into your Apple Wallet.
+
+See [Apple's Sandbox Testing Documentation](https://developer.apple.com/apple-pay/sandbox-testing/) to setup your Sandbox Tester Account and check the section Test Cards for Apps and the Web to see the full list of supported test cards by Apple. Although our test payment gateway does not support all of them, so if you want to test successful cases, please use the cards listed in the Test Cards section.
+
+If you are not enrolled into the Apple Developer Program and need a tester account, please contact our support team for further instructions.
+
+#### Testing Google Pay
+
+The Google Pay [Test Card Suite](https://developers.google.com/pay/api/android/guides/resources/test-card-suite) allows you to test Google Pay without the need of adding real cards to Google accounts.
+
+To instantly view these cards in your Google Account TEST environment, join [Google's User Group](https://groups.google.com/g/googlepay-test-mode-stub-data) and all test cards will be automatically added to your account so you do not need to add them manually.
+
+You are free to leave or join [Google's Test Card Suite Group](https://groups.google.com/g/googlepay-test-mode-stub-data) as needed. To leave, select My membership settings and click Leave group.
 
 ## Try it out
 
