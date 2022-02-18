@@ -1,1 +1,0 @@
-Three-letter currency code in [ISO 4217 format](https://en.wikipedia.org/wiki/ISO_4217).

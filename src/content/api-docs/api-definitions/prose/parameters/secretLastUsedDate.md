@@ -1,1 +1,0 @@
-The timestamp of the last used date, in [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601).

@@ -19,9 +19,19 @@ fi
 echo "Branch name: $BRANCH_NAME"
 echo "Cluster name: $CLOUDSDK_CONTAINER_CLUSTER"
 
+filename="/app/docs-site/docusaurus.config.js"
+
+if [ -f $filename ]; then
+    echo "$filename exists."
+else
+    echo "File not found: $filename"
+    exit 1 
+fi
 
 if [ $CLOUDSDK_CONTAINER_CLUSTER == "production-remotepayments" ]; then
-    echo "Skipped config updates for '$CLOUDSDK_CONTAINER_CLUSTER' cluster. No updates required in prod!"
+    echo "Production build detected."
+    sed -i "s#url: 'https://dev-docs.dojo.dev'#url: 'https://docs.dojo.tech'#g" $filename
+    cat $filename
     exit 0
 fi
 
@@ -32,29 +42,14 @@ if [ $BRANCH_NAME != "master" && "$DEV_ENV" == "" ]; then
     exit 1
 fi
 
-filename="/src/config.toml"
-
-echo "Dev build detected! Updating '$filename' file..."
-
-if [ -f $filename ]; then
-    echo "$filename exists."
-else
-    echo "File not found: $filename"
-    exit 1 
-fi
-
 if [ $CLOUDSDK_CONTAINER_CLUSTER == "staging-remotepayments" ]; then
-    devHostname="staging-docs.dojo.dev"
-    DEV_ENV="master"
+    echo "Staging build detected!"
+    sed -i "s#url: 'https://dev-docs.dojo.dev'#url: 'https://staging-docs.dojo.dev'#g" $filename
+    sed -i "s#baseUrl: '/'#baseUrl: '/master/'#g" $filename
+ 
 else
-    devHostname="dev-docs.dojo.dev"
+    echo "Dev build detected with '$DEV_ENV'!"
+    sed -i "s#baseUrl: '/'#baseUrl: '/$DEV_ENV/'#g" $filename
 fi
 
-sed -i "1irelativeURLs = true" $filename
-sed -i "1icanonifyURLs = true" $filename
-sed -i "1ibaseURL = \"https://$devHostname/$DEV_ENV/\"" $filename
-
-echo "Dumping $filename"
-echo "*****************"
 cat $filename
-

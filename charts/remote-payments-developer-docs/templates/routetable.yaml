@@ -13,5 +13,3 @@ spec:
           upstream:
             name: '{{- printf "%s-%s-80" .Release.Namespace .Values.fullnameOverride -}}'
             namespace: '{{- $.Release.Namespace -}}'
-      options:
-        prefixRewrite: /
