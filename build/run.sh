@@ -16,7 +16,7 @@ fi
 if [ $ENVIRONMENT == "production" ]; then
     echo "Production build detected!"
     sed -i "s#url: 'https://dev-docs.dojo.dev'#url: 'https://docs.dojo.tech'#g" $filename
-else if [ $ENVIRONMENT == "master" ]; then
+elif [ $ENVIRONMENT == "master" ]; then
     echo "Staging build detected!"
     sed -i "s#url: 'https://dev-docs.dojo.dev'#url: 'https://staging-docs.dojo.dev'#g" $filename
     sed -i "s#baseUrl: '/'#baseUrl: '/master/'#g" $filename
