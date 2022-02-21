@@ -12,8 +12,8 @@ container:
 
   resources: # Only pass if you want to reserve resources for container
     limits:
-      cpu: 500m
-      memory: 2Gi
+      cpu: 750m
+      memory: 3Gi
     requests:
       cpu: 100m
       memory: 250Mi
