@@ -26,11 +26,17 @@ container:
       value: jaeger-agent.jaeger.svc:5778/sampling
     - name: JAEGER_SERVICE_NAME
       value: '{{ include "common.names.name" . }}-{{ .Values.global.environment }}'
+    - name: ENVIRONMENT
+      value: '{{ .Values.global.environment }}'
 
   ports:
     - name: http
       containerPort: 80
       protocol: TCP
+  readinessProbe:
+    httpGet:
+      path: /api/health/ready
+      port: http
 
 pod:
   imagePullSecrets: []

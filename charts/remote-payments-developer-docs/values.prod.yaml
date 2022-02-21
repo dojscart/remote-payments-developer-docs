@@ -5,6 +5,10 @@ container:
         command:
           - /bin/sleep
           - '20'
+  readinessProbe:
+    httpGet:
+      path: '/'
+      port: http
 
 autoscaling:
   enabled: true

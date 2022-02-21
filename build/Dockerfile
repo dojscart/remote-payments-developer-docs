@@ -1,16 +1,12 @@
 FROM node:16
 
-ARG BRANCH_NAME
-ARG CLOUDSDK_CONTAINER_CLUSTER
-
 WORKDIR /app/docs-site
 COPY ./docs-site /app/docs-site
 
-COPY ./build/updatebaseurl.sh /build/updatebaseurl.sh
-RUN chmod +x /build/updatebaseurl.sh
-RUN /build/updatebaseurl.sh $BRANCH_NAME $CLOUDSDK_CONTAINER_CLUSTER
+COPY ./build/run.sh /build/run.sh
+RUN chmod +x /build/run.sh
 
-RUN yarn install && yarn build
-ENTRYPOINT ["yarn", "run", "serve", "--port", "80", "--host", "0.0.0.0"]
+RUN yarn install
 
+ENTRYPOINT ["/build/run.sh"]
 EXPOSE 80
