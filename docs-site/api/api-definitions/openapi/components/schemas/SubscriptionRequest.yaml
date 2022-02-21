@@ -4,7 +4,7 @@ example:
     - payment_intent.created
     - payment.successful
     - order.created
-  url: https://my-company.com/incoming-events
+  url: https://example.com/incoming-events
 additionalProperties: false
 required:
   - events

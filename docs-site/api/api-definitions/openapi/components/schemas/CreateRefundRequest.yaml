@@ -1,9 +1,8 @@
 type: object
 description: The create refund request object.
 example:
-  amount: 100
-  refundReason: Duplicate transaction
-  notes: notes
+  amount: 1000
+  refundReason: 'Demo refund'
 additionalProperties: false
 title: CreateRefundRequest
 properties:

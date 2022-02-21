@@ -2,7 +2,6 @@ type: object
 additionalProperties: false
 description: The PaymentIntentResponse object.
 title: PaymentIntentResponse
-x-examples: {}
 properties:
   id:
     type: string

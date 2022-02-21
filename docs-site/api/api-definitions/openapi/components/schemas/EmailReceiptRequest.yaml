@@ -10,3 +10,5 @@ properties:
 required:
   - emails
 description: ''
+example:
+  emails: ["gabriel@dojo.com","mari@dojo.com"]

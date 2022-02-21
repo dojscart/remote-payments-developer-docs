@@ -99,3 +99,9 @@ properties:
 required:
   - amount
   - reference
+example:
+  amount:
+    value: 1000
+    currencyCode: "GBP"
+  reference: "Order 234"
+  description: "Demo payment intent"

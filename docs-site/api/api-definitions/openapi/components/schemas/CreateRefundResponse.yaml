@@ -15,3 +15,8 @@ properties:
     description:   
      $ref: ../../../prose/parameters/refundId.md
     nullable: true
+example:
+  status: "Created"
+  message: null
+  refundId: "rfnd_127usj"
+

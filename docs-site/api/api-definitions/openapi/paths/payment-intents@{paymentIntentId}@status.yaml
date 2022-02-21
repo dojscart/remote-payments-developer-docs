@@ -20,6 +20,7 @@ get:
       description: 
         $ref: ../../prose/parameters/paymentIntentId.md
       x-position: 1
+      example: 'pi_SMqqJwmMTk6o44wmXde3KA'
   responses:
     '200':
       description: OK
@@ -27,6 +28,8 @@ get:
         application/json:
           schema:
             $ref: ../components/schemas/PaymentIntentResponse.yaml
+          example:
+            $ref: ../components/examples/PaymentIntentCreated.yaml
     '400':
       description: Bad request
       content:

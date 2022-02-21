@@ -20,6 +20,7 @@ post:
       schema:
         type: string
       x-position: 1
+      example: 'pi_SMqqJwmMTk6o44wmXde3KA'
   requestBody:
     x-name: request
     content:
@@ -35,6 +36,8 @@ post:
         application/json:
           schema:
             $ref: ../components/schemas/PaymentIntentResponse.yaml
+          example:
+            $ref: ../components/examples/PaymentIntentCreated.yaml
     '400':
       description: Bad request
       content:

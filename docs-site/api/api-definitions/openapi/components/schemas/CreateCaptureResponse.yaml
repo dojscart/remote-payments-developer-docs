@@ -15,3 +15,7 @@ properties:
     description:    
      $ref: ../../../prose/parameters/captureId.md
     nullable: true
+example:
+  status: "Created"
+  message: "Demo capture"
+  captureId: "cp_itIiJMEAvES3ynYF_Yhs2g"

@@ -1,9 +1,6 @@
 type: string
 description:   
  $ref: ../../../prose/parameters/paymentMethod.md
-x-enumNames:
-  - Card
-  - Wallet
 enum:
   - Card
   - Wallet

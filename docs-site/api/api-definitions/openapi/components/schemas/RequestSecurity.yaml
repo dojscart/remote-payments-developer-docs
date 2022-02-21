@@ -19,3 +19,7 @@ properties:
     description:   
      $ref: ../../../prose/parameters/device.md
     nullable: true
+example:
+  userAgent: null
+  ipAddress: null
+  device: null

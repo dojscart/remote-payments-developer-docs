@@ -23,6 +23,7 @@ post:
       schema:
         type: string
       x-position: 1
+      example: 'pi_SMqqJwmMTk6o44wmXde3KA'
   responses:
     '204':
       description: Payment receipt requested successfully.

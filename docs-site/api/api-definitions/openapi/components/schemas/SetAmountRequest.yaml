@@ -9,3 +9,5 @@ properties:
      $ref: ../../../prose/parameters/amount.md
 required:
   - amount
+example:
+  amount: 500

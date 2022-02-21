@@ -1,18 +1,12 @@
 type: object
 additionalProperties: false
-x-examples:
-  example:
-    value:
-      address1: The Brunel Building
-      address2: 2 Canalside Walk
-      address3: ''
-      address4: ''
-      city: London
-      state: ''
-      postcode: W2 1DG
-      countryCode: GB
-      locality: ''
-      county: UK
+example:
+  address1: The Brunel Building
+  address2: 2 Canalside Walk
+  city: London
+  postcode: W2 1DG
+  countryCode: GB
+  county: UK
 description:  
   $ref: ../../../prose/parameters/address.md
 properties:

@@ -23,3 +23,8 @@ properties:
     nullable: true
 description: The refund response object.
 title: RefundResponse
+example:
+  paymentIntentId: 'pi_gfygdkh34261d'
+  refundId: 'rfnd_127usj'
+  refundReason: 'Demo refund'
+  notes: null

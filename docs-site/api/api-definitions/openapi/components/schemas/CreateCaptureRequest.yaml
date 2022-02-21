@@ -10,3 +10,5 @@ properties:
     format: int64
 required:
   - amount
+example:
+  amount: 1000

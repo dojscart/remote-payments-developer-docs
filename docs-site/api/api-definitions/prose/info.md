@@ -35,15 +35,15 @@ API requests without authentication will fail.
 The API returns HTTP responses on each request to indicate the success or otherwise of API requests. The various HTTP status codes we might return are listed below.
 
 | Code  | Title | Description |
-|---------|----------------|----------------|
-|200| OK | The request was successful. |
-|400| Bad request | Bad request, probably due to a syntax error. |
-|401| Unauthorized | Authentication required. |
-|402| Request Failed | Over plan quota on this endpoint. |
-|404| Not found | The resource doesn't exist. |
-|405| Method Not Allowed| The used request method isn't supported by that resource, for example using a POST on a resource that requires a GET.
-|409| Conflict | The request couldn't be completed because it conflicted with another request or the server's configuration. |
-|50X| Internal Server Error | An error occurred with our API.|
+|-----|-----|-----|
+|`200`|`OK`| The request was successful. |
+|`400`|`Bad Request`| Bad request, probably due to a syntax error. |
+|`401`|`Unauthorized`| Authentication required. |
+|`402`|`Request Failed`| Over plan quota on this endpoint. |
+|`404`|`Not Found`| The resource doesn't exist. |
+|`405`|`Method Not Allowed`| The used request method isn't supported by that resource, for example using a POST on a resource that requires a GET.
+|`409`|`Conflict`| The request couldn't be completed because it conflicted with another request or the server's configuration. |
+|`50X`|`Internal Server Error`| An error occurred with our API.|
 
 # Errors
 
@@ -54,13 +54,13 @@ Dojo follows the error response format proposed in [RFC 7807](https://tools.ietf
 In case of an error, the response object contains the following fields:
 
 | Field | Type|  Description |
-|---------|----------------|---------------|
-|errors| object | A human-readable explanation of errors.|
-|type| string | A URI reference [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) that identifies the problem type.|
-|title| string| A short, human-readable summary of the error. |
-|status| integer  | The [HTTP status code](#section/HTTP-Responses). |
-|traceId| string | The unique identifier of the failing request.|
-|detail| string | A human-readable message giving more details about the error. Not always present.|
+|-----|-----|-----|
+|`errors`|`object`| A human-readable explanation of errors.|
+|`type`|`string`| A URI reference [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) that identifies the problem type.|
+|`title`|`string`| A short, human-readable summary of the error. |
+|`status`|`integer`| The [HTTP status code](#section/HTTP-Responses). |
+|`traceId`|`string`| The unique identifier of the failing request.|
+|`detail`|`string`| A human-readable message giving more details about the error. Not always present.|
 
 The following example shows a possible error response:
 
@@ -99,4 +99,4 @@ The current version is 2022-01-03. Check the last updates out in the [changelog]
 
 You can run the API collection in Postman:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295?action=collection%2Ffork&collection-url=entityId%3D16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)
+ [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e?action=collection%2Ffork&collection-url=entityId%3D16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)

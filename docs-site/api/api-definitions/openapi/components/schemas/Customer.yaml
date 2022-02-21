@@ -14,3 +14,6 @@ properties:
 description:   
  $ref: ../../../prose/parameters/customer.md
 title: Customer
+example:
+  emailAddress: 'support@dojo.com'
+  phoneNumber: '+448000443550'

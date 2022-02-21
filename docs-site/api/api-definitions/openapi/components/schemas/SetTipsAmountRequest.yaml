@@ -9,3 +9,7 @@ properties:
      $ref: ../../../prose/parameters/tipsAmount.md
 required:
   - tipsAmount
+example:
+  tipsAmount:
+    value: 500
+    currencyCode: "GBP"

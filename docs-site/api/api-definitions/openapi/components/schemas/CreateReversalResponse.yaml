@@ -15,3 +15,7 @@ properties:
     description:   
      $ref: ../../../prose/parameters/reversalId.md
     nullable: true
+example:
+  status: "Created"
+  message: null
+  reversalId: "rvs_127usj"

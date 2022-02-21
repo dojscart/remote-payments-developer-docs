@@ -21,6 +21,7 @@ post:
       application/json:
         schema:
           $ref: ../components/schemas/CreatePaymentIntentRequest.yaml
+          examples: {}
     required: true
     x-position: 1
   responses:
@@ -30,6 +31,8 @@ post:
         application/json:
           schema:
             $ref: ../components/schemas/PaymentIntentResponse.yaml
+          example:
+            $ref: ../components/examples/PaymentIntentCreated.yaml
     '400':
       description: Bad request
       content:

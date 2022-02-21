@@ -25,3 +25,7 @@ properties:
 required:
   - url
   - label
+example:
+  url: 'https://docs.dojo.tech/docs/Getting%20started'
+  label: 'docs-link'
+
