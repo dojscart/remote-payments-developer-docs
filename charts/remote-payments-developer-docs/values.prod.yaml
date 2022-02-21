@@ -10,16 +10,6 @@ container:
       path: '/'
       port: http
 
-autoscaling:
-  enabled: true
-  minReplicas: 3
-  maxReplicas: 25
-  targetCPUUtilizationPercentage: 80
-  targetMemoryUtilizationPercentage: 80
-  targetHttpRequests: 25
-  targetExternal:
-    enabled: false
-
 podDisruptionBudget:
   enabled: true
   minAvailable: 2
