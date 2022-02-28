@@ -207,10 +207,9 @@ If you haven't set up webhooks yet, review our [webhooks guide](../../Developmen
 
 Before going live, test your integration using the test card numbers:
 
-|Card Name | Card type | Test credit number | Expiry Date | CVV | 3D security|
-|-----|-----|-----|-----|-----|-----|
-|Test Cardholder|Visa | 4111 1111 1111 1111 |12/25|123|12345678|
-|Test Cardholder|Master Card | 5555 5555 5555 5599 |12/24|123|-|
+import CardSnippet from '../../snippets/_card.mdx';
+
+<CardSnippet />
 
 When you are ready to go live, switch your secret key to production one with the prefix `sk_`.
 

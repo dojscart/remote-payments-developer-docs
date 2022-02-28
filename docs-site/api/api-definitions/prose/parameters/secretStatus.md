@@ -1,1 +1,1 @@
-The status of the secret. It can be activated or diactivated.
+The status of the secret. It can be activated or deactivated.

@@ -1,0 +1,14 @@
+required:
+  - customerEmailReceiptEnabled
+  - merchantEmailReceiptEnabled
+type: object
+properties:
+  merchantEmailReceiptEnabled:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/merchantEmailReceiptEnabled.md
+  customerEmailReceiptEnabled:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/customerEmailReceiptEnabled.md
+additionalProperties: false

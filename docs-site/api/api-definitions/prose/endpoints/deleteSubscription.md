@@ -1,1 +1,1 @@
-Deletes a subscruption.
+Deletes a subscription.

@@ -1,1 +1,1 @@
-Changes tips amount for a payment intent. Available only if you allowed tips when creating this payment intent.
+Changes tips amount for a payment intent. Available if you allowed tips when creating this payment intent.

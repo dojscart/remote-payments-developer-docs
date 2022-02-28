@@ -17,6 +17,56 @@
   --ifm-font-family-base: -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
   'Segoe UI emoji';
   --ifm-font-family-monospace: 'SFMono-Regular', 'Roboto Mono', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  
+  
+  /*
+  This seems like a lot, but we want to ensure enough contrast.
+  Goal is to have a min score of 3 on https://www.myndex.com/APCA/fullmatrix
+  For fontWeight 400 + score 3, the cell must show a value < 16px (fontsize we use in places like alerts)
+  See also https://github.com/facebookincubator/infima/issues/55#issuecomment-884023075
+   */
+   --ifm-contrast-background-value: 90%;
+   --ifm-contrast-foreground-value: 70%;
+   /* Using slightly different values for dark mode */
+   --ifm-contrast-background-dark-value: 70%;
+   --ifm-contrast-foreground-dark-value: 90%;
+   --ifm-color-success: #26D07C;
+   --ifm-color-info: #7084FF;
+   --ifm-color-warning: #FFB100;
+   --ifm-color-danger: #FF4655;
+   --ifm-color-success-dark: #1c995a;
+   --ifm-color-success-darker: #17864f;
+   --ifm-color-success-darkest: #115f38;
+   --ifm-color-success-light: #51D996; 
+   --ifm-color-success-lighter: #92E7BD; 
+   --ifm-color-success-lightest: #BEF1D8; 
+   --ifm-color-success-contrast-background: rgb(230, 246, 230);
+   --ifm-color-success-contrast-foreground: #26D07C;
+   --ifm-color-info-dark: #7084FF;
+   --ifm-color-info-darker: #7084FF;
+   --ifm-color-info-darkest: #7084FF;
+   --ifm-color-info-light: #8D9DFF;
+   --ifm-color-info-lighter: #A9B5FF;
+   --ifm-color-info-lightest: #C6CEFF;
+   --ifm-color-info-contrast-background: #F1F3FF;
+   --ifm-color-info-contrast-foreground: #7084FF;
+   --ifm-color-warning-dark: #FFB100;
+   --ifm-color-warning-darker: #FFB100;
+   --ifm-color-warning-darkest: #FFB100;
+   --ifm-color-warning-light: #E9F180;
+   --ifm-color-warning-lighter: #EEF4A0;
+   --ifm-color-warning-lightest: #F4F8BF;
+   --ifm-color-warning-contrast-background: rgb(255, 248, 230);
+   --ifm-color-warning-contrast-foreground: rgb(77, 56, 0);
+   --ifm-color-danger-dark: #FF4655;
+   --ifm-color-danger-darker: #FF4655;
+   --ifm-color-danger-darkest: #FF4655;
+   --ifm-color-danger-light: #FF6B77;
+   --ifm-color-danger-lighter: #FF9099;
+   --ifm-color-danger-lightest: #FFB5BB;
+   --ifm-color-danger-contrast-background: rgb(255, 235, 236);
+   --ifm-color-danger-contrast-foreground: rgb(75, 17, 19);
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -39,4 +89,8 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(87,87,87);
+}
+
+.footer__copyright {
+  font-size: 0.75rem;
 }

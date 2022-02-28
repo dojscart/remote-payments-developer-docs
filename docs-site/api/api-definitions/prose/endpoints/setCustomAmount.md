@@ -1,1 +1,1 @@
-Changes the amount for a payment intent. Available only if you allowed the amount changes when creating this payment intent.
+Changes the amount for a payment intent. Available if you allowed the amount changes when creating this payment intent.

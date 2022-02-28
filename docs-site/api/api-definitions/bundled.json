@@ -4,7 +4,7 @@
   "info": {
     "title": "Payment Service",
     "version": "2022-01-03",
-    "description": "# Introduction\n\nThe Dojo API is RESTful. It returns HTTP response codes to indicate errors. It also\naccepts and returns JSON in the HTTP body.\n\n## Base URLs\n\nUse the following base URL when making requests to the API:  https://api.dojo.tech/\n\n## Looking for no-code solutions?\n\nTry one of our [pre-builded solutions](../no-code/) for your site.\n\n# Authentication\n\nThe Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). You can generate new API keys or find your existing ones in the [Dojo Dashboard](https://account.dojo.tech/login?redirectTo=%2Ftransactions).\nSecret keys for the test environment have the prefix `sk_test_` and for production have the prefix `sk_`.\n\nYou must include your secret API key in the header of all requests, for example:\n\n``` curl\ncurl\n  --header 'content-type: application/json' \\\n  --header 'Authorization: Basic sk_your_key' \\\n...\n    \n```\n\nAPI requests without authentication will fail.\n\n<SecurityDefinitions />\n\n# HTTP Responses\n\nThe API returns HTTP responses on each request to indicate the success or otherwise of API requests. The various HTTP status codes we might return are listed below.\n\n| Code  | Title | Description |\n|-----|-----|-----|\n|`200`|`OK`| The request was successful. |\n|`400`|`Bad Request`| Bad request, probably due to a syntax error. |\n|`401`|`Unauthorized`| Authentication required. |\n|`402`|`Request Failed`| Over plan quota on this endpoint. |\n|`404`|`Not Found`| The resource doesn't exist. |\n|`405`|`Method Not Allowed`| The used request method isn't supported by that resource, for example using a POST on a resource that requires a GET.\n|`409`|`Conflict`| The request couldn't be completed because it conflicted with another request or the server's configuration. |\n|`50X`|`Internal Server Error`| An error occurred with our API.|\n\n# Errors\n\nDojo follows the error response format proposed in [RFC 7807](https://tools.ietf.org/html/rfc7807) also known as Problem Details for HTTP APIs. All errors are returned in the form of JSON.\n\n## Error Schema\n\nIn case of an error, the response object contains the following fields:\n\n| Field | Type|  Description |\n|-----|-----|-----|\n|`errors`|`object`| A human-readable explanation of errors.|\n|`type`|`string`| A URI reference [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) that identifies the problem type.|\n|`title`|`string`| A short, human-readable summary of the error. |\n|`status`|`integer`| The [HTTP status code](#section/HTTP-Responses). |\n|`traceId`|`string`| The unique identifier of the failing request.|\n|`detail`|`string`| A human-readable message giving more details about the error. Not always present.|\n\nThe following example shows a possible error response:\n\n``` json\n{\n    \"errors\": {\n        \"Reference\": [\n            \"The Reference field is required.\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-a405f077df056a498323ffbcec05923f-aa63e6f4dbbc734a-01\",\n    \n}\n```\n\n# Versioning\n\nDojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls, for example:\n\n``` curl\ncurl\n  --header 'content-type: application/json' \\\n  --header 'Authorization: Basic sk_your_key' \\\n  --header 'version: 2022-01-03' \\\n    \n```\n\nWhen we make [breaking changes](../development-resources/versioning-overview/#breaking-changes) to the API, we release new dated versions.\n\nThe current version is 2022-01-03. Check the last updates out in the [changelog](../development-resources/versioning-overview/#changelog).\n\n# Postman collection\n\nYou can run the API collection in Postman:\n\n [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e?action=collection%2Ffork&collection-url=entityId%3D16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)",
+    "description": "# Introduction\n\nThe Dojo API is RESTful. It returns HTTP response codes to indicate errors. It also\naccepts and returns JSON in the HTTP body.\n\n## Base URLs\n\nUse the following base URL when making requests to the API:  https://api.dojo.tech/\n\n## Looking for no-code solutions?\n\nTry one of our [pre-builded solutions](../docs/No-code%20solutions/) for your site.\n\n# Authentication\n\nThe Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). You can generate new API keys or find your existing ones in the [Dojo Dashboard](https://account.dojo.tech/login?redirectTo=%2Ftransactions).\nSecret keys for the test environment have the prefix `sk_test_` and for production have the prefix `sk_`.\n\nYou must include your secret API key in the header of all requests, for example:\n\n``` curl\ncurl\n  --header 'content-type: application/json' \\\n  --header 'Authorization: Basic sk_your_key' \\\n...\n    \n```\n\nAPI requests without authentication will fail.\n\n<SecurityDefinitions />\n\n# HTTP Responses\n\nThe API returns HTTP responses on each request to indicate the success or otherwise of API requests. The various HTTP status codes we might return are listed below.\n\n| Code  | Title | Description |\n|-----|-----|-----|\n|`200`|`OK`| The request was successful. |\n|`400`|`Bad Request`| Bad request, probably due to a syntax error. |\n|`401`|`Unauthorized`| Authentication required. |\n|`402`|`Request Failed`| Over plan quota on this endpoint. |\n|`404`|`Not Found`| The resource doesn't exist. |\n|`405`|`Method Not Allowed`| The used request method isn't supported by that resource, for example using a POST on a resource that requires a GET.\n|`409`|`Conflict`| The request couldn't be completed because it conflicted with another request or the server's configuration. |\n|`50X`|`Internal Server Error`| An error occurred with our API.|\n\n# Errors\n\nDojo follows the error response format proposed in [RFC 7807](https://tools.ietf.org/html/rfc7807) also known as Problem Details for HTTP APIs. All errors are returned in the form of JSON.\n\n## Error Schema\n\nIn case of an error, the response object contains the following fields:\n\n| Field | Type|  Description |\n|-----|-----|-----|\n|`errors`|`object`| A human-readable explanation of errors.|\n|`type`|`string`| A URI reference [RFC 3986](https://datatracker.ietf.org/doc/html/rfc3986) that identifies the problem type.|\n|`title`|`string`| A short, human-readable summary of the error. |\n|`status`|`integer`| The [HTTP status code](#section/HTTP-Responses). |\n|`traceId`|`string`| The unique identifier of the failing request.|\n|`detail`|`string`| A human-readable message giving more details about the error. Not always present.|\n\nThe following example shows a possible error response:\n\n``` json\n{\n    \"errors\": {\n        \"Reference\": [\n            \"The Reference field is required.\"\n        ]\n    },\n    \"type\": \"https://tools.ietf.org/html/rfc7231#section-6.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"traceId\": \"00-a405f077df056a498323ffbcec05923f-aa63e6f4dbbc734a-01\",\n    \n}\n```\n\n# Versioning\n\nDojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls, for example:\n\n``` curl\ncurl\n  --header 'content-type: application/json' \\\n  --header 'Authorization: Basic sk_your_key' \\\n  --header 'version: 2022-01-03' \\\n    \n```\n\nWhen we make [breaking changes](../docs/Development%20resources/versioning-overview#breaking-changes) to the API, we release new dated versions.\n\nThe current version is 2022–01–03. Check the last updates out in the changelog.\n\n# Postman collection\n\nYou can run the API collection in Postman:\n\n [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e?action=collection%2Ffork&collection-url=entityId%3D16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)",
     "termsOfService": "https://dojo.tech/legal/",
     "contact": {
       "name": "Dojo Developer Experience Team"
@@ -19,23 +19,23 @@
   "tags": [
     {
       "name": "Payment intents",
-      "description": "Allows you to take and manage payments.\n\n**Documentation**: [Payments](../../accept-payments/)"
+      "description": "Allows you to take and manage payments.\n\n**Documentation**: [Payments](../docs/Accept%20payments/)"
     },
     {
       "name": "Refunds",
-      "description": "Allows you to manage a refund for payments.\n\n**Documentation**: [Refunds](../../manage-payments/cancellation/refund/)"
+      "description": "Allows you to manage a refund for payments.\n\n**Documentation**: [Refunds](../docs/Manage%20payments/Cancellation%20payments/refund/)"
     },
     {
       "name": "Reversal",
-      "description": "**Documentation**: [Reversal](../../manage-payments/cancellation/reversal/)"
+      "description": "Allows you to create a reversal for payments.\n\n**Documentation**: [Reversal](../docs/Manage%20payments/Cancellation%20payments/reversal/)"
     },
     {
       "name": "Captures",
-      "description": "**Documentation**: [Captures](../../manage-payments/capture/)"
+      "description": "Allows you to capture the full payment amount or part of the amount.\n\n**Documentation**: [Captures](../docs/Manage%20payments/capture/)"
     },
     {
       "name": "Webhooks",
-      "description": "Dojo webhooks notify you when a specific event has occurred. To learn more about webhook implementation, check our [Webhooks guide](../../development-resources/webhooks/)."
+      "description": "Webhooks notify you when a specific event has occurred. \n\n**Documentation**: [Webhooks](../docs/Development%20resources/webhooks/)"
     }
   ],
   "x-tagGroup": [
@@ -72,7 +72,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "description": "Creates a payment intent.",
@@ -99,31 +99,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Created",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Created",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -183,7 +181,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "responses": {
@@ -195,31 +193,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Created",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Created",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -278,7 +274,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -301,31 +297,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Canceled",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Canceled",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -388,7 +382,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -479,7 +473,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -502,31 +496,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Created",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Created",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -577,7 +569,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -600,31 +592,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Created",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Created",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -724,11 +714,11 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "summary": "List all payment intents",
-        "description": "Retrieves a list of payment intents.\nResults are paginated, by default the method returns only up to 50 payment intents."
+        "description": "Retrieves a list of payment intents.\nResults are paginated, by default the method returns up to 50 payment intents."
       }
     },
     "/payment-intents/{paymentIntentId}/tips-amount": {
@@ -747,7 +737,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -782,31 +772,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Created",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Created",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -848,7 +836,7 @@
           }
         ],
         "summary": "Change tips amount",
-        "description": "Changes tips amount for a payment intent. Available only if you allowed tips when creating this payment intent."
+        "description": "Changes tips amount for a payment intent. Available if you allowed tips when creating this payment intent."
       }
     },
     "/payment-intents/{paymentIntentId}/amount": {
@@ -867,7 +855,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -902,31 +890,29 @@
                   "$ref": "#/components/schemas/PaymentIntentResponse"
                 },
                 "example": {
-                  "example": {
-                    "id": "pi_SMqqJwmMTk6o44wmXde3KA",
-                    "captureMode\"": "Auto",
-                    "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
-                    "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
-                    "status": "Created",
-                    "paymentMethods": [
-                      "Card"
-                    ],
-                    "amount": {
-                      "value": 1000,
-                      "currencyCode\"": "GBP"
-                    },
-                    "totalAmount": {
-                      "value": 1000,
-                      "currencyCode": "GBP"
-                    },
-                    "createdAt": "2022-02-21T14:39:21.6050276Z",
-                    "updatedAt": "2022-02-21T14:39:21.6050277Z",
-                    "reference": "Order 234",
-                    "description": "Demo payment intent",
-                    "itemLines": [],
-                    "taxLines": [],
-                    "metadata": {}
-                  }
+                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "captureMode\"": "Auto",
+                  "connecteToken": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
+                  "connecteTokenExpirationDate": "2022-02-21T15:09:21Z",
+                  "status": "Created",
+                  "paymentMethods": [
+                    "Card"
+                  ],
+                  "amount": {
+                    "value": 1000,
+                    "currencyCode\"": "GBP"
+                  },
+                  "totalAmount": {
+                    "value": 1000,
+                    "currencyCode": "GBP"
+                  },
+                  "createdAt": "2022-02-21T14:39:21.6050276Z",
+                  "updatedAt": "2022-02-21T14:39:21.6050277Z",
+                  "reference": "Order 234",
+                  "description": "Demo payment intent",
+                  "itemLines": [],
+                  "taxLines": [],
+                  "metadata": {}
                 }
               }
             }
@@ -963,7 +949,7 @@
           }
         },
         "summary": "Change a payment intent amount",
-        "description": "Changes the amount for a payment intent. Available only if you allowed the amount changes when creating this payment intent.",
+        "description": "Changes the amount for a payment intent. Available if you allowed the amount changes when creating this payment intent.",
         "security": [
           {
             "BasicAuth": []
@@ -989,7 +975,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -1083,7 +1069,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -1175,7 +1161,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "refundId",
@@ -1247,7 +1233,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "paymentIntentId",
@@ -1332,7 +1318,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "responses": {
@@ -1405,7 +1391,7 @@
           }
         ],
         "summary": "List all subscriptions",
-        "description": "Retrieves a list of all subscribtions.",
+        "description": "Retrieves a list of all subscriptions.",
         "parameters": [
           {
             "name": "version",
@@ -1416,7 +1402,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "responses": {
@@ -1512,7 +1498,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "requestBody": {
@@ -1632,7 +1618,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "subscriptionId",
@@ -1728,7 +1714,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "subscriptionId",
@@ -1836,7 +1822,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "subscriptionId",
@@ -1919,7 +1905,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "subscriptionId",
@@ -1991,7 +1977,7 @@
           }
         ],
         "summary": "Update a webhook",
-        "description": "Updates you subscription details. You can change the url or the list of events.",
+        "description": "Updates you subscription details. You can change the URL or the list of events.",
         "parameters": [
           {
             "name": "version",
@@ -2002,7 +1988,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           },
           {
             "name": "subscriptionId",
@@ -2094,7 +2080,7 @@
           }
         ],
         "summary": "Delete a subscription",
-        "description": "Deletes a subscruption.",
+        "description": "Deletes a subscription.",
         "parameters": [
           {
             "name": "subscriptionId",
@@ -2115,7 +2101,7 @@
               "format": "date"
             },
             "example": "2022-01-03",
-            "description": "API version with format yyyy-mm-dd. Current version is 2022-01-03. Today's date will always give you the latest version. "
+            "description": "API version with format yyyy-mm-dd. Current version is 2022–01–03. Today's date will always give you the latest version. "
           }
         ],
         "responses": {
@@ -2275,7 +2261,7 @@
           },
           "countryCode": {
             "type": "string",
-            "description": " Two-letter country code in [ISO 3166-1-alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
+            "description": " Two-letter country code in [ISO 3166–1-alpha-2 format](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).",
             "example": "GB",
             "nullable": true
           },
@@ -2674,7 +2660,7 @@
                 "$ref": "#/components/schemas/TransactionSource"
               }
             ],
-            "description": "Information regarding the transaction source type."
+            "description": "Information about the transaction source type."
           },
           "config": {
             "nullable": true,
@@ -2727,7 +2713,7 @@
           },
           "paymentSource": {
             "type": "string",
-            "description": "Information regarding the payment source type.",
+            "description": "Information about the payment source type.",
             "nullable": true
           },
           "metadata": {
@@ -2829,7 +2815,7 @@
                 "$ref": "#/components/schemas/TransactionSource"
               }
             ],
-            "description": "Information regarding the transaction source type."
+            "description": "Information about the transaction source type."
           },
           "connecteToken": {
             "type": "string",
@@ -2931,6 +2917,16 @@
             ],
             "description": "The address where to send the order."
           },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp of the create date, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) UTC format."
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The timestamp of the update date, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) UTC format."
+          },
           "reference": {
             "type": "string",
             "description": "Details of the reference for the payment.",
@@ -2984,7 +2980,7 @@
           },
           "paymentSource": {
             "type": "string",
-            "description": "Information regarding the payment source type.",
+            "description": "Information about the payment source type.",
             "nullable": true
           },
           "metadata": {
@@ -3128,7 +3124,7 @@
           },
           "paymentSource": {
             "type": "string",
-            "description": "Information regarding the payment source type.",
+            "description": "Information about the payment source type.",
             "nullable": true
           },
           "statuses": {
@@ -3464,7 +3460,7 @@
           },
           "isActive": {
             "type": "boolean",
-            "description": "The status of the secret. It can be activated or diactivated."
+            "description": "The status of the secret. It can be activated or deactivated."
           }
         }
       },

@@ -1,1 +1,1 @@
-Retrieves a list of all subscribtions.
+Retrieves a list of all subscriptions.

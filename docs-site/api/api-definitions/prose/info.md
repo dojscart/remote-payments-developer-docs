@@ -9,7 +9,7 @@ Use the following base URL when making requests to the API:  https://api.dojo.te
 
 ## Looking for no-code solutions?
 
-Try one of our [pre-builded solutions](../no-code/) for your site.
+Try one of our [pre-builded solutions](../docs/No-code%20solutions/) for your site.
 
 # Authentication
 
@@ -91,9 +91,9 @@ curl
     
 ```
 
-When we make [breaking changes](../development-resources/versioning-overview/#breaking-changes) to the API, we release new dated versions.
+When we make [breaking changes](../docs/Development%20resources/versioning-overview#breaking-changes) to the API, we release new dated versions.
 
-The current version is 2022-01-03. Check the last updates out in the [changelog](../development-resources/versioning-overview/#changelog).
+The current version is 2022–01–03. Check the last updates out in the changelog.
 
 # Postman collection
 

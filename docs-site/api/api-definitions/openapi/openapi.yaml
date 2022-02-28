@@ -16,21 +16,30 @@ tags:
     description: |-
       Allows you to take and manage payments.
 
-      **Documentation**: [Payments](../../accept-payments/)
+      **Documentation**: [Payments](../docs/Accept%20payments/)
   - name: Refunds
     description: |-
       Allows you to manage a refund for payments.
 
-      **Documentation**: [Refunds](../../manage-payments/cancellation/refund/)
+      **Documentation**: [Refunds](../docs/Manage%20payments/Cancellation%20payments/refund/)
   - name: Reversal
     description: |-
-      **Documentation**: [Reversal](../../manage-payments/cancellation/reversal/)
+      Allows you to create a reversal for payments.
+
+      **Documentation**: [Reversal](../docs/Manage%20payments/Cancellation%20payments/reversal/)
   - name: Captures
     description: |-
-      **Documentation**: [Captures](../../manage-payments/capture/)
+      Allows you to capture the full payment amount or part of the amount.
+
+      **Documentation**: [Captures](../docs/Manage%20payments/capture/)
   - name: Webhooks
     description: |-
-        Dojo webhooks notify you when a specific event has occurred. To learn more about webhook implementation, check our [Webhooks guide](../../development-resources/webhooks/).
+        Webhooks notify you when a specific event has occurred. 
+        
+        **Documentation**: [Webhooks](../docs/Development%20resources/webhooks/)
+ # - name: Receipts
+ #   description: |-
+ #  Allows you to automatically send email receipts after a payment.
 x-tagGroup:
   - name: Payments
     tags:
@@ -41,6 +50,9 @@ x-tagGroup:
   - name: Notifications
     tags: 
       - Webhooks
+ # - name: Receipt
+  #  tags: 
+  #    - Receipt
 paths:
   /payment-intents:
     $ref: paths/payment-intents.yaml
@@ -78,6 +90,12 @@ paths:
     $ref: paths/webhooks@{subscriptionId}@secrets@{secretId}.yaml
   /webhooks/{subscriptionId}:
     $ref: paths/webhooks@{subscriptionId}.yaml
+  #/receipt-configurations:
+  #  $ref: paths/receipt-configurations.yaml
+  #/receipt-configurations/{receiptConfigurationId}:
+  #  $ref: paths/receipt-configurations@{receiptConfigurationId}.yaml
+  #/receipt-configurations/search:
+  #  $ref: paths/receipt-configurations@search.yaml
 components:
   securitySchemes:
     BasicAuth: 

@@ -1,0 +1,38 @@
+type: object
+properties:
+  id:
+    type: string
+    nullable: true
+    description:
+      $ref: ../../../prose/parameters/receiptConfigurationId.md
+  accountId:
+    type: string
+    nullable: true
+    description:
+      $ref: ../../../prose/parameters/accountId.md
+  merchantEmailReceiptEnabled:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/merchantEmailReceiptEnabled.md
+  customerEmailReceiptEnabled:
+    type: boolean
+    description:   
+     $ref: ../../../prose/parameters/customerEmailReceiptEnabled.md
+  createdAt:
+    type: string
+    format: date-time
+    description:   
+     $ref: ../../../prose/parameters/createdAt.md
+  lastUpdated:
+    type: string
+    format: date-time
+    description:   
+     $ref: ../../../prose/parameters/updatedAt.md
+additionalProperties: false
+example:
+  id: 'pr_ThObVb7cIkOhv86U_nixRg'
+  accountId: 'acc_D16YoGlrc'
+  merchantEmailReceiptEnabled: true
+  customerEmailReceiptEnabled: true
+  createdAt: "2022-02-22T11:56:52.553Z"
+  lastUpdated: "2022-02-22T11:56:58.491Z"

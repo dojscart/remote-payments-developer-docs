@@ -87,6 +87,16 @@ properties:
       - $ref: ./ShippingDetails.yaml
     description:      
      $ref: ../../../prose/parameters/shippingDetails.md
+  createdAt:
+    type: string
+    format: date-time
+    description:      
+     $ref: ../../../prose/parameters/createdAt.md
+  updatedAt:
+    type: string
+    format: date-time
+    description:      
+     $ref: ../../../prose/parameters/updatedAt.md
   reference:
     type: string
     description:     

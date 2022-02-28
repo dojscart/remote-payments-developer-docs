@@ -1,0 +1,1 @@
+If has the value `true`, a receipt will be sent to the customer.

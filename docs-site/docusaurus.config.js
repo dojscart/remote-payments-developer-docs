@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Dojo Developer Portal',
   tagline: '',
-  url: 'https://dev-docs.dojo.dev',
+  url: 'https://dev-docs.dojo.dev/master/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
@@ -31,6 +31,17 @@ const config = {
             routePath: "/api"
           },
         ],
+        theme: {
+          /**
+           * Highlight color for docs
+           */
+          //primaryColor: '#1890ff',
+          /**
+           * Options to pass to redoc
+           * @see https://github.com/redocly/redoc#redoc-options-object
+           */
+          redocOptions: { hideDownloadButton: false, hideSchemaTitles:true, onlyRequiredInSamples:true, disableSearch: false, expandResponses:"200,201" },
+        },
       }
     ],
     [
@@ -66,7 +77,7 @@ const config = {
         logo: {
           alt: 'DojoDocs',
           src: 'images/logo.svg',
-		  srcDark: 'images/logo_dark.svg',
+		      srcDark: 'images/logo_dark.svg',
           href: '/docs',
         },
         items: [
@@ -81,6 +92,7 @@ const config = {
             position: 'left',
             to: '/api'
           },
+          {type: 'search', position: 'right'},
           {to: 'https://support.dojo.tech/hc/en-gb', label: 'Support', position: 'right'},
           {to: 'https://status.dojo.tech/', label: 'System status', position: 'right'},
           {to: 'https://account.dojo.tech/login', label: 'Log in', position: 'right'},
@@ -114,6 +126,17 @@ const config = {
       prism: {
         additionalLanguages: ['csharp', 'cs', 'dotnet'],
       },
+      //plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+      //algolia: {
+        //apiKey: 'f86f56d907f69c455b18518a5a4996a1',
+        //indexName: 'docs-site',
+        //appId: 'KJL6YSFBA3',
+        //contextualSearch: true,
+  
+        // Optional: see doc section bellow
+  
+        //... other Algolia params
+      //},
       footer: {
         style: 'dark',
         links: [
@@ -185,6 +208,23 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+    
+    plugins: [
+      //[
+         // require.resolve("@cmfcmf/docusaurus-search-local"),
+         // {
+              // Options here
+           //  indexPages: true,
+         // },
+     // ],
+     // [
+      //  require.resolve('docusaurus-lunr-search'),
+     // {
+     //   excludeRoutes: [],
+      //},
+    //]
+    require.resolve("@easyops-cn/docusaurus-search-local"),
+  ]
 };
 
 module.exports = config;

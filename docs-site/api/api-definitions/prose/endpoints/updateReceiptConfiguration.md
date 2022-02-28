@@ -1,0 +1,1 @@
+Updates a receipt configuration.

@@ -1,0 +1,50 @@
+post:
+  summary: 'Create a receipt configuration'
+  description: 
+    $ref: ../../prose/endpoints/createReceiptConfiguration.md
+  tags:
+    - Receipts
+  parameters:
+    - name: accountId
+      in: header
+      required: true
+      schema:
+        type: string
+      example: 'acc_D16YoGlrc'
+      description:
+        $ref: ../../prose/parameters/accountId.md
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ReceiptConfigurationRequest.yaml
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ReceiptConfigurationResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '409':
+      description: Conflict
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: 
+    - BasicAuth: []

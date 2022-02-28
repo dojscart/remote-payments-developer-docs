@@ -1,0 +1,58 @@
+put:
+  summary: 'Update a receipt configuration'
+  description: 
+    $ref: ../../prose/endpoints/updateReceiptConfiguration.md
+  tags:
+    - Receipts
+  parameters:
+    - name: receiptConfigurationId
+      in: path
+      required: true
+      schema:
+        type: string
+      example: 'pr_ThObVb7cIkOhv86U_nixRg'
+      description:
+        $ref: ../../prose/parameters/receiptConfigurationId.md
+    - name: accountId
+      in: header
+      required: true
+      schema:
+        type: string
+      example: 'acc_D16YoGlrc'
+      description:
+        $ref: ../../prose/parameters/accountId.md
+    - name: version
+      in: header
+      required: true
+      schema: 
+        type: string 
+        format: date
+      example: '2022-01-03'
+      description:
+        $ref: ../../prose/parameters/version.md
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/ReceiptConfigurationRequest.yaml
+  responses:
+    '200':
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ReceiptConfigurationResponse.yaml
+    '400':
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+    '404':
+      description: Not found
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/ProblemDetails.yaml
+  security: 
+    - BasicAuth: []

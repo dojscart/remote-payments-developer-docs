@@ -117,7 +117,7 @@ When you are ready to go live, switch your secret key to production one with the
 |`id` |string|Unique identifier for the event.|
 |`event` |string|The event type. Possible values are `payment_intent.status_updated`, `payment_intent.created`, `payment_intent.send-receipt`.|
 |`accountId` |string|Unique identifier for the account. |
-|`createdAt` |string date-time|The timestamp of the created date, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) UTC format.|
+|`createdAt` |string date-time|The timestamp of the create date, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) UTC format.|
 |`data` |object|Information regarding the payment.|
 |`paymentIntentId` |string|Unique identifier for the payment intent.|
 |`paymentStatus` |string|Current status of the payment intent. Possible values are `Created`, `Authorized`, `Captured`, `Reversed`, `Refunded`, `Canceled`.|

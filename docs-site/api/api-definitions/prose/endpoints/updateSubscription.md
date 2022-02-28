@@ -1,1 +1,1 @@
-Updates you subscription details. You can change the url or the list of events.
+Updates you subscription details. You can change the URL or the list of events.

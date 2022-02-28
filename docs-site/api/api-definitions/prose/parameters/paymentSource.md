@@ -1,1 +1,1 @@
-Information regarding the payment source type.
+Information about the payment source type.
