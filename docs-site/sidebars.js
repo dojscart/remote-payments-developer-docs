@@ -19,6 +19,7 @@ const sidebars = {
   // But you can create a sidebar manually
   
   tutorialSidebar: [
+   'Introduction',
    'Getting started',
     {
       type: 'category',
@@ -91,16 +92,16 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'No-code solutions',
+      label: 'Plugins',
       link: {
-        type: 'doc', id: 'No-code solutions/No-code solutions'
+        type: 'doc', id: 'plugins/plugins'
       },
       collapsed: true,
       items: [
-        'No-code solutions/magento',
-        'No-code solutions/opencart',
-        'No-code solutions/prestashop',
-        'No-code solutions/woocommerce',
+        'plugins/magento',
+        'plugins/opencart',
+        'plugins/prestashop',
+        'plugins/woocommerce',
       ],
     },
     {

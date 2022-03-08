@@ -1,6 +1,6 @@
 ---
 title: Getting started
-sidebar_position: 1
+sidebar_position: 2
 id: Getting started
 ---
 
@@ -12,7 +12,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 :::info Not a developer?
 
-Check out our [no-code solutions](No-code%20solutions).
+Check out our [no-code solutions](plugins).
 
 :::
 

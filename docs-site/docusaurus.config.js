@@ -156,8 +156,8 @@ const config = {
                 to: '/api',
               },
               {
-                label: 'No-code solutions',
-                to: '/docs/No-code%20solutions/',
+                label: 'Plugins',
+                to: '/docs/plugins/',
               },
             ],
             

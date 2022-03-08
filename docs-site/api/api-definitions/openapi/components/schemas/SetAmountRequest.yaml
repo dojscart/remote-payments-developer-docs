@@ -10,4 +10,6 @@ properties:
 required:
   - amount
 example:
-  amount: 500
+  amount: 
+    value: 1000
+    currencyCode: 'GBP'

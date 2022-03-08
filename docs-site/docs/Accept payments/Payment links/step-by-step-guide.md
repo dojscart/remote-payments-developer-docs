@@ -27,8 +27,9 @@ Step-by-step guide:
 
 ### Before you start
 
-Before you begin to integrate, make sure you have followed the [Getting started guide](../../Getting%20started/) and get your API keys.
-For the test environment use your secret key with the prefix `sk_test_`.
+import BeforeStartSnippet from '../../snippets/_before-start.mdx';
+
+<BeforeStartSnippet />
 
 ### Step 1. Create a payment link
 
@@ -92,7 +93,9 @@ import CardSnippet from '../../snippets/_card.mdx';
 
 <CardSnippet />
 
-When you are ready to go live, switch your secret key to production one with the prefix `sk_`.
+import GoLiveSnippet from '../../snippets/_test-and-go-live.mdx';
+
+<GoLiveSnippet />
 
 ---
 

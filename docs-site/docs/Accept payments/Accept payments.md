@@ -14,7 +14,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 [![](/images/dojo-icons/Link.svg) **Payment links** Links that you send to your customer and accept payments without a website.](Payment%20links/)
 
-[![](/images/dojo-icons/Plugin.svg) **Plugins** Third-party integrations that don't require programming skills, such as Magento and OpenCart.](../No-code%20solutions)
+[![](/images/dojo-icons/Plugin.svg) **Plugins** Third-party integrations that don't require programming skills, such as Magento and OpenCart.](../plugins)
 
 [![](/images/dojo-icons/Layout.svg) **Dojo components** Our ready-made JavaScript components that you can combine with your own components.](Components/)
 

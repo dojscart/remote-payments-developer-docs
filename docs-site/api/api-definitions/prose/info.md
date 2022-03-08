@@ -9,7 +9,7 @@ Use the following base URL when making requests to the API:  https://api.dojo.te
 
 ## Looking for no-code solutions?
 
-Try one of our [pre-builded solutions](../docs/No-code%20solutions/) for your site.
+Try one of our [pre-builded solutions](../docs/plugins/) for your site.
 
 # Authentication
 

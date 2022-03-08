@@ -13,14 +13,6 @@ put:
       example: 'pr_ThObVb7cIkOhv86U_nixRg'
       description:
         $ref: ../../prose/parameters/receiptConfigurationId.md
-    - name: accountId
-      in: header
-      required: true
-      schema:
-        type: string
-      example: 'acc_D16YoGlrc'
-      description:
-        $ref: ../../prose/parameters/accountId.md
     - name: version
       in: header
       required: true
