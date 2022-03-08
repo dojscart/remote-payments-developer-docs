@@ -6,19 +6,19 @@ import styles from "./styles.module.css";
 const data = [
   {
     link: "/docs/plugins/woocommerce",
-    icon: "/images/woocommerce.svg",
+    icon: "/images/plugins/woocommerce.svg",
   },
   {
     link: "/docs/plugins/magento",
-    icon: "/images/magento.svg",
+    icon: "/images/plugins/magento.svg",
   },
   {
     link: "/docs/plugins/opencart",
-    icon: "/images/opencart.svg",
+    icon: "/images/plugins/opencart.svg",
   },
   {
     link: "/docs/plugins/prestashop",
-    icon: "/images/prestashop.svg",
+    icon: "/images/plugins/prestashop.svg",
   },
 ];
 
