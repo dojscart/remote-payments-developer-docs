@@ -1,14 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Dojo Developer Portal',
   tagline: '',
-  url: 'https://dev-docs.dojo.dev/master/',
+  url: 'https://dev-docs.dojo.dev/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
@@ -20,7 +17,6 @@ const config = {
       api: "openapi-with-examples.json",
     }
   },
-
   presets: [
     [
       'redocusaurus',
@@ -63,6 +59,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        googleAnalytics: {
+          trackingID: 'UA-160435074-14'
+        },
       }),
     ],
   ],
@@ -82,10 +81,10 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'Introduction',
+            to: "/docs",
+            activeBasePath: "/",
             position: 'left',
-            label: 'Guide',
+            label: 'Documentation',
           },
           {
             label: 'API Reference',
@@ -204,8 +203,8 @@ const config = {
         copyright: `Dojo is a trading name of Paymentsense Limited. Copyright © ${new Date().getFullYear()} Paymentsense Limited. All rights reserved. Paymentsense Limited is authorised and regulated by the Financial Conduct Authority (FCA FRN 738728) and under the Electronic Money Regulations 2011 (FCA FRN 900925) for the issuing of electronic money and provision of payment services.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: require("prism-react-renderer/themes/github"),
+        darkTheme: require("prism-react-renderer/themes/nightOwl"),
       },
     }),
     
@@ -223,7 +222,13 @@ const config = {
      //   excludeRoutes: [],
       //},
     //]
+    [
     require.resolve("@easyops-cn/docusaurus-search-local"),
+    {
+      hashed: true,
+      ignoreFiles: /snippets/,
+    }
+  ]
   ]
 };
 

@@ -12,7 +12,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 :::info Not a developer?
 
-Check out our [no-code solutions](plugins).
+Check out our [plugins](plugins).
 
 :::
 

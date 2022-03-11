@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 const data = [
   {
     title: "Online Checkout",
-    link: "Accept%20payments/Online%20checkout/",
+    link: "docs/Accept%20payments/Online%20checkout/",
     icon: "images/online-checkout.png",
     description: <>
     <div>
@@ -22,7 +22,7 @@ const data = [
   },
   {
     title: "Payment Links",
-    link: "Accept%20payments/Payment%20links/",
+    link: "docs/Accept%20payments/Payment%20links/",
     icon: "images/payment-links.png",
     description: <>
     <div>
@@ -38,7 +38,7 @@ const data = [
   },
   {
     title: "Dojo Components",
-    link: "Accept%20payments/Components/",
+    link: "docs/Accept%20payments/Components/",
     icon: "images/components.png",
     description: <>
     <div>

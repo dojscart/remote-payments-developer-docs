@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './card.module.css';
 import Link from '@docusaurus/Link';
-import BannerSvg from '@site/static//images/dojo-icons/Question.svg';
+import BannerSvg from '@site/static/images/dojo-icons/Question.svg';
 
 
 const OneCard = () => {
     return (
-        <Link className={styles.BannerLink} href="survey/question-1">
+        <Link className={styles.BannerLink} href="docs/survey/question-1">
             <div className={styles.Banner}>
             <div><BannerSvg className={styles.BannerSvg}/></div>
                 <div className={styles.BannerContent}>

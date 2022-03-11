@@ -25,7 +25,7 @@ const data = [
 function Resource({ link, icon}) {
   return (
     <div className={clsx("col col--3 padding--sm", styles.posRelative)}>
-      <a className={clsx("margin-top--sm", styles.posRelative)} href={link}><img
+      <a className={clsx("margin-top--sm", styles.posRelative)} href={useBaseUrl(link)}><img
         className="margin-left--xs"
         alt="icons"
         style={{ height: "200px", width: "230px" }}

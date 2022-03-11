@@ -25,8 +25,8 @@ The exception to this are `expiryDate` fields where we accept values in the MM/Y
 
 ``` json
 {
-    "transactionDateTime": "2021-05-12T07:45:00Z",
-    "expiryDate": "04/21"
+  "transactionDateTime": "2021-05-12T07:45:00Z",
+  "expiryDate": "04/21"
 }
 ```
 
@@ -36,6 +36,6 @@ Countries are handled as two-letter country codes according to [ISO 3166-1-alpha
 
 ``` json
 {
-    "countryCode": "GB"
+  "countryCode": "GB"
 }
 ```

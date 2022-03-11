@@ -4,7 +4,7 @@ weight: 1
 
 ---
 
-Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the version as the `version` header in all API calls.
+Dojo API uses the YYYY-MM-DD API version scheme. You have to pass the version as the `version` header in all API calls.
 
 When you make the first API request, use current data as a version to get the latest available version.
 
@@ -15,14 +15,13 @@ The current version is `2022-01-03`.
 Breaking or backwards-incompatible changes include:
 
 - Changing the URL format.
-- Changing existing error codes and messages.
 - Changing parameters from non-mandatory to mandatory.
 - Changing the type of a parameter.
 - Changing authentication mechanism.
-- Adding new mandatory request or response parameters to existing API methods.
+- Adding new mandatory request parameters to existing API methods.
 - Removing or renaming a resource, field, method or an enum value.
 
- If we make breaking changes to the API, we release new dated versions. But we don't change your version, you have to change it yourself.
+ If we make breaking changes to the API, we release new, dated versions. We don't change your version, if you want to use a new version you have to change the version yourself.
 
 ## Non-breaking changes
 
