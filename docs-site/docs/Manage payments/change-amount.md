@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 You can call the Dojo API to change the payment amount and tip amount after creating the payment. Before you start, make sure that payment intent could be updated. By default, when a payment intent is created, it can't be updated. If you want to be able to update the payment, include fields indicating which updates are allowed when creating the payment intent. In the following example, both the payment amount and the tip amount can be changed:
 
-```
+```json
 "config": {
     "payment": {
         "customAmountAllowed": true,
@@ -55,7 +55,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/change-amount.cs
 ```
 
@@ -66,7 +66,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/ch
 
 If your request is successful, the response will return information about the changed payment intent.
 
-```
+```json
 {
   {
   "id": "pi_pT08VyWG3EC_HQB4NBVliA",
@@ -154,7 +154,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/change-tips-amount.cs
 ```
 
@@ -165,7 +165,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/ch
 
 If your request is successful, the response will return information about the changed payment intent.
 
-```
+```json
 {
   {
   "id": "pi_pT08VyWG3EC_HQB4NBVliA",

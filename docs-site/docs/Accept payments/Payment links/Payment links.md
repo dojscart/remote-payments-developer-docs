@@ -14,7 +14,7 @@ Payment links don't expire, but each link can only be used to make one successfu
 
 This solution is PCI compliant, you are required to submit [Self-Assessment Questionnaire A](https://www.pcisecuritystandards.org/documents/PCI-DSS-v3_2_1-SAQ-A.pdf).
 
-![](/images/payment-links.png)
+![](/images/payment-links.jpg)
 
 ---
 

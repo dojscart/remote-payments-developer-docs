@@ -13,6 +13,12 @@ properties:
      $ref: ../../../prose/parameters/amount.md
     oneOf:
       - $ref: ./Money.yaml
+  tipsAmount:
+    description:    
+     $ref: ../../../prose/parameters/tipsAmount.md
+    nullable: true
+    oneOf:
+      - $ref: ./Money.yaml
   reference:
     type: string
     minLength: 1

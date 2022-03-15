@@ -51,7 +51,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/send-receipt.cs
 ```
 

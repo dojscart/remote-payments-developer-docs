@@ -46,7 +46,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/capture.cs
 ```
 </TabItem>
@@ -56,7 +56,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/ca
 
 If your request is successful, the response will return information about the capture.
 
-```
+```json
 {
   "status": "Created",
   "message": "collect payment for the order 3443",

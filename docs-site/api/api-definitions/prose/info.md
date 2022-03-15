@@ -18,7 +18,7 @@ Secret keys for the test environment have the prefix `sk_test_` and for producti
 
 You must include your secret API key in the header of all requests, for example:
 
-``` curl
+```curl
 curl
   --header 'content-type: application/json' \
   --header 'Authorization: Basic sk_your_key' \
@@ -64,7 +64,7 @@ In case of an error, the response object contains the following fields:
 
 The following example shows a possible error response:
 
-``` json
+```json
 {
     "errors": {
         "Reference": [

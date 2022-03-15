@@ -122,9 +122,6 @@ const config = {
           },
         },
       },
-      prism: {
-        additionalLanguages: ['csharp', 'cs', 'dotnet'],
-      },
       //plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
       //algolia: {
         //apiKey: 'f86f56d907f69c455b18518a5a4996a1',
@@ -203,8 +200,9 @@ const config = {
         copyright: `Dojo is a trading name of Paymentsense Limited. Copyright © ${new Date().getFullYear()} Paymentsense Limited. All rights reserved. Paymentsense Limited is authorised and regulated by the Financial Conduct Authority (FCA FRN 738728) and under the Electronic Money Regulations 2011 (FCA FRN 900925) for the issuing of electronic money and provision of payment services.`,
       },
       prism: {
-        theme: require("prism-react-renderer/themes/github"),
-        darkTheme: require("prism-react-renderer/themes/nightOwl"),
+        theme: require("prism-react-renderer/themes/vsLight"),
+        darkTheme: require("prism-react-renderer/themes/vsDark"),
+        additionalLanguages: ['csharp'],
       },
     }),
     

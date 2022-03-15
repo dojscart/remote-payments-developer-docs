@@ -46,7 +46,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/reversal.cs
 ```
 
@@ -57,7 +57,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/re
 
 If your request is successful, the response will return information about the reversal.
 
-```
+```json
 {
   "status": "Created",
   "message": "reverse for the order 3443",

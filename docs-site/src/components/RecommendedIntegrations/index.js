@@ -7,7 +7,7 @@ const data = [
   {
     title: "Online Checkout",
     link: "docs/Accept%20payments/Online%20checkout/",
-    icon: "images/online-checkout.png",
+    icon: "images/online-checkout.jpg",
     description: <>
     <div>
        <p>Send your customers to Dojo Online Checkout page to pay.</p>
@@ -23,7 +23,7 @@ const data = [
   {
     title: "Payment Links",
     link: "docs/Accept%20payments/Payment%20links/",
-    icon: "images/payment-links.png",
+    icon: "images/payment-links.jpg",
     description: <>
     <div>
         <p>Embed or share a link to Dojo Online Checkout page to accept payments without a website.</p>
@@ -39,7 +39,7 @@ const data = [
   {
     title: "Dojo Components",
     link: "docs/Accept%20payments/Components/",
-    icon: "images/components.png",
+    icon: "images/components.jpg",
     description: <>
     <div>
     <p>Integrate customizable UI components into your website or mobile app to collect payment.</p>
@@ -61,7 +61,7 @@ function Resource({ title, link, icon, description }) {
       <img
         className="margin-left--xs"
         alt="icons"
-        style={{ height: "150px", width: "250px" }}
+        style={{ height: "200px", width: "350px" }}
         src={useBaseUrl(icon)}
       />
        <h3><a className={clsx("margin-top--sm", styles.posRelative)} href={link}>

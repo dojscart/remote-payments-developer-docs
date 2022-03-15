@@ -48,7 +48,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/python/
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/cs/add-payment-methods.cs
 ```
 
@@ -81,7 +81,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/python/
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/cs/billing-and-shipping-details.cs
 ```
 
@@ -109,7 +109,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/python/
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/cs/redirect-success-page.cs
 ```
 
@@ -138,7 +138,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/python/
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/cs/show-information.cs
 ```
 

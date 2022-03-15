@@ -8,7 +8,7 @@ id: Online checkout
 
 Dojo Online Checkout is a pre-built UI page where you send your customers to finalize their payment details. This solution is PCI compliant, you are required to submit [Self-Assessment Questionnaire A](https://www.pcisecuritystandards.org/documents/PCI-DSS-v3_2_1-SAQ-A.pdf).
 
-![](/images/online-checkout.png)
+![](/images/online-checkout.jpg)
 
 ### What’s in the box
 

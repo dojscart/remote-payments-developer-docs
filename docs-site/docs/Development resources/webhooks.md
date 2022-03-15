@@ -58,7 +58,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/python/enabl
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/cs/enable-webhooks.cs
 ```
 
@@ -91,7 +91,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/python/verif
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/cs/verify-webhooks.cs
 ```
 

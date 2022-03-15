@@ -2616,6 +2616,15 @@
               }
             ]
           },
+          "tipsAmount": {
+            "description": "The tips amount.",
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              }
+            ]
+          },
           "reference": {
             "type": "string",
             "minLength": 1,

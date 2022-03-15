@@ -46,7 +46,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/cancel.cs
 ```
 
@@ -57,7 +57,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/ca
 
 If your request is successful, the response will return information about the canceled payment.
 
-```
+```json
 {
   "id": "pi_pT08VyWG3EC_HQB4NBVliA",
   "status": "Canceled",

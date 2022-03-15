@@ -45,7 +45,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/getting-started/pytho
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference
+```csharp reference
 https://github.com/dojo-engineering/dojo-samples/blob/main/getting-started/cs/create-payment-intent.cs
 ```
 

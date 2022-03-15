@@ -113,7 +113,7 @@ Next, in your JavaScript file, create an instance of Dojo:
 
  For an unsuccessful payment, Dojo.js returns an error. The error event returns an object which contains details about the error:
 
- ```js
+```js
      // handling errors
       function displayErrors(errors) {
         const errorsDiv = document.getElementById('errors');

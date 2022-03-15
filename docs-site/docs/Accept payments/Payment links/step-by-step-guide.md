@@ -53,7 +53,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/payment-links/server/
   </TabItem>
   <TabItem value="C#" label="C#">
 
-```cs reference title="server.cs"
+```csharp reference title="server.cs"
 https://github.com/dojo-engineering/dojo-samples/blob/main/payment-links/server/cs/server.cs
 ```
 

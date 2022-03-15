@@ -11,7 +11,7 @@ This solution is PCI compliant, you are required to submit [Self-Assessment Ques
 
 If you'd rather do less coding, use pre-build [Dojo Online Checkout](../Online%20checkout/).
 
-![](/images/components.png)
+![](/images/components.jpg)
 
 ---
 ## Ready to get started?
