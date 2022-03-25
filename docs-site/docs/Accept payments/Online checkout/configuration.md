@@ -21,7 +21,7 @@ You can activate additional features like address collection. Explore a few exam
 
     Show your success page to customers.
 
-- [Show detailed information about the order](#show-detailed-information-about-the-order)
+- [Show detailed information about the order and taxes](#show-detailed-information-about-the-order-and-taxes)
 
     Set up the information that you want to show to customers.
 
@@ -62,7 +62,7 @@ Additionally, you need to verify your domain for Apple Pay.
 ![](/images/billing-and-shipping-details.png)
 
 You can add a form to collect billing address, shipping details, and customer email to the online checkout page.
-To do it pass `"collectionRequired": true` in `config.billingAddress`, `config.shippingDetails`, and `config.customerEmail`, for example:
+To do it pass `collectionRequired: true` in `config.billingAddress`, `config.shippingDetails`, and `config.customerEmail`, for example:
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>
@@ -116,10 +116,13 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/cs/redi
   </TabItem>
 </Tabs>
 
-## Show detailed information about the order
+## Show detailed information about the order and taxes
 
-You can add information about each position in the order to the online checkout page.
-To do it pass `itemLines` and `taxLines`, for example:
+![](/images/show-detailed-information.png)
+
+You can add information about each position in the order to the online checkout page, to do it, pass this data to `itemLines`. In addition, you can add information about all taxes or fees that are included to the order, use `taxLines` for this. The item and tax amounts don't affect the payment intent amount.
+
+To add total due to the online checkout page, pass `showTotal: true` in `config.details`. This value will be the same as the payment intent amount.
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>
