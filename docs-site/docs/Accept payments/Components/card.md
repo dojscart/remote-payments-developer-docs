@@ -2,7 +2,8 @@
 title: Card Component
 sidebar_position: 1
 ---
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import CodePen from 'codepen-react'
 
 >Learn how you can embed pre-built Dojo Card Component on your checkout page.
@@ -42,100 +43,31 @@ import BeforeStartSnippet from '../../snippets/_before-start.mdx';
 
 ### Step 1. Add the component to your checkout page
 
-Include the Dojo.js script on your checkout page. This script must always load directly from `connect.paymentsense.cloud` to remain PCI compliant — you can’t include it in a bundle or host a copy of it yourself.
+Include Dojo `client.js` script on your checkout page. This script must always load directly from `cdn.dojo.tech` to remain PCI compliant—you can’t include it in a bundle or host a copy of it yourself.
 
-```html
-<head>
-   <script src="https://web.e.test.connect.paymentsense.cloud/assets/js/client.js"></script>
-</head>
+```html reference title="index.html"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/templates/index.html#L4-L8
 ```
 
 Add empty placeholders div to your checkout page to create a payment form.
 For example:
 
-```html
-<body>
-    <div id="demo-payment"></div>
-    <div id="errors"></div>
-    <button id="testPay" class="btn-primary btn pull-right" data-loading-text="Processing...">Pay</button>
-    <div id="demo-result" style="display: none">
-        <h5>Payment Complete</h5>
-        <dl>
-            <dt>Status Code</dt>
-            <dd id="status-code"></dd>
-            <dt>Auth Code</dt>
-            <dd id="auth-code"></dd>
-        </dl>
-    </div>
-</body>
+```html reference title="index.html"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/templates/index.html#L9-L24
 ```
 
 ### Step 2. Set up Dojo card component
 
 Next, in your JavaScript file, create an instance of Dojo:
 
-```js
-
-    .then(response => response.json())
-    .then(function (data) {
-        const payConfig = {
-            paymentDetails: {
-                paymentToken: data.paymentToken
-            },
-            containerId: "demo-payment",
-            fontCss: ['https://fonts.googleapis.com/css?family=Do+Hyeon'],
-            styles: {
-                base: {},
-            }
-        }
-        // intialising connection
-        const connectE = new Connect.ConnectE(config, displayErrorsCallback);
-
-        // sending payment on button click and processing the response
-        const btnTestPay = document.getElementById("testPay");
-
-        btnTestPay.onclick = () => {
-            btnTestPay.innerText = 'loading';
-            btnTestPay.setAttribute("disabled", "true");
-            connectE.executePayment()
-                .then(function (data) {
-                    document.getElementById("demo-payment").hidden = true;
-                    btnTestPay.remove();
-                    document.getElementById("demo-result").hidden = false;
-                    document.getElementById("status-code").innerText = data.statusCode;
-                    document.getElementById("auth-code").innerText = data.authCode;
-                }).catch(function (data) {
-                    console.log('Payment Request failed: ' + data);
-                    btnTestPay.innerText = 'Pay';
-                    btnTestPay.removeAttribute("disabled");
-                    if (typeof data === 'string') {
-                        document.getElementById("errors").innerText = data;
-                    }
-                    if (data && data.message) {
-                        document.getElementById("errors").innerText = data.message;
-                    }
-                }
-                );
-        };
+```js reference title="script.js"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/static/script.js#L17-L59
 ```
 
- For an unsuccessful payment, Dojo.js returns an error. The error event returns an object which contains details about the error:
+ For an unsuccessful payment, Dojo returns an error. The error event returns an object which contains details about the error:
 
-```js
-     // handling errors
-        function displayErrorsCallback(errors) {
-            const errorsDiv = document.getElementById('errors');
-            errorsDiv.innerHTML = '';
-            if (errors && errors.length) {
-                const list = document.createElement("ul");
-                for (const error of errors) {
-                    const item = document.createElement("li");
-                    item.innerText = error.message;
-                    list.appendChild(item);
-                }
-                errorsDiv.appendChild(list);
-            }
-        }
+```js reference title="script.js"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/static/script.js#L61-L75
 ```
 
 See the [Optional configuration](configuration) for a complete list of parameters that you can use.
@@ -144,20 +76,8 @@ See the [Optional configuration](configuration) for a complete list of parameter
 
 Call a server-side endpoint to create a payment intent, for example:
 
-```js
-    function myFunction() {
-      // POST
-      fetch('/checkout', {
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify({
-          "greeting": ""
-        })
-      })
-    }
+```js reference title="script.js"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/static/script.js#L2-L16
 ```
 
 To create a payment intent, the following parameters are required:
@@ -168,35 +88,24 @@ To create a payment intent, the following parameters are required:
 
 Here's an example of how to create a payment intent on your server-side:
 
-```py title="server.py"
- payload = json.dumps({
-          "amount": {
-            "value": 1000,
-            "currencyCode": "GBP"
-          },
-          "reference": "Order 245"
-          })
-        headers = {
-            'content-type': "application/json",
-            'version': "2022-01-03",
-            'Authorization': "Basic sk_test_m302B3jKTdyIXCOgMJwTrZBlIN4_bFBeuRsuUJqC3QS0w6XR-HTcXT9vfcxPHjw_fPmWFinEitRoGusuxjuM0hTYkO2YQQmalTSRAxX1yQsQWSSLWU3TsJ4ImPRdMKzjP88IJVookJQQ7DgQoD4JK9tbdLbID1h7gNa9d8AtgV24mR0dR1Nwc8rDZxcWRFH_WaOoPfKoaM8TdwZV7PiR3A" # <-- Change to your secret key
-            }
-        conn.request("POST", "/payment-intents/", payload, headers)
+<Tabs groupId="codeGroup">
+  <TabItem value="python" label="Python">
 
-        # handling the response from POST
-        res = conn.getresponse()
-        data = res.read()
-        resp_data = {}
-        resp_data['paymentToken'] = json.loads(data)["connecteToken"]
-        json_data = json.dumps(resp_data)
-        resp = app.response_class(
-          response=json_data,
-          mimetype='application/json'
-          )
-        return resp
+```py reference title="server.py"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/server/python/server.py#L36-L61
 ```
 
-See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a complete list of parameters that can be used for payment intent creation.
+  </TabItem>
+  <TabItem value="C#" label="C#">
+
+```csharp reference title="server.cs"
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/server/cs/server.cs
+```
+
+  </TabItem>
+</Tabs>
+
+See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a complete list parameters that you can use.
 
 ### Step 4. Handle post-payment events
 
@@ -215,10 +124,6 @@ import CardSnippet from '../../snippets/_card.mdx';
 import GoLiveSnippet from '../../snippets/_test-and-go-live.mdx';
 
 <GoLiveSnippet />
-
-## Try it out
-
-<CodePen user="myafka" hash="ExwWzpM"/>
 
 ---
 

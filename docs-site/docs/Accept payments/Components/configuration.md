@@ -3,9 +3,9 @@ title: Configure Dojo Components
 sidebar_position: 3
 ---
 
-## Connect-E Card
+## Dojo Card
 
-```const connectE = new Connect.ConnectE(config, displayErrorsCallback, onSubmitTriggered, onBlur);```
+```const card = new new Dojo.Payment(config, displayErrorsCallback, onSubmitTriggered, onBlur);```
 
 | Parameter | Type | Description |
 |-----|-----|-----|
@@ -14,15 +14,15 @@ sidebar_position: 3
 |`onSubmitTriggered` | function|An optional callback that is called when the submit event on the payment form is fired. This allows the payment to be submitted or extra validation done when the user presses the enter key on the payment form.|
 |`onBlur` |function(isValid: boolean)| An optional callback that is called when focus is lost from any field in the form. The parameter isValid will be true when all fields are completed and there are no validation errors.|
 
-## Connect-E Wallet
+## Dojo Wallet
 
-```const connectE = new Connect.ConnectE(config, displayErrorsCallback, onSubmitTriggered, onBlur);```
+```const wallet = new Dojo.WalletPayment(config, displayErrorsCallback, paymentComplete);```
 
 | Parameter | Type | Description |
 |-----|-----|-----|
 |`config` |object [Config](#config)|Required. Config containing details of this payment and the styling of the payment button. |
 |`displayErrorsCallback` |function| An optional callback to display text [validation errors](#validation-error). The supplied function is called when there is a validation state change. This function is passed an array of validationError objects.|
-|`onPaymentExecuted` | function|A callback that returns the result of payment. The supplied function is called when the payment is executed. This function is passed a [Transaction Result](#transaction-result) object.|
+|`paymentComplete` | function|A callback that returns the result of payment. The supplied function is called when the payment is executed. This function is passed a [Transaction Result](#transaction-result) object.|
 
 ## Config
 
@@ -48,7 +48,6 @@ sidebar_position: 3
 | Property| Type |Description |
 |-----|-----|-----|
 |`paymentToken` | string | Required. The access token supplied by the get access token API.|
-|`countryCode` | string | Required for Apple Pay. The two-letter ISO 3166 country code, e.g. GB for the United Kingdom. This property is required for Apple Pay.|
 
 ### Styles Config
 
@@ -142,7 +141,7 @@ This allows overriding of the default error messages. This will override both th
 
 ```js
 
-connectE.executePayment(additionalInfo)
+card.executePayment(additionalInfo)
     .then(function(data){
         /*handle response here*/
     }).catch(function(data){
@@ -207,23 +206,3 @@ The user's email address and billing address can be passed as the optional addit
 |`state` |string|Customer’s billing address state or county.|
 |`postcode` |string|Customer’s billing address postcode or zipcode.|
 |`countryCode` |string|Customer’s billing address country code using ISO 3166-1 e.g. United Kingdom: 826.|
-
-## Update Access Token
-
-It may be useful to update the access token if the current token has been consumed or expired. A new access token will need to be obtained from the [Dojo API](/api#operation/PaymentIntents_RefreshPaymentIntentToken) and passed as an object of payment details to the function.
-
-For the card component:
-
-```
-
-connectE.updateAccessToken(paymentDetails);
-
-```
-
-For the wallet component:
-
-```
-
-wallet.updateAccessToken(paymentDetails);
-
-```

@@ -5,19 +5,19 @@ import styles from "./styles.module.css";
 
 const data = [
   {
-    link: "/docs/plugins/woocommerce",
+    link: "docs/plugins/woocommerce",
     icon: "/images/plugins/woocommerce.svg",
   },
   {
-    link: "/docs/plugins/magento",
+    link: "docs/plugins/magento",
     icon: "/images/plugins/magento.svg",
   },
   {
-    link: "/docs/plugins/opencart",
+    link: "docs/plugins/opencart",
     icon: "/images/plugins/opencart.svg",
   },
   {
-    link: "/docs/plugins/prestashop",
+    link: "docs/plugins/prestashop",
     icon: "/images/plugins/prestashop.svg",
   },
 ];

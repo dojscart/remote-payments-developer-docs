@@ -5,22 +5,6 @@ import styles from "./styles.module.css";
 
 const data = [
   {
-    title: "Online Checkout",
-    link: "docs/Accept%20payments/Online%20checkout/",
-    icon: "images/online-checkout.jpg",
-    description: <>
-    <div>
-       <p>Send your customers to Dojo Online Checkout page to pay.</p>
-       <ul>
-       <li>Minimal coding</li>
-       <li>Website required, Dojo hosts the checkout page</li>
-       <li>Responsive web	</li>
-       <li>Full PCI compliance</li>
-       </ul>
-       </div>
-       </>,
-  },
-  {
     title: "Payment Links",
     link: "docs/Accept%20payments/Payment%20links/",
     icon: "images/payment-links.jpg",
@@ -30,6 +14,22 @@ const data = [
        <ul>
        <li>No coding</li>
        <li>No website required</li>
+       <li>Responsive web	</li>
+       <li>Full PCI compliance</li>
+       </ul>
+       </div>
+       </>,
+  },
+  {
+    title: "Online Checkout",
+    link: "docs/Accept%20payments/Online%20checkout/",
+    icon: "images/online-checkout.jpg",
+    description: <>
+    <div>
+       <p>Send your customers to Dojo Online Checkout page to pay.</p>
+       <ul>
+       <li>Minimal coding</li>
+       <li>Website required, Dojo hosts the checkout page</li>
        <li>Responsive web	</li>
        <li>Full PCI compliance</li>
        </ul>
@@ -64,7 +64,7 @@ function Resource({ title, link, icon, description }) {
         style={{ height: "200px", width: "350px" }}
         src={useBaseUrl(icon)}
       />
-       <h3><a className={clsx("margin-top--sm", styles.posRelative)} href={link}>
+       <h3><a className={clsx("margin-top--sm", styles.posRelative)} href={useBaseUrl(link)}>
         {title}
       </a></h3>
       <p>{description}</p>

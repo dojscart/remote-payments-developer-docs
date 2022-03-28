@@ -26,7 +26,7 @@ If your API key is lost or compromised, you need to ask for a new one.
 ## Step 2. Make a test API call
 
 To verify that your key is working correctly, let's create a test API call.
-Copy the code below into a command line, replace `YOUR_API_KEY_HERE` with your test API key (with the prefix `sk_test_`), and run the command.
+Copy the code below, replace `YOUR_API_KEY_HERE` with your test API key (with the prefix `sk_test_`), and run the code.
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>

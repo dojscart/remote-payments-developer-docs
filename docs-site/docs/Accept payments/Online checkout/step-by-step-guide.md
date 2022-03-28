@@ -37,7 +37,7 @@ import BeforeStartSnippet from '../../snippets/_before-start.mdx';
 
 Call a server-side endpoint from the checkout button on your client-side to create a payment intent, for example:
 
-```html reference title="online-checkout-client.html"
+```js reference title="online-checkout-client.html"
 https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/client/html/templates/online-checkout-client.html#L10-L27
 ```
 
@@ -85,7 +85,7 @@ Return this id to the client-side and use it to create a link in the following f
 
 Redirect your customer to the link on your client-side:
 
-```html reference title="online-checkout-client.html"
+```js reference title="online-checkout-client.html"
 https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/client/html/templates/online-checkout-client.html#L28-L32
 ```
 

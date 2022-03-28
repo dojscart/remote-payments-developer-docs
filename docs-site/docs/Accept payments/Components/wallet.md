@@ -2,7 +2,8 @@
 title: Wallet Component
 sidebar_position: 2
 ---
-
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 import CodePen from 'codepen-react'
 
 >Learn how you can embed our pre-built wallet component on your checkout page.
@@ -40,6 +41,10 @@ import BeforeStartSnippet from '../../snippets/_before-start.mdx';
 
 <BeforeStartSnippet />
 
+To enable Apple Pay, you must host the [domain verification file](/apple-pay/apple-developer-merchantid-domain-association) on each domain you want to use, including subdomains, under the following path: `https://yourdomain/.well-known/apple-developer-merchantid-domain-association`. 
+
+Make sure that the file is downloadable and served at the correct location, as Apple will use this location to verify the validity of your domain. If your domain is protected from public access and you wish to complete domain verification, you should allow [Apple IP Addresses for Domain Verification](https://developer.apple.com/documentation/apple_pay_on_the_web/setting_up_your_server/#3179116).
+
 #### Terms and Conditions
 
 - By integrating Apple Pay, you adhere to the [Apple Pay APIs Acceptable Use Policy](https://developer.apple.com/apple-pay/acceptable-use-guidelines-for-websites/) and accept the terms and conditions defined in the [Apple Pay Web Merchant Terms and Conditions](https://developer.apple.com/apple-pay/terms/apple-pay-web/).
@@ -48,87 +53,31 @@ import BeforeStartSnippet from '../../snippets/_before-start.mdx';
 
 ### Step 1. Add the component to your checkout page
 
-Include the Dojo.js script on your checkout page. This script must always load directly from `connect.paymentsense.cloud` to remain PCI compliant—you can’t include it in a bundle or host a copy of it yourself.
+Include Dojo `client.js` script on your checkout page. This script must always load directly from `cdn.dojo.tech` to remain PCI compliant—you can’t include it in a bundle or host a copy of it yourself.
 
-```html
-<head>
-   <script src="https://web.e.test.connect.paymentsense.cloud/assets/js/client.js"></script>
-</head>
+```html reference title="index.html"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/client/html/templates/index.html#L4-L8
 ```
 
 Add empty placeholders div to your checkout page to create a payment form.
 For example:
 
-```html
-<body>
-  <div id="demo-payment-wallet"></div>
-  <div id="errors"></div>
-  <div id="demo-result" hidden>
-    <h5>Payment Complete</h5>
-    <dl>
-        <dt>Status Code</dt>
-        <dd id="status-code"></dd>
-        <dt>Auth Code</dt>
-        <dd id="auth-code"></dd>
-        <dt>Message</dt>
-        <dd id="message"></dd>
-    </dl>
-  </div>
-</body>
+```html reference title="index.html"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/client/html/templates/index.html#L10-L25
 ```
 
 ### Step 2. Set up Dojo Wallet Component
 
 Next, in your JavaScript file, create an instance of Dojo:
 
-```js
-
-    .then(response => response.json())
-    .then(function (data) {
-        const payConfig = {
-            paymentDetails: {
-                countryCode: 'GB',
-                paymentToken: data.paymentToken
-            },
-            containerId: "demo-payment-wallet",
-            buttonConfig: {
-              color: 'black',
-              type: 'plain'
-            },
-            emailRequired: true,
-            billingAddressRequired: false,
-            shippingAddressRequired: false
-        }
-        // intialising connection
-        const wallet = new Connect.Wallet(config, displayErrors, paymentComplete);
-
-        function paymentComplete(response) {
-          document.getElementById('demo-payment-wallet').hidden = true;
-          document.getElementById('demo-result').hidden = false;
-          document.getElementById('status-code').innerText = response.statusCode;
-          document.getElementById('auth-code').innerText = response.authCode;
-          document.getElementById('message').innerText = response.message;
-    }
+```js reference title="script.js"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/client/html/static/script.js#L17-L41
 ```
 
- For an unsuccessful payment, Dojo.js returns an error. The error event returns an object which contains details about the error:
+ For an unsuccessful payment, Dojo returns an error. The error event returns an object which contains details about the error:
 
-```js
-     // handling errors
-      function displayErrors(errors) {
-        const errorsDiv = document.getElementById('errors');
-        errorsDiv.innerHTML = '';
-
-        if (errors && errors.length) {
-          const list = document.createElement('ul');
-          for (const error of errors){
-              const item = document.createElement('li');
-              item.innerText = error.message;
-              list.appendChild(item);
-          }
-          errorsDiv.appendChild(list);
-        }
-      }
+ ```js reference title="script.js"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/client/html/static/script.js#L43-L56
 ```
 
 See the [Optional configuration](configuration) for a complete list of parameters that you can use.
@@ -137,20 +86,8 @@ See the [Optional configuration](configuration) for a complete list of parameter
 
 Call a server-side endpoint to create a payment intent, for example:
 
-```js
-    function myFunction() {
-      // POST
-      fetch('/checkout', {
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify({
-          "greeting": ""
-        })
-      })
-    }
+```js reference title="script.js"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/client/html/static/script.js#L2-L16
 ```
 
 To create a payment intent, the following parameters are required:
@@ -161,35 +98,24 @@ To create a payment intent, the following parameters are required:
 
 Here's an example of how to create a payment intent on your server-side:
 
-```py title="server.py"
- payload = json.dumps({
-          "amount": {
-            "value": 1000,
-            "currencyCode": "GBP"
-          },
-          "reference": "Order 245"
-          })
-        headers = {
-            'content-type': "application/json",
-            'version': "2022-01-03",
-            'Authorization': "Basic sk_test_m302B3jKTdyIXCOgMJwTrZBlIN4_bFBeuRsuUJqC3QS0w6XR-HTcXT9vfcxPHjw_fPmWFinEitRoGusuxjuM0hTYkO2YQQmalTSRAxX1yQsQWSSLWU3TsJ4ImPRdMKzjP88IJVookJQQ7DgQoD4JK9tbdLbID1h7gNa9d8AtgV24mR0dR1Nwc8rDZxcWRFH_WaOoPfKoaM8TdwZV7PiR3A" # <-- Change to your secret key
-            }
-        conn.request("POST", "/payment-intents/", payload, headers)
+<Tabs groupId="codeGroup">
+  <TabItem value="python" label="Python">
 
-        # handling the response from POST
-        res = conn.getresponse()
-        data = res.read()
-        resp_data = {}
-        resp_data['paymentToken'] = json.loads(data)["connecteToken"]
-        json_data = json.dumps(resp_data)
-        resp = app.response_class(
-          response=json_data,
-          mimetype='application/json'
-          )
-        return resp
+```py reference title="server.py"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/server/python/server.py#L36-L61
 ```
 
-See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a complete list of parameters that can be used for payment intent creation.
+  </TabItem>
+  <TabItem value="C#" label="C#">
+
+```csharp reference title="server.cs"
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/server/cs/server.cs
+```
+  </TabItem>
+</Tabs>
+
+
+See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a complete list parameters that you can use.
 
 ### Step 4. Handle post-payment events
 
@@ -207,21 +133,17 @@ Before going live, test your integration. <GoLiveSnippet />
 
 To enable test cards for Apple Pay, you must have an Apple Sandbox Tester Account, then you will be able to add test cards into your Apple Wallet.
 
-See [Apple's Sandbox Testing Documentation](https://developer.apple.com/apple-pay/sandbox-testing/) to setup your Sandbox Tester Account and check the section Test Cards for Apps and the Web to see the full list of supported test cards by Apple. Although our test payment gateway does not support all of them, so if you want to test successful cases, please use the cards listed in the Test Cards section.
+See [Apple's Sandbox Testing Documentation](https://developer.apple.com/apple-pay/sandbox-testing/) to setup your Sandbox Tester Account and check the section Test Cards for Apps and the Web to see the full list of supported test cards by Apple. Although our test payment gateway doesn't support all of them, so if you want to test successful cases, please use the cards listed in the Test Cards section.
 
-If you are not enrolled into the Apple Developer Program and need a tester account, please contact our support team for further instructions.
+If you aren't enrolled into the Apple Developer Program and need a tester account, please contact our support team for further instructions.
 
 #### Testing Google Pay
 
 The Google Pay [Test Card Suite](https://developers.google.com/pay/api/android/guides/resources/test-card-suite) allows you to test Google Pay without the need of adding real cards to Google accounts.
 
-To instantly view these cards in your Google Account TEST environment, join [Google's User Group](https://groups.google.com/g/googlepay-test-mode-stub-data) and all test cards will be automatically added to your account so you do not need to add them manually.
+To instantly view these cards in your Google Account TEST environment, join [Google's User Group](https://groups.google.com/g/googlepay-test-mode-stub-data) and all test cards will be automatically added to your account so you don't need to add them manually.
 
 You are free to leave or join [Google's Test Card Suite Group](https://groups.google.com/g/googlepay-test-mode-stub-data) as needed. To leave, select My membership settings and click Leave group.
-
-## Try it out
-
-<CodePen user="myafka" hash="NWapZbz"/>
 
 ---
 

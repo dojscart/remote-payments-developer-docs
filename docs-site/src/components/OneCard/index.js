@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './card.module.css';
 import Link from '@docusaurus/Link';
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import BannerSvg from '@site/static/images/dojo-icons/Question.svg';
 
 
-const OneCard = () => {
+const OneCard = ({surveyUrl='docs/survey/question-1'}) => {
     return (
-        <Link className={styles.BannerLink} href="docs/survey/question-1">
+        <Link className={styles.BannerLink} href={useBaseUrl(surveyUrl)}>
             <div className={styles.Banner}>
             <div><BannerSvg className={styles.BannerSvg}/></div>
                 <div className={styles.BannerContent}>
