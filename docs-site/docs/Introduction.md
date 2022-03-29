@@ -2,7 +2,7 @@
 title: "Online payments"
 sidebar_position: 1
 slug: /
-id: Introduction
+id: introduction
 hide_table_of_contents: true
 ---
 
@@ -32,7 +32,7 @@ Dojo supports plugins to bring payments into your website. These plugins are off
 
 [![](/images/dojo-icons/TerminalWindow.svg) **API Reference** Learn about API and integrate with API endpoints.](/api)
 
-[![](/images/dojo-icons/AnchorSimple.svg) **Webhooks** Subscribe to events and get notified.](docs/Development%20resources/webhooks)
+[![](/images/dojo-icons/AnchorSimple.svg) **Webhooks** Subscribe to events and get notified.](/development-resources/webhooks.md)
 
 [![](/images/dojo-icons/Rocket.svg) **Postman collection** You can run the API collection in Postman.](https://app.getpostman.com/run-collection/16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295?action=collection%2Ffork&collection-url=entityId%3D16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523"class="stretched-link)
 

@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 >Find out how to cancel a payment that hasn't yet been authorized.
 
 Use a cancel if you don’t want to proceed with a payment, for example because authorization is declined by the card issuer.
-You can only cancel a payment before it has already been authorized. Payments that have yet been authorized have to be [reversed](reversal/) instead.
+You can only cancel a payment before it has already been authorized. Payments that have yet been authorized have to be [reversed](reversal.md) instead.
 
 ## Cancel using the Dojo API
 
@@ -64,11 +64,3 @@ If your request is successful, the response will return information about the ca
   ...
 }
 ```
-
----
-
-## See also
-
-* [Change amount](../change-amount/)
-
-* [Reversal](reversal/)

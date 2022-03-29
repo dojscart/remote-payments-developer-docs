@@ -73,13 +73,3 @@ When you capture a payment, you get a CaptureResponse object in the response, wh
 | `Created`| Dojo is processing the capture.|
 | `Successful` | Dojo has approved the capture, money is being sent to the consumer.|
 | `Failed`|  The request failed, the consumer doesn't receive a payment. It can be caused by, for example, the card receiving the capture is no longer valid, or bad request parameters.|
-
----
-
-## See also
-
-* [Change amount](change-amount/)
-
-* [Reversal](Cancellation%20payments/reversal/)
-
-* [Send a receipt](send-receipt/)

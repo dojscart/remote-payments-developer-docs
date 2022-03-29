@@ -1,7 +1,7 @@
 ---
 title: Payment links
 weight: 2
-id: Payment links
+id: payment-links
 ---
 
 >Learn about Dojo Payment Links.
@@ -26,6 +26,6 @@ import CardGrid from "@site/src/components/CardGrid"
 
 [![](/images/dojo-icons/MobileInformation.svg) **Dojo App** Create each payment link manually using Dojo App.](https://support.dojo.tech/hc/en-gb/articles/4415821097874-How-to-use-payment-links)
 
-[![](/images/dojo-icons/BookBookmark.svg) **API step-by-step guide** Generate payment links automatically through the API.](step-by-step-guide)
+[![](/images/dojo-icons/BookBookmark.svg) **API step-by-step guide** Generate payment links automatically through the API.](./step-by-step-guide.md)
 
 </CardGrid>

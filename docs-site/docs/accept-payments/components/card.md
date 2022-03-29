@@ -19,7 +19,7 @@ In terms of implementation, integration contains:
 
 - Webhook server: receives information about the payment.
 
-If you'd rather do less coding, use pre-build [Dojo Online Checkout](../Online%20checkout/).
+If you'd rather do less coding, use pre-build [Dojo Online Checkout](../online-checkout/online-checkout.md).
 
 ## How to process a payment
 
@@ -31,7 +31,7 @@ Step-by-step guide:
 
 3. [Create a payment intent](#step-3-create-a-payment-intent).
 
-4. [Handle post-payment events](#step-4-handle-post-payment-events)
+4. [Handle post-payment events](#step-4-handle-post-payment-events).
 
 5. [Test and go live](#step-5-test-and-go-live).
 
@@ -70,7 +70,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client
 https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/static/script.js#L61-L75
 ```
 
-See the [Optional configuration](configuration) for a complete list of parameters that you can use.
+See the [Optional configuration](./configuration.md) for a complete list of parameters that you can use.
 
 ### Step 3. Create a payment intent
 
@@ -111,7 +111,7 @@ See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a
 
 Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
 
-If you haven't set up webhooks yet, review our [webhooks guide](../../Development%20resources/webhooks.md).
+If you haven't set up webhooks yet, review our [webhooks guide](../../development-resources/webhooks.md).
 
 ### Step 5. Test and go live
 
@@ -133,10 +133,10 @@ import CardGrid from "@site/src/components/CardGrid"
 
 <CardGrid home>
 
-[![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../../Development%20resources/webhooks.md)
+[![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../../development-resources/webhooks.md)
 
-[![](/images/dojo-icons/Settings.svg) **Configure Dojo Components** Find out how you can configure the Dojo Components.](configuration)
+[![](/images/dojo-icons/Settings.svg) **Configure Dojo Components** Find out how you can configure the Dojo Components.](./configuration.md)
 
-[![](/images/dojo-icons/Filters.svg) **Manage payments** Learn how to capture or reverse payments, retrieve payment details or change payments amount.](../../Manage%20payments)
+[![](/images/dojo-icons/Filters.svg) **Manage payments** Learn how to capture or reverse payments, retrieve payment details or change payments amount.](../../manage-payments/manage-payments.md)
 
 </CardGrid>

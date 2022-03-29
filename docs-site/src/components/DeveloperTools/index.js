@@ -12,7 +12,7 @@ const data = [
   },
   {
     title: "API Explorer",
-    link: "Accept%20payments/Payment%20links/",
+    link: "accept-payments/payment-links/",
     description: <>
     <div>
         <p>Embed or share a link to to Dojo Online Checkout page to accept payments without a website.</p>

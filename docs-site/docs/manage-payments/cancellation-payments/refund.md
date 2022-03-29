@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Use a refund if you need to return money to your customer, for example if they returned a purchase, you need to refund the payment. You can refund the full payment amount, part of the amount, or make several partial refunds if their amount doesn't exceed the full payment amount.
 
-You can only refund a payment after it has already been [captured](../capture/). Payments that haven't yet been captured have to be [reversed](reversal/) instead.
+You can only refund a payment after it has already been [captured](../capture.md). Payments that haven't yet been captured have to be [reversed](reversal.md) instead.
 
 If you want to use the Dojo Merchant app for a refund, see [Refunding online checkout transactions](https://support.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1SZJWY37BZKNMN0BQ3EYKF).
 
@@ -82,11 +82,3 @@ When you refund a payment, you get a RefundResponse object in the response, whic
 ## Cancel a refund
 
 Once created, the refund can't be canceled. As an option, you can create a new payment intent instead of the one that was refunded.
-
----
-
-## See also
-
-* [Change amount](../change-amount/)
-
-* [Reversal](reversal/)

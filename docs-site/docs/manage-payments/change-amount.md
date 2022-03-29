@@ -18,7 +18,7 @@ You can call the Dojo API to change the payment amount and tip amount after crea
 }
 ```
 
-You can only change an amount for payments before it has been [captured](capture/).
+You can only change an amount for payments before it has been [captured](capture.md).
 
 ## Change payment amount
 
@@ -208,13 +208,3 @@ If your request is successful, the response will return information about the ch
 * complete the unmodified payment and create a new to pay the additional amount
 
 * create a new payment with the same payments details, but with a new payment amount. After the payment is authorized, cancel the original payment
-
----
-
-## See also
-
-* [Capture a payment](capture/)
-
-* [Reversal](Cancellation%20payments/reversal/)
-
-* [Send a receipt](send-receipt/)

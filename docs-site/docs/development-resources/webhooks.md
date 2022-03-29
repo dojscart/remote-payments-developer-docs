@@ -23,8 +23,8 @@ To start using webhooks, you need:
 
 ### Before you start
 
-Before you begin, make sure you have followed the [Getting started guide](../Getting%20started/) and get your API keys. Webhooks API use the same Basic Authentication as Dojo API.
-For the test environment, use your secret key with the prefix `sk_test_`.
+Before you begin, make sure you have followed the [Getting started guide](../getting-started.md) and get your API keys. Webhooks API use the same Basic Authentication as Dojo API.
+For the test environment, use your secret key with the prefix `sk_sandbox_`.
 
 ### Step 1. Choose which events to subscribe to
 

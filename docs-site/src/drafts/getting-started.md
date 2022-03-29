@@ -26,7 +26,7 @@ If your API key is lost or compromised, you need to generate a new one.
 ## Step 3. Make a test API call
 
 To verify that your account is working correctly, let's create a test payment for 10 GBP.
-Copy the code below into a command line, replace YOUR_API_KEY_HERE with your test API key (with the prefix `sk_test_`), and run the command.
+Copy the code below into a command line, replace YOUR_API_KEY_HERE with your test API key (with the prefix `sk_sandbox_`), and run the command.
 
 {{< code lang="Shell" file="code/create-payment-intent.sh" >}}{{< /code >}}
 
