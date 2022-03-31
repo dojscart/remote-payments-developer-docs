@@ -58,18 +58,7 @@ If your request is successful, the response will return information about the ca
 
 ```json
 {
-  "status": "Created",
   "message": "collect payment for the order 3443",
-  "captureId": "5"
+  "captureId": "cp_itIiJMEAvES3ynYF_Yhs2g"
 }
 ```
-
-## Capture status
-
-When you capture a payment, you get a CaptureResponse object in the response, which includes the status field. The status field can be `Created`, `Successful`, or `Failed`.
-
-| Status | Description |
-| ------------- | -----|
-| `Created`| Dojo is processing the capture.|
-| `Successful` | Dojo has approved the capture, money is being sent to the consumer.|
-| `Failed`|  The request failed, the consumer doesn't receive a payment. It can be caused by, for example, the card receiving the capture is no longer valid, or bad request parameters.|

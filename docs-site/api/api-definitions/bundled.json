@@ -3044,30 +3044,12 @@
           "amount": 1000
         }
       },
-      "CaptureStatus": {
-        "title": "CaptureStatus",
-        "type": "string",
-        "description": "Current capture status.",
-        "x-enumNames": [
-          "Created",
-          "Successful",
-          "Failed"
-        ],
-        "enum": [
-          "Created",
-          "Successful",
-          "Failed"
-        ]
-      },
       "CreateCaptureResponse": {
         "type": "object",
         "description": "The capture response object.",
         "additionalProperties": false,
         "title": "CreateCaptureResponse",
         "properties": {
-          "status": {
-            "$ref": "#/components/schemas/CaptureStatus"
-          },
           "message": {
             "type": "string",
             "description": "The description of the operation.",
@@ -3080,7 +3062,6 @@
           }
         },
         "example": {
-          "status": "Created",
           "message": "Demo capture",
           "captureId": "cp_itIiJMEAvES3ynYF_Yhs2g"
         }
@@ -3301,30 +3282,12 @@
           "amount"
         ]
       },
-      "RefundStatus": {
-        "type": "string",
-        "title": "RefundStatus",
-        "enum": [
-          "Created",
-          "Successful",
-          "Failed"
-        ],
-        "x-enumNames": [
-          "Created",
-          "Successful",
-          "Failed"
-        ],
-        "description": "Current refund status."
-      },
       "CreateRefundResponse": {
         "type": "object",
         "description": "The create refund response object.",
         "additionalProperties": false,
         "title": "CreateRefundResponse",
         "properties": {
-          "status": {
-            "$ref": "#/components/schemas/RefundStatus"
-          },
           "message": {
             "type": "string",
             "description": "The description of the operation.",
@@ -3337,7 +3300,6 @@
           }
         },
         "example": {
-          "status": "Created",
           "message": null,
           "refundId": "rfnd_127usj"
         }
@@ -3376,30 +3338,12 @@
           "notes": null
         }
       },
-      "ReversalStatus": {
-        "type": "string",
-        "title": "ReversalStatus",
-        "enum": [
-          "Created",
-          "Successful",
-          "Failed"
-        ],
-        "x-enumNames": [
-          "Created",
-          "Successful",
-          "Failed"
-        ],
-        "description": "Current reversal status."
-      },
       "CreateReversalResponse": {
         "type": "object",
         "description": "The create reversal response object.",
         "additionalProperties": false,
         "title": "CreateReversalResponse",
         "properties": {
-          "status": {
-            "$ref": "#/components/schemas/ReversalStatus"
-          },
           "message": {
             "type": "string",
             "description": "The description of the operation.",
@@ -3412,7 +3356,6 @@
           }
         },
         "example": {
-          "status": "Created",
           "message": null,
           "reversalId": "rvs_127usj"
         }

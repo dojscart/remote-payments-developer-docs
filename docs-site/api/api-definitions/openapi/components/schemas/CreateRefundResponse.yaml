@@ -3,8 +3,6 @@ description: The create refund response object.
 additionalProperties: false
 title: CreateRefundResponse
 properties:
-  status:
-    $ref: ./RefundStatus.yaml
   message:
     type: string
     description:    
@@ -16,7 +14,6 @@ properties:
      $ref: ../../../prose/parameters/refundId.md
     nullable: true
 example:
-  status: "Created"
   message: null
   refundId: "rfnd_127usj"
 

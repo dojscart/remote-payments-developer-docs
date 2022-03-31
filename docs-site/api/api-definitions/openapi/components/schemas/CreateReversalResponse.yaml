@@ -3,8 +3,6 @@ description: The create reversal response object.
 additionalProperties: false
 title: CreateReversalResponse
 properties:
-  status:
-    $ref: ./ReversalStatus.yaml
   message:
     type: string
     description:   
@@ -16,6 +14,5 @@ properties:
      $ref: ../../../prose/parameters/reversalId.md
     nullable: true
 example:
-  status: "Created"
   message: null
   reversalId: "rvs_127usj"

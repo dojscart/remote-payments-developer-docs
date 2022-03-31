@@ -63,21 +63,10 @@ If your request is successful, the response will return information about the re
 
 ```json
 {
-  "status": "Created",
   "message": "refund for the order 3443",
-  "refundId": "555546464"
+  "refundId": "rfnd_g8mCx87TykeQ6BOXqxZ9NQ"
 }
 ```
-
-## Refund status
-
-When you refund a payment, you get a RefundResponse object in the response, which includes the status field. The status field can be `Created`, `Successful`, or `Failed`.
-
-| Status | Description |
-| ------------- | -----|
-| `Created`| Dojo is processing the refund.|
-| `Successful` | Dojo has approved the refund, refund are being sent to the customer.|
-| `Failed`|  The request failed, the customer doesn't receive a refund. It can be caused by, for example, the card receiving the refund is no longer valid, or bad request parameters.|
 
 ## Cancel a refund
 

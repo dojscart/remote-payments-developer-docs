@@ -59,21 +59,10 @@ If your request is successful, the response will return information about the re
 
 ```json
 {
-  "status": "Created",
   "message": "reverse for the order 3443",
-  "reversalId": "55873"
+  "reversalId": "rvs_g8mCx87TykeQ6BOXqxZ9NQ"
 }
 ```
-
-## Reversal status
-
-When you reverse a payment, you get a ReverseResponse object in the response, which includes the status field. The status field can be `Created`, `Successful`, or `Failed`.
-
-| Status | Description |
-| ------------- | -----|
-| `Created`| Dojo is processing the reversal.|
-| `Successful` | Dojo has approved the reversal, reversal are being sent to the customer.|
-| `Failed`|  The request failed, the customer doesn't receive a reversal. It can be caused by, for example, bad request parameters.|
 
 ## Cancel a reverse
 
