@@ -1,0 +1,32 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
+
+Here's an example of how to subscribe to the `payment_intent.status_updated` event:
+
+<Tabs groupId="codeGroup">
+ <TabItem value="curl" label="curl">
+
+```bash reference
+https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/curl/enable-webhooks.sh
+```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```py reference
+https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/python/enable-webhooks.py
+```
+
+  </TabItem>
+  <TabItem value="C#" label="C#">
+
+```csharp reference
+https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/cs/enable-webhooks.cs
+```
+
+  </TabItem>
+</Tabs>
+
+If you haven't set up webhooks yet, review our [webhooks guide](../development-resources/webhooks.md).

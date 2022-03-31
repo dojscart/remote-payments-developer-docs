@@ -15,9 +15,9 @@ In terms of implementation, integration contains:
 
 - Server-side: one API request to create a payment intent.
 
-- Client-side: set up Dojo card component, which securely sends payment data to our server.
+- Client-side: set up Dojo Card Component, which securely sends payment data to our server.
 
-- Webhook server: receives information about the payment.
+- Webhooks: server-side endpoint to receive information about the payment.
 
 If you'd rather do less coding, use pre-build [Dojo Online Checkout](../online-checkout/online-checkout.md).
 
@@ -109,9 +109,9 @@ See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a
 
 ### Step 4. Handle post-payment events
 
-Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
+import WebhooksSnippet from '../../snippets/_webhooks.mdx';
 
-If you haven't set up webhooks yet, review our [webhooks guide](../../development-resources/webhooks.md).
+<WebhooksSnippet />
 
 ### Step 5. Test and go live
 

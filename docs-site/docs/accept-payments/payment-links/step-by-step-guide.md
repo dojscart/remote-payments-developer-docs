@@ -11,7 +11,7 @@ In terms of implementation, integration contains:
 
 - Server-side: one API request to create a payment intent.
 
-- Webhook server: receives information about the payment.
+- Webhooks: server-side endpoint to receive information about the payment.
 
 ## How to process a payment
 
@@ -81,9 +81,9 @@ Send the link to your customer through chat or email. When the customer opens th
 
 ### Step 3. Handle post-payment events
 
-Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
+import WebhooksSnippet from '../../snippets/_webhooks.mdx';
 
-If you haven't set up webhooks yet, review our [webhooks guide](../../development-resources/webhooks.md).
+<WebhooksSnippet />
 
 ### Step 4. Test and go live
 

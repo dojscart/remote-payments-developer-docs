@@ -5,15 +5,15 @@ weight: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
->Learn how to implement our Online checkout page to accept payments.
+>Learn how to implement our Online Checkout page to accept payments.
 
 In terms of implementation, integration contains:
 
 - Server-side: one API request to create a payment intent.
 
-- Client-side: redirect to Dojo online checkout page.
+- Client-side: redirect to Dojo Online Checkout page.
 
-- Webhook server: receives information about the payment.
+- Webhooks: server-side endpoint to receive information about the payment.
 
 ## How to process a payment
 
@@ -93,9 +93,9 @@ After your customer fills payment information on the checkout page, Dojo process
 
 ### Step 3. Handle post-payment events
 
-Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
+import WebhooksSnippet from '../../snippets/_webhooks.mdx';
 
-If you haven't set up webhooks yet, review our [webhooks guide](../../development-resources/webhooks.md).
+<WebhooksSnippet />
 
 ### Step 4. Test and go live
 

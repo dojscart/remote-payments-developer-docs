@@ -8,6 +8,11 @@ properties:
     type: string
     description:   
      $ref: ../../../prose/parameters/subscriptionId.md
+  accountId:
+    type: string
+    nullable: true
+    description:
+      $ref: ../../../prose/parameters/accountId.md
   events:
     type: array
     description:   
@@ -27,3 +32,13 @@ properties:
      $ref: ../../../prose/parameters/secrets.md
     items:
       $ref: ./SubscriptionSecret.yaml
+  createdAt:
+    type: string
+    format: date-time
+    description:      
+     $ref: ../../../prose/parameters/createdAt.md
+  updatedAt:
+    type: string
+    format: date-time
+    description:      
+     $ref: ../../../prose/parameters/updatedAt.md

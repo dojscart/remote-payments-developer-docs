@@ -15,9 +15,9 @@ In terms of implementation, integration contains:
 
 - Server-side: one API request to create a payment intent.
 
-- Client-side: set up Dojo wallet component, which securely sends payment data to our server.
+- Client-side: set up Dojo Wallet Component, which securely sends payment data to our server.
 
-- Webhook server: receives information about the payment.
+- Webhooks: server-side endpoint to receive information about the payment.
 
 If you'd rather do less coding, use pre-build [Dojo Online Checkout](../online-checkout/online-checkout.md).
 
@@ -41,7 +41,7 @@ import BeforeStartSnippet from '../../snippets/_before-start.mdx';
 
 <BeforeStartSnippet />
 
-To enable Apple Pay, you must host the [domain verification file](https://github.com/dojo-engineering/dojo-samples/blob/main/domain-verification-file/apple-developer-merchantid-domain-association) on each domain you want to use, including subdomains, under the following path: `https://yourdomain/.well-known/apple-developer-merchantid-domain-association`.
+To enable Apple Pay, you must host the [domain verification file](https://cdn.dojo.tech/payments/assets/ApplePay/apple-developer-merchantid-domain-association) on each domain you want to use, including subdomains, under the following path: `https://yourdomain/.well-known/apple-developer-merchantid-domain-association`.
 
 Make sure that the file is downloadable and served at the correct location, as Apple will use this location to verify the validity of your domain. If your domain is protected from public access and you wish to complete domain verification, you should allow [Apple IP Addresses for Domain Verification](https://developer.apple.com/documentation/apple_pay_on_the_web/setting_up_your_server/#3179116).
 
@@ -119,9 +119,9 @@ See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a
 
 ### Step 4. Handle post-payment events
 
-Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
+import WebhooksSnippet from '../../snippets/_webhooks.mdx';
 
-If you haven't set up webhooks yet, review our [webhooks guide](../../development-resources/webhooks.md).
+<WebhooksSnippet />
 
 ### Step 5. Test and go live
 

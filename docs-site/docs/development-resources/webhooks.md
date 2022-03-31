@@ -49,6 +49,13 @@ In your request, include:
 Here's an example of how to subscribe to the `payment_intent.status_updated` event:
 
 <Tabs groupId="codeGroup">
+ <TabItem value="curl" label="curl">
+
+```bash reference
+https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/curl/enable-webhooks.sh
+```
+
+  </TabItem>
   <TabItem value="python" label="Python">
 
 ```py reference
