@@ -34,7 +34,7 @@ Dojo supports plugins to bring payments into your website. These plugins are off
 
 [![](/images/dojo-icons/AnchorSimple.svg) **Webhooks** Subscribe to events and get notified.](/development-resources/webhooks.md)
 
-[![](/images/dojo-icons/Rocket.svg) **Postman collection** You can run the API collection in Postman.](https://app.getpostman.com/run-collection/16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295?action=collection%2Ffork&collection-url=entityId%3D16735701-7fe64908-9da4-4c17-b78d-80a1f41b4295%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523"class="stretched-link)
+[![](/images/dojo-icons/Rocket.svg) **Postman collection** You can run the API collection in Postman.](https://god.gw.postman.com/run-collection/16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e?action=collection%2Ffork&collection-url=entityId%3D16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)
 
 [![](/images/dojo-icons/Copy.svg) **Sample integrations** Clone examples integrations.](https://github.com/dojo-engineering/dojo-samples)
 
