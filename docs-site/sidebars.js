@@ -76,6 +76,7 @@ const sidebars = {
         'Manage payments/capture',
         'Manage payments/change-amount',
         'Manage payments/send-receipt',
+        'Manage payments/payment-intent',
         {
           type: 'category',
           label: 'Cancellation payments',
