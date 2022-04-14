@@ -5,8 +5,10 @@ description:
 x-enumNames:
   - Created
   - Successful
+  - Declined
   - Failed
 enum:
   - Created
   - Successful
+  - Declined
   - Failed

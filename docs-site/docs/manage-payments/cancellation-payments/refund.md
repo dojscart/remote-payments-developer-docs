@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Use a refund if you need to return money to your customer, for example if they returned a purchase, you need to refund the payment. You can refund the full payment amount, part of the amount, or make several partial refunds if their amount doesn't exceed the full payment amount.
 
-You can only refund a payment after it has already been [captured](../capture/). Payments that haven't yet been captured have to be [reversed](reversal/) instead.
+You can only refund a payment after it has already been [captured](../capture.md). Payments that haven't yet been captured have to be [reversed](reversal.md) instead.
 
 If you want to use the Dojo Merchant app for a refund, see [Refunding online checkout transactions](https://support.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1SZJWY37BZKNMN0BQ3EYKF).
 
@@ -63,30 +63,11 @@ If your request is successful, the response will return information about the re
 
 ```json
 {
-  "status": "Created",
   "message": "refund for the order 3443",
-  "refundId": "555546464"
+  "refundId": "rfnd_g8mCx87TykeQ6BOXqxZ9NQ"
 }
 ```
-
-## Refund status
-
-When you refund a payment, you get a RefundResponse object in the response, which includes the status field. The status field can be `Created`, `Successful`, or `Failed`.
-
-| Status | Description |
-| ------------- | -----|
-| `Created`| Dojo is processing the refund.|
-| `Successful` | Dojo has approved the refund, refund are being sent to the customer.|
-| `Failed`|  The request failed, the customer doesn't receive a refund. It can be caused by, for example, the card receiving the refund is no longer valid, or bad request parameters.|
 
 ## Cancel a refund
 
 Once created, the refund can't be canceled. As an option, you can create a new payment intent instead of the one that was refunded.
-
----
-
-## See also
-
-* [Change amount](../change-amount/)
-
-* [Reversal](reversal/)

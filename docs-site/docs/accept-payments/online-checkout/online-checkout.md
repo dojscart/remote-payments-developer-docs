@@ -1,7 +1,7 @@
 ---
 title: Online Checkout
 weight: 1
-id: Online checkout
+id: online-checkout
 ---
 
 >Learn about Dojo Online Checkout.
@@ -32,6 +32,6 @@ import CardGrid from "@site/src/components/CardGrid"
 
 <CardGrid home>
 
-[![](/images/dojo-icons/BookBookmark.svg) **Step-by-step guide** Learn how to implement Dojo Online Checkout to accept payments.](step-by-step-guide)
+[![](/images/dojo-icons/BookBookmark.svg) **Step-by-step guide** Learn how to implement Dojo Online Checkout to accept payments.](./step-by-step-guide.md)
 
 </CardGrid>

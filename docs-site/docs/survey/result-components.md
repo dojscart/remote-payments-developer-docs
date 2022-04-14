@@ -14,8 +14,8 @@ This solution is PCI compliant, you are required to submit [Self-Assessment Ques
 
 <CardGrid home>
 
-[![](/images/dojo-icons/PaymentCard.svg) **Card Component** Learn how to use our card component to accept payments.](../Accept%20payments/Components/card)
+[![](/images/dojo-icons/PaymentCard.svg) **Card Component** Learn how to use our card component to accept payments.](../accept-payments/components/card)
 
-[![](/images/dojo-icons/Wallet.svg) **Wallet Component** Learn how to use our single component for Apple Pay and Google Pay.](../Accept%20payments/Components/wallet)
+[![](/images/dojo-icons/Wallet.svg) **Wallet Component** Learn how to use our single component for Apple Pay and Google Pay.](../accept-payments/components/wallet)
 
 </CardGrid>

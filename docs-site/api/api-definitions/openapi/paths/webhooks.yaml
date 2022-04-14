@@ -27,29 +27,21 @@ get:
             items:
               $ref: ../components/schemas/Subscription.yaml
           example:
-            - id: sub_aNkU6yob0vOMxUlghg2oynUw
+            - id: ws_aNkU6yob0vOMxUlghg2oynUw
+              accountId: 12345
               events:
                 - payment_intent.created
                 - payment_intent.status_updated
               url: https://example.com.com/incoming-events
               secrets:
-                - id: sst_qNkU6yob0vOMxUlb2oynUw
+                - id: sc_qNkU6yob0vOMxUlb2oynUw
                   value: >-
                     U3Vic2NyaXB0aW9uUmVzcG9uc2VFeGFtcGxlIDogSUV4YW1wbGVQcm92aWRlcjxTdWJ
                   createdAt: 2021-12-13T14:15:01
                   lastUsedAt: 2021-12-16T13:44:03.3242202Z
                   isActive: true
-            - id: sub_bNkU6yob0vOMxUlghg2oynUw
-              events:
-                - payment_intent.send-receipt
-              url: https://example.com/incoming-events
-              secrets:
-                - id: sst_qNkU6yob0vOMxUlb2oynUw
-                  value: >-
-                    U3Vic2NyaXB0aW9uUmVzcG9uc2VFeGFtcGxlIDogSUV4YW1wbGVQcm92aWRlcjxTdWJ
-                  createdAt: 2021-12-13T14:15:01
-                  lastUsedAt: 2021-12-16T13:44:03.324537Z
-                  isActive: true
+              createdAt: 2022-03-30T12:21:04.143Z
+              updatedAt: 2022-03-30T12:21:04.143Z
     '401':
       description: Unauthorized
       content:
@@ -97,14 +89,15 @@ post:
           schema:
             $ref: ../components/schemas/SecretsResponse.yaml
           example:
+            id: "ws_lgQzejyXb0SD8oIDE2zcqA"
             secrets:
-              - id: sst_qNkU6yob0vOMxUlb2oynUw
+              - id: sc_qNkU6yob0vOMxUlb2oynUw
                 value: >-
                   U3Vic2NyaXB0aW9uUmVzcG9uc2VFeGFtcGxlIDogSUV4YW1wbGVQcm92aWRlcjxTdWJ
                 createdAt: 2021-12-13T14:15:01
                 lastUsedAt: 2021-12-16T13:44:03.3533309Z
                 isActive: true
-              - id: sst_zNkU6yob0vOMxUlb2oynUw
+              - id: sc_zNkU6yob0vOMxUlb2oynUw
                 value: FGswesdsaXB0aW9uUmVzcG9wbGVQcm92aWRlcjxTdWJ
                 createdAt: 2020-12-13T14:15:01
                 lastUsedAt: 2021-12-02T13:58:03.3533322Z

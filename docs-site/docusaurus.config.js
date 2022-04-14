@@ -141,11 +141,11 @@ const config = {
             items: [
               {
                 label: 'Getting started',
-                to: '/docs/Getting%20started/',
+                to: '/docs/getting-started/',
               },
               {
                 label: 'Accept payments',
-                to: '/docs/Accept%20payments/',
+                to: '/docs/accept-payments/',
               },
               {
                 label: 'API Reference',

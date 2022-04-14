@@ -61,13 +61,3 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/manage-payments/cs/se
 ### Response example
 
 If your request is successful, the response will return an empty object.
-
----
-
-## See also
-
-* [Change amount](change-amount/)
-
-* [Capture a payment](capture/)
-
-* [Reversal](Cancellation%20payments/reversal/)

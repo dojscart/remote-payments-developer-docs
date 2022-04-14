@@ -13,6 +13,6 @@ Dojo Online Checkout is a pre-built UI page where you send your customers to fin
 
 <CardGrid home>
 
-[![](/images/dojo-icons/BookBookmark.svg) **Step-by-step guide** Learn how to implement Dojo Online Checkout to accept payments.](../Accept%20payments/Online%20checkout/step-by-step-guide)
+[![](/images/dojo-icons/BookBookmark.svg) **Step-by-step guide** Learn how to implement Dojo Online Checkout to accept payments.](../accept-payments/online-checkout/step-by-step-guide)
 
 </CardGrid>

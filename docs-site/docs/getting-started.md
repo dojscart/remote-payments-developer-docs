@@ -1,7 +1,7 @@
 ---
 title: Getting started
 sidebar_position: 2
-id: Getting started
+id: getting-started
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,7 +12,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 :::info Not a developer?
 
-Check out our [plugins](plugins).
+Check out our [plugins](/plugins/plugins.md).
 
 :::
 
@@ -26,7 +26,7 @@ If your API key is lost or compromised, you need to ask for a new one.
 ## Step 2. Make a test API call
 
 To verify that your key is working correctly, let's create a test API call.
-Copy the code below, replace `YOUR_API_KEY_HERE` with your test API key (with the prefix `sk_test_`), and run the code.
+Copy the code below, replace `YOUR_API_KEY_HERE` with your test API key (with the prefix `sk_sandbox_`), and run the code.
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>
@@ -62,12 +62,12 @@ You're now ready to start building your payment integration. You can integrate w
 
 <CardGrid home>
 
-[![](/images/dojo-icons/ShoppingBag.svg) **Dojo Online Checkout** A pre-built payment page for accepting payments on your website.](/Accept%20payments/Online%20checkout/Online%20checkout.md)
+[![](/images/dojo-icons/ShoppingBag.svg) **Dojo Online Checkout** A pre-built payment page for accepting payments on your website.](/accept-payments/online-checkout/online-checkout.md)
 
-[![](/images/dojo-icons/Link.svg) **Payment links** Links that you send to your customer and accept payments without a website.](Accept%20payments/Payment%20links/)
+[![](/images/dojo-icons/Link.svg) **Payment links** Links that you send to your customer and accept payments without a website.](/accept-payments/payment-links/payment-links.md)
 
-[![](/images/dojo-icons/Layout.svg) **Dojo Components** Our ready-made JavaScript components that you can combine with your own components.](Accept%20payments/Components/)
+[![](/images/dojo-icons/Layout.svg) **Dojo Components** Our ready-made JavaScript components that you can combine with your own components.](/accept-payments/components/components.md)
 
-[![](/images/dojo-icons/Code.svg) **API only** A solution for creating your own UI and having full control over your payment page.](Accept%20payments/api-only/)
+[![](/images/dojo-icons/Code.svg) **API only** A solution for creating your own UI and having full control over your payment page.](/accept-payments/api-only.md)
 
 </CardGrid>

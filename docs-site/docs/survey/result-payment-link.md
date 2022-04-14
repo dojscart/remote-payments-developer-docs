@@ -18,6 +18,6 @@ You can create payment links either in the Dojo App, or using the Dojo API:
 
 [![](/images/dojo-icons/MobileInformation.svg) **Dojo App** Create each payment link manually using Dojo App.](https://support.dojo.tech/hc/en-gb/articles/4415821097874-How-to-use-payment-links)
 
-[![](/images/dojo-icons/BookBookmark.svg) **API step-by-step guide** Generate payment links automatically through the API.](../Accept%20payments/Payment%20links/step-by-step-guide)
+[![](/images/dojo-icons/BookBookmark.svg) **API step-by-step guide** Generate payment links automatically through the API.](../accept-payments/payment-links/step-by-step-guide)
 
 </CardGrid>

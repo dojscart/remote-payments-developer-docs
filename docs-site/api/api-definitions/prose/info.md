@@ -14,7 +14,7 @@ Try one of our [pre-builded solutions](../docs/plugins/) for your site.
 # Authentication
 
 The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). To generate your API keys, send a request to our [support team](https://support.dojo.tech/hc/en-gb/requests/new).
-Secret keys for the test environment have the prefix `sk_test_` and for production have the prefix `sk_`.
+Secret keys for the test environment have the prefix `sk_sandbox_` and for production have the prefix `sk_`.
 
 You must include your secret API key in the header of all requests, for example:
 
@@ -91,7 +91,7 @@ curl
     
 ```
 
-When we make [breaking changes](../docs/Development%20resources/versioning-overview#breaking-changes) to the API, we release new dated versions.
+When we make [breaking changes](../docs/development-resources/versioning-overview#breaking-changes) to the API, we release new dated versions.
 
 The current version is 2022–01–03. Check the last updates out in the changelog.
 

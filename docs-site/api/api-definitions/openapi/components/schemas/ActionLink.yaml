@@ -26,6 +26,6 @@ required:
   - url
   - label
 example:
-  url: 'https://docs.dojo.tech/docs/Getting%20started'
+  url: 'https://docs.dojo.tech/docs/getting-started'
   label: 'docs-link'
 

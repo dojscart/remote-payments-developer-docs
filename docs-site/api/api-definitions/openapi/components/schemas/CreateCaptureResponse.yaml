@@ -3,8 +3,6 @@ description: The capture response object.
 additionalProperties: false
 title: CreateCaptureResponse
 properties:
-  status:
-    $ref: ./CaptureStatus.yaml
   message:
     type: string
     description: 
@@ -16,6 +14,5 @@ properties:
      $ref: ../../../prose/parameters/captureId.md
     nullable: true
 example:
-  status: "Created"
   message: "Demo capture"
   captureId: "cp_itIiJMEAvES3ynYF_Yhs2g"

@@ -15,11 +15,11 @@ In terms of implementation, integration contains:
 
 - Server-side: one API request to create a payment intent.
 
-- Client-side: set up Dojo wallet component, which securely sends payment data to our server.
+- Client-side: set up Dojo Wallet Component, which securely sends payment data to our server.
 
-- Webhook server: receives information about the payment.
+- Webhooks: server-side endpoint to receive information about the payment.
 
-If you'd rather do less coding, use pre-build [Dojo Online Checkout](../Online%20checkout/).
+If you'd rather do less coding, use pre-build [Dojo Online Checkout](../online-checkout/online-checkout.md).
 
 ## How to process a payment
 
@@ -31,7 +31,7 @@ Step-by-step guide:
 
 3. [Create a payment intent](#step-3-create-a-payment-intent).
 
-4. [Handle post-payment events](#step-4-handle-post-payment-events)
+4. [Handle post-payment events](#step-4-handle-post-payment-events).
 
 5. [Test and go live](#step-5-test-and-go-live).
 
@@ -41,7 +41,7 @@ import BeforeStartSnippet from '../../snippets/_before-start.mdx';
 
 <BeforeStartSnippet />
 
-To enable Apple Pay, you must host the [domain verification file](/apple-pay/apple-developer-merchantid-domain-association) on each domain you want to use, including subdomains, under the following path: `https://yourdomain/.well-known/apple-developer-merchantid-domain-association`. 
+To enable Apple Pay, you must host the [domain verification file](https://cdn.dojo.tech/payments/assets/ApplePay/apple-developer-merchantid-domain-association) on each domain you want to use, including subdomains, under the following path: `https://yourdomain/.well-known/apple-developer-merchantid-domain-association`.
 
 Make sure that the file is downloadable and served at the correct location, as Apple will use this location to verify the validity of your domain. If your domain is protected from public access and you wish to complete domain verification, you should allow [Apple IP Addresses for Domain Verification](https://developer.apple.com/documentation/apple_pay_on_the_web/setting_up_your_server/#3179116).
 
@@ -80,7 +80,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/clie
 https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/client/html/static/script.js#L43-L56
 ```
 
-See the [Optional configuration](configuration) for a complete list of parameters that you can use.
+See the [Optional configuration](./configuration.md) for a complete list of parameters that you can use.
 
 ### Step 3. Create a payment intent
 
@@ -119,9 +119,9 @@ See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a
 
 ### Step 4. Handle post-payment events
 
-Use webhooks to receive information about the payment. We send a `payment_intent.status_updated` event when the payment is completed.
+import WebhooksSnippet from '../../snippets/_webhooks.mdx';
 
-If you haven't set up webhooks yet, review our [webhooks guide](../../Development%20resources/webhooks.md).
+<WebhooksSnippet />
 
 ### Step 5. Test and go live
 
@@ -143,8 +143,6 @@ The Google Pay [Test Card Suite](https://developers.google.com/pay/api/android/g
 
 To instantly view these cards in your Google Account TEST environment, join [Google's User Group](https://groups.google.com/g/googlepay-test-mode-stub-data) and all test cards will be automatically added to your account so you don't need to add them manually.
 
-You are free to leave or join [Google's Test Card Suite Group](https://groups.google.com/g/googlepay-test-mode-stub-data) as needed. To leave, select My membership settings and click Leave group.
-
 ---
 
 ## Next steps
@@ -153,10 +151,10 @@ import CardGrid from "@site/src/components/CardGrid"
 
 <CardGrid home>
 
-[![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../../Development%20resources/webhooks.md)
+[![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../../development-resources/webhooks.md)
 
-[![](/images/dojo-icons/Settings.svg) **Configure Dojo Components** Find out how you can configure the Dojo Components.](configuration)
+[![](/images/dojo-icons/Settings.svg) **Configure Dojo Components** Find out how you can configure the Dojo Components.](./configuration.md)
 
-[![](/images/dojo-icons/Filters.svg) **Manage payments** Learn how to capture or reverse payments, retrieve payment details or change payments amount.](../../Manage%20payments)
+[![](/images/dojo-icons/Filters.svg) **Manage payments** Learn how to capture or reverse payments, retrieve payment details or change payments amount.](../../manage-payments/manage-payments.md)
 
 </CardGrid>
