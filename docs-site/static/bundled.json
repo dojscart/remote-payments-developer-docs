@@ -2624,10 +2624,10 @@
             ],
             "description": "The link to the payment's associated actions."
           },
-          "autoExpireAction": {
+          "manualAutoExpireAction": {
             "$ref": "#/components/schemas/AutoExpireAction"
           },
-          "autoExpireAt": {
+          "manualAutoExpireAt": {
             "type": "string",
             "format": "date-time",
             "description": "The timestamp of the date when this payment intent will be captured or reversed, in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) UTC format.\nOnly avalible if `captureMode: Manual`."

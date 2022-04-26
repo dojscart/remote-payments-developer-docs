@@ -90,9 +90,9 @@ properties:
       - $ref: ./ActionLink.yaml
     description:   
       $ref: ../../../prose/parameters/actionLink.md
-  autoExpireAction:
+  manualAutoExpireAction:
     $ref: ./AutoExpireAction.yaml
-  autoExpireAt: 
+  manualAutoExpireAt: 
     type: string
     format: date-time
     description:     
