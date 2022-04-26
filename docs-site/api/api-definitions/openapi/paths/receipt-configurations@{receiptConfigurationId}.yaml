@@ -19,7 +19,7 @@ put:
       schema: 
         type: string 
         format: date
-      example: '2022-01-03'
+      example: '2022-04-07'
       description:
         $ref: ../../prose/parameters/version.md
   requestBody:

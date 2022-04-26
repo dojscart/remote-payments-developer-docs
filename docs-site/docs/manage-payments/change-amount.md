@@ -71,8 +71,8 @@ If your request is successful, the response will return information about the ch
   {
   "id": "pi_pT08VyWG3EC_HQB4NBVliA",
   "captureMode": "Auto",
-  "connecteToken": "string",
-  "connecteTokenExpirationDate": "2019-08-24T14:15:22Z",
+  "clientSessionSecret": "string",
+  "clientSessionSecretExpirationDate": "2019-08-24T14:15:22Z",
   "status": "Created",
   "paymentMethods": [
     "Card"
@@ -170,8 +170,8 @@ If your request is successful, the response will return information about the ch
   {
   "id": "pi_pT08VyWG3EC_HQB4NBVliA",
   "captureMode": "Auto",
-  "connecteToken": "string",
-  "connecteTokenExpirationDate": "2019-08-24T14:15:22Z",
+  "clientSessionSecret": "string",
+  "clientSessionSecretExpirationDate": "2019-08-24T14:15:22Z",
   "status": "Created",
   "paymentMethods": [
     "Card"

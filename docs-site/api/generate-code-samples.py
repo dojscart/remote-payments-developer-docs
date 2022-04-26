@@ -8,7 +8,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 docsWithSnippetFile = f"../static/openapi-with-examples.json"
 snippetFolder = "snippet"
-apiFile = f"{dir_path}/api-definitions/bundled.json"
+apiFile = f"../static/bundled.json"
 
 def cleanUp():
     try:

@@ -6,7 +6,7 @@ properties:
     nullable: true
     description: ' '
     items:
-      $ref: ./PaymentIntentResponse.yaml
+      $ref: ./PaymentIntent.yaml
   before:
     type: string
     description:   

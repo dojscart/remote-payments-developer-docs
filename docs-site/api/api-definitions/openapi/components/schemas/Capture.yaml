@@ -1,7 +1,7 @@
 type: object
 description: The capture response object.
 additionalProperties: false
-title: CreateCaptureResponse
+title: Capture
 properties:
   message:
     type: string

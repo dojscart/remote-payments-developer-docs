@@ -28,7 +28,7 @@ See the [API reference](/api-docs/#operation/PaymentIntents_CreatePaymentIntent)
 
 ## Step 2: Set up Dojo.js
 
-Next, create an instance of the Dojo object by providing payment details and connecteToken as the first parameter:
+Next, create an instance of the Dojo object by providing payment details and 'clientSessionSecret' as the first parameter:
 
 {{< code lang="JS" file="code/script.js" >}}{{< /code >}}
 

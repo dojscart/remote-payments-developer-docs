@@ -1,7 +1,7 @@
 type: object
 description: The create reversal response object.
 additionalProperties: false
-title: CreateReversalResponse
+title: Reversal
 properties:
   message:
     type: string

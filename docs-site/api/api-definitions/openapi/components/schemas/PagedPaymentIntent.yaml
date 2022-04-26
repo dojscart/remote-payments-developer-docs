@@ -1,4 +1,4 @@
 allOf:
-  - $ref: ./PagedResultOfPaymentIntentResponse.yaml
+  - $ref: ./PagedResultOfPaymentIntent.yaml
   - type: object
     additionalProperties: false

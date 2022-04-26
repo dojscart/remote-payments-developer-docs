@@ -90,6 +90,13 @@ properties:
       - $ref: ./ActionLink.yaml
     description:   
       $ref: ../../../prose/parameters/actionLink.md
+  autoExpireAction:
+    $ref: ./AutoExpireAction.yaml
+  autoExpireAt: 
+    type: string
+    format: date-time
+    description:     
+     $ref: ../../../prose/parameters/autoExpireAt.md
   paymentSource:
     type: string
     description:    

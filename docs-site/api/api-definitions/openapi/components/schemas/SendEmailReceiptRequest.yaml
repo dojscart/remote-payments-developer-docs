@@ -1,4 +1,4 @@
-title: EmailReceiptRequest
+title: SendEmailReceiptRequest
 type: object
 properties:
   emails:

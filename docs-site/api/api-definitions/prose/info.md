@@ -1,3 +1,5 @@
+**Download OpenAPI specification**: [Download](/bundled.json)
+
 # Introduction
 
 The Dojo API is RESTful. It returns HTTP response codes to indicate errors. It also
@@ -14,14 +16,14 @@ Try one of our [pre-builded solutions](../docs/plugins/) for your site.
 # Authentication
 
 The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). To generate your API keys, send a request to our [support team](https://support.dojo.tech/hc/en-gb/requests/new).
-Secret keys for the test environment have the prefix `sk_sandbox_` and for production have the prefix `sk_`.
+Secret keys for the test environment have the prefix `sk_sandbox_` and for production have the prefix `sk_prod_`.
 
 You must include your secret API key in the header of all requests, for example:
 
 ```curl
 curl
   --header 'content-type: application/json' \
-  --header 'Authorization: Basic sk_your_key' \
+  --header 'Authorization: Basic sk_prod_your_key' \
 ...
     
 ```
@@ -86,17 +88,17 @@ Dojo API uses the YYYY-MM-DD API version-naming scheme. You have to pass the ver
 ``` curl
 curl
   --header 'content-type: application/json' \
-  --header 'Authorization: Basic sk_your_key' \
-  --header 'version: 2022-01-03' \
+  --header 'Authorization: Basic sk_prod_your_key' \
+  --header 'version: 2022-04-07' \
     
 ```
 
 When we make [breaking changes](../docs/development-resources/versioning-overview#breaking-changes) to the API, we release new dated versions.
 
-The current version is 2022–01–03. Check the last updates out in the changelog.
+The current version is 2022-04-07.
 
 # Postman collection
 
 You can run the API collection in Postman:
 
- [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e?action=collection%2Ffork&collection-url=entityId%3D16735701-a83d1d8b-2a32-4af7-a487-60b974f0c47e%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)
+ [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/16735701-b218f555-a7ad-46c4-8ad8-1f11c0aee443?action=collection%2Ffork&collection-url=entityId%3D16735701-b218f555-a7ad-46c4-8ad8-1f11c0aee443%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)

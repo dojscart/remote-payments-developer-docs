@@ -1,0 +1,11 @@
+type: string
+description: 
+  $ref: ../../../prose/parameters/autoExpireAction.md
+x-enumNames: [
+  "Release",
+  "Capture"
+]
+enum: [
+  "Release",
+  "Capture"
+]

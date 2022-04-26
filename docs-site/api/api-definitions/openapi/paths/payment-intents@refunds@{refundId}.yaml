@@ -9,7 +9,7 @@ get:
       schema: 
         type: string 
         format: date
-      example: '2022-01-03'
+      example: '2022-04-07'
       description:
         $ref: ../../prose/parameters/version.md
     - name: refundId
@@ -26,7 +26,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: ../components/schemas/RefundResponse.yaml
+            $ref: ../components/schemas/Refund.yaml
     '400':
       description: Bad request
       content:

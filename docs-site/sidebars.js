@@ -112,8 +112,8 @@ const sidebars = {
       },
       collapsed: true,
       items: [
-        'development-resources/data-types',
         'development-resources/versioning-overview',
+        'development-resources/data-types',
         'development-resources/webhooks',
         'development-resources/testing',
       ],

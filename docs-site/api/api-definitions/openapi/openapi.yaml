@@ -2,7 +2,7 @@ x-generator: NSwag v13.12.1.0 (NJsonSchema v10.4.6.0 (Newtonsoft.Json v12.0.0.0)
 openapi: 3.0.0
 info:
   title: Payment Service
-  version: 2022-01-03
+  version: '2022-04-07'
   description:
     $ref: ../prose/info.md
   termsOfService: https://dojo.tech/legal/
@@ -10,7 +10,6 @@ info:
     name: Dojo Developer Experience Team
 servers:
   - url: https://api.dojo.tech
-    description: Production API
 tags:
   - name: Payment intents
     description: |-
@@ -60,10 +59,8 @@ paths:
     $ref: paths/payment-intents@{paymentIntentId}.yaml
   /payment-intents/{paymentIntentId}/captures:
     $ref: paths/payment-intents@{paymentIntentId}@captures.yaml
-  /payment-intents/{paymentIntentId}/refresh-token:
-    $ref: paths/payment-intents@{paymentIntentId}@refresh-token.yaml
-  /payment-intents/{paymentIntentId}/status:
-    $ref: paths/payment-intents@{paymentIntentId}@status.yaml
+  /payment-intents/{paymentIntentId}/refresh-client-session-secret:
+    $ref: paths/payment-intents@{paymentIntentId}@refresh-client-session-secret.yaml
   /payment-intents/search:
     $ref: paths/payment-intents@search.yaml
   /payment-intents/{paymentIntentId}/tips-amount:

@@ -1,7 +1,7 @@
 type: object
 additionalProperties: false
-description: The PaymentIntentResponse object.
-title: PaymentIntentResponse
+description: The PaymentIntent object.
+title: PaymentIntent
 properties:
   id:
     type: string
@@ -16,16 +16,15 @@ properties:
       - $ref: ./TransactionSource.yaml
     description:        
      $ref: ../../../prose/parameters/transactionSourceDescription.md
-  connecteToken:
+  clientSessionSecret:
     type: string
     description:        
-     $ref: ../../../prose/parameters/connecteToken.md
+     $ref: ../../../prose/parameters/clientSessionSecret.md
     nullable: true
-  connecteTokenExpirationDate:
+  clientSessionSecretExpirationDate:
     type: string
     description:       
-     $ref: ../../../prose/parameters/connecteTokenExpirationDate.md
-    format: date-time
+     $ref: ../../../prose/parameters/clientSessionSecretExpirationDate.md
   paymentDetails:
     nullable: true
     oneOf:
@@ -137,6 +136,13 @@ properties:
       - $ref: ./PaymentIntentConfig.yaml
     description:  
      $ref: ../../../prose/parameters/config.md
+  manualAutoExpireAction:
+    $ref: ./AutoExpireAction.yaml
+  manualAutoExpireAt: 
+    type: string
+    format: date-time
+    description:     
+     $ref: ../../../prose/parameters/autoExpireAt.md
   paymentSource:
     type: string
     description: 

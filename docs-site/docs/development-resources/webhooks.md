@@ -107,7 +107,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/webhooks/cs/verify-we
 
 ### Step 4. Go live
 
-When you are ready to go live, switch your secret key to production one with the prefix `sk_` and check `url` that you provide.
+When you are ready to go live, switch your secret key to production one with the prefix `sk_prod_` and check `url` that you provide.
 
 ## Available webhooks
 

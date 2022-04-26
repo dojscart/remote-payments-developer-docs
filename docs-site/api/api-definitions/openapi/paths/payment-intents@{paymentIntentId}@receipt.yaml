@@ -12,7 +12,7 @@ post:
       schema: 
         type: string 
         format: date
-      example: '2022-01-03'
+      example: '2022-04-07'
       description:
         $ref: ../../prose/parameters/version.md
     - name: paymentIntentId
@@ -51,7 +51,7 @@ post:
     content:
       application/json:
         schema:
-          $ref: ../components/schemas/EmailReceiptRequest.yaml
+          $ref: ../components/schemas/SendEmailReceiptRequest.yaml
     description: ''
 parameters:
   - schema:

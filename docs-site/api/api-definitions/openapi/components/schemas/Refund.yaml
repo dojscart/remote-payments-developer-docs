@@ -22,7 +22,7 @@ properties:
      $ref: ../../../prose/parameters/notes.md
     nullable: true
 description: The refund response object.
-title: RefundResponse
+title: Refund
 example:
   paymentIntentId: 'pi_gfygdkh34261d'
   refundId: 'rfnd_127usj'

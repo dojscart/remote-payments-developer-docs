@@ -8,7 +8,7 @@ Dojo API uses the YYYY-MM-DD API version scheme. You have to pass the version as
 
 When you make the first API request, use current data as a version to get the latest available version.
 
-The current version is `2022-01-03`.
+The current version is `2022-04-07`.
 
 ## Breaking changes
 
@@ -21,7 +21,7 @@ Breaking or backwards-incompatible changes include:
 - Adding new mandatory request parameters to existing API methods.
 - Removing or renaming a resource, field, method or an enum value.
 
- If we make breaking changes to the API, we release new, dated versions. We don't change your version, if you want to use a new version you have to change the version yourself.
+If we make breaking changes to the API, we release new, dated versions. We don't change your version, if you want to use a new version you have to change the version yourself.
 
 ## Non-breaking changes
 

@@ -1,1 +1,1 @@
-Updates a token.
+Updates a client session secret.

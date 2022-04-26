@@ -1,0 +1,1 @@
+The expiration date of `clientSessionSecret`.
