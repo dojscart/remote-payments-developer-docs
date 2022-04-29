@@ -5,15 +5,29 @@ weight: 2
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
->Learn how to implement our Online Checkout page to accept payments.
+>Learn how to implement our Checkout Page to accept payments.
 
 In terms of implementation, integration contains:
 
 - Server-side: one API request to create a payment intent.
 
-- Client-side: redirect to Dojo Online Checkout page.
+- Client-side: redirect to Checkout Page.
 
 - Webhooks: server-side endpoint to receive information about the payment.
+
+The payment flow is:
+
+1. The customer visits your site and clicks the button Checkout.
+
+2. Your client-side sends the customer's purchases information to your server-side, your server-side sends this information to our server to [create a payment intent](#step-1-create-a-payment-intent).
+
+3. You [redirect the customer](#step-2-redirect-your-customer-to-dojo-checkout-page) to Prebuilt Checkout Page that's hosted on our side.
+
+4. Prebuilt Checkout Page collects the customer's payment details, sends them to our servers, and redirects the customer to the result page.
+
+5. Your server receives a [webhook notification](#step-3-handle-post-payment-events) when the payment is completed.
+
+![](/images/flow-checkout-page.jpg)
 
 ## How to process a payment
 
@@ -21,7 +35,7 @@ Step-by-step guide:
 
 1. [Create a payment intent](#step-1-create-a-payment-intent).
 
-2. [Redirect your customer to Dojo Online Checkout page](#step-2-redirect-your-customer-to-dojo-online-checkout-page).
+2. [Redirect your customer to Dojo Checkout Page](#step-2-redirect-your-customer-to-dojo-checkout-page).
 
 3. [Handle post-payment events](#step-3-handle-post-payment-events).
 
@@ -68,7 +82,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/serve
 
 See the [API reference](/api#operation/PaymentIntents_CreatePaymentIntent) for a complete list of parameters that can be used for payment intent creation.
 
-### Step 2. Redirect your customer to Dojo online checkout page
+### Step 2. Redirect your customer to Dojo Checkout Page
 
 After receiving the request, Dojo creates a payment intent and returns its unique id:
 
@@ -119,7 +133,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 [![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../../development-resources/webhooks.md)
 
-[![](/images/dojo-icons/Settings.svg) **Configure Dojo Online Checkout page** Find out how to add another payment method or shipping address form to the page.](configuration.md)
+[![](/images/dojo-icons/Settings.svg) **Configure Checkout Page** Find out how to add another payment method or shipping address form to the page.](configuration.md)
 
 [![](/images/dojo-icons/Filters.svg) **Manage payments** Learn how to capture or reverse payments, retrieve payment details or change payments amount.](../../manage-payments/manage-payments.md)
 

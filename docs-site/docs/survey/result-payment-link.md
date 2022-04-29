@@ -9,7 +9,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 ## Payment Link
 
-Based on your answers we recommend you to use Payment Link. It's a link you can send to your customer, and it will take them to a Dojo Online Checkout page for them to complete the payment. The payment page works across different devices and can be customized. With the payment links, you can sell online without a website. You could send the payment links after interacting with your customer through chat or email, or any other channel.
+Based on your answers we recommend you to use Payment Link. It's a link you can send to your customer, and it will take them to a Dojo Prebuilt Checkout Page for them to complete the payment. The payment page works across different devices and can be customized. With the payment links, you can sell online without a website. You could send the payment links after interacting with your customer through chat or email, or any other channel.
 
 This solution is PCI compliant, you are required to submit [Self-Assessment Questionnaire A](https://www.pcisecuritystandards.org/documents/PCI-DSS-v3_2_1-SAQ-A.pdf).
 

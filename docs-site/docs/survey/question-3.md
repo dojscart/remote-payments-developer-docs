@@ -14,6 +14,6 @@ import CardGrid from "@site/src/components/CardGrid"
 
 [![](/images/dojo-icons/TickCircle.svg) **Yes** I need a customizable UI.](result-components)
 
-[![](/images/dojo-icons/DeleteCircle.svg) **No** Having a pre-build UI is fine for me.](result-checkout)
+[![](/images/dojo-icons/DeleteCircle.svg) **No** Having a prebuild UI is fine for me.](result-checkout)
 
 </CardGrid>

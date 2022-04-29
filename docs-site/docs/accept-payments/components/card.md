@@ -6,9 +6,9 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CodePen from 'codepen-react'
 
->Learn how you can embed pre-built Dojo Card Component on your checkout page.
+>Learn how you can embed prebuilt Dojo Card Component on your checkout page.
 
-Dojo Card Component is a pre-built JavaScript component for accepting payments on your checkout page. Use this integration option when you want full control over the payment flow and the look of your online checkout page.
+Dojo Card Component is a prebuilt JavaScript component for accepting payments on your checkout page. Use this integration option when you want full control over the payment flow and the look of your checkout page.
 This solution is PCI compliant, you are only required to submit [Self-Assessment Questionnaire A](https://www.pcisecuritystandards.org/documents/PCI-DSS-v3_2_1-SAQ-A.pdf).
 
 In terms of implementation, integration contains:
@@ -19,8 +19,27 @@ In terms of implementation, integration contains:
 
 - Webhooks: server-side endpoint to receive information about the payment.
 
-If you'd rather do less coding, use pre-build [Dojo Online Checkout](../online-checkout/online-checkout.md).
+The payment flow is:
 
+1. The customer visits your site and clicks the button Checkout.
+
+2. Your client-side sends the customer's purchases information to your server-side, your server-side sends this information to our server to [create a payment intent](#step-3-create-a-payment-intent).
+
+3. Your client-side creates an instance of the [card component](#step-1-add-the-component-to-your-checkout-page) using the `clientSessionSecret`.
+
+4. Your customer enters payment details directly on your checkout page to the card component.
+
+5. The card component collects the customer's payment details, sends them to our servers, and redirects the customer to the result page.
+
+6. Your server receives a [webhook notification](#step-4-handle-post-payment-events) when the payment is completed.
+
+![](/images/flow-card.jpg)
+
+:::note
+
+If you'd rather do less coding, use prebuild [Dojo Prebuilt Checkout Page](../checkout-page/checkout-page.md).
+
+:::
 ## How to process a payment
 
 Step-by-step guide:

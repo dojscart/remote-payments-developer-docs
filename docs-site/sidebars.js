@@ -31,13 +31,13 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'Online checkout',
+          label: 'Checkout page',
           link: {
-            type: 'doc', id: 'accept-payments/online-checkout/online-checkout'
+            type: 'doc', id: 'accept-payments/checkout-page/checkout-page'
           },
           items: [
-            'accept-payments/online-checkout/step-by-step-guide',
-            'accept-payments/online-checkout/configuration',
+            'accept-payments/checkout-page/step-by-step-guide',
+            'accept-payments/checkout-page/configuration',
           ],
         },
         {
@@ -116,6 +116,8 @@ const sidebars = {
         'development-resources/data-types',
         'development-resources/webhooks',
         'development-resources/testing',
+        'development-resources/sdk'
+        
       ],
     },
   ],
