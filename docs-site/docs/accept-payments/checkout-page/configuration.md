@@ -5,7 +5,7 @@ weight: 3
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
->Learn how to activate additional features for your online checkout page.
+>Learn how to activate additional features for your checkout page.
 
 You can activate additional features like address collection. Explore a few examples below, or see the API reference for the full list of configurable fields.
 
@@ -15,7 +15,7 @@ You can activate additional features like address collection. Explore a few exam
 
 - [Collect billing address, shipping details, and customer email](#collect-billing-address-shipping-details-and-customer-email)
 
-    Use your online checkout page to capture useful information about your customer.
+    Use your checkout page to capture useful information about your customer.
 
 - [Redirect to your success page](#redirect-to-your-success-page)
 
@@ -29,7 +29,7 @@ You can activate additional features like address collection. Explore a few exam
 
 ![](/images/add-payment-methods.png)
 
-By default, the online checkout page supports only card payments. To enable Apple Pay and Google Pay wallets pass `"Card","Wallet"` in `paymentMethods`, for example:
+By default, the checkout page supports only card payments. To enable Apple Pay and Google Pay wallets pass `"Card","Wallet"` in `paymentMethods`, for example:
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>
@@ -61,7 +61,7 @@ Additionally, you need to verify your domain for Apple Pay.
 
 ![](/images/billing-and-shipping-details.png)
 
-You can add a form to collect billing address, shipping details, and customer email to the online checkout page.
+You can add a form to collect billing address, shipping details, and customer email to the checkout page.
 To do it pass `collectionRequired: true` in `config.billingAddress`, `config.shippingDetails`, and `config.customerEmail`, for example:
 
 <Tabs groupId="codeGroup">
@@ -120,9 +120,9 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/configuration/cs/redi
 
 ![](/images/show-detailed-information.png)
 
-You can add information about each position in the order to the online checkout page, to do it, pass this data to `itemLines`. In addition, you can add information about all taxes or fees that are included to the order, use `taxLines` for this. The item and tax amounts don't affect the payment intent amount.
+You can add information about each position in the order to the checkout page, to do it, pass this data to `itemLines`. In addition, you can add information about all taxes or fees that are included to the order, use `taxLines` for this. The item and tax amounts don't affect the payment intent amount.
 
-To add total due to the online checkout page, pass `showTotal: true` in `config.details`. This value will be the same as the payment intent amount.
+To add total due to the checkout page, pass `showTotal: true` in `config.details`. This value will be the same as the payment intent amount.
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>

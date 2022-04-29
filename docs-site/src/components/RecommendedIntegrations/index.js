@@ -10,7 +10,7 @@ const data = [
     icon: "images/payment-links.jpg",
     description: <>
     <div>
-        <p>Embed or share a link to Dojo Online Checkout page to accept payments without a website.</p>
+        <p>Embed or share a link to Dojo Prebuilt Checkout Page to accept payments without a website.</p>
        <ul>
        <li>No coding</li>
        <li>No website required</li>
@@ -21,12 +21,12 @@ const data = [
        </>,
   },
   {
-    title: "Online Checkout",
-    link: "docs/accept-payments/online-checkout/",
+    title: "Checkout Page",
+    link: "docs/accept-payments/checkout-page/",
     icon: "images/online-checkout.jpg",
     description: <>
     <div>
-       <p>Send your customers to Dojo Online Checkout page to pay.</p>
+       <p>Send your customers to Dojo Prebuilt Checkout Page to pay.</p>
        <ul>
        <li>Minimal coding</li>
        <li>Website required, Dojo hosts the checkout page</li>
@@ -37,7 +37,7 @@ const data = [
        </>,
   },
   {
-    title: "Dojo Components",
+    title: "Components",
     link: "docs/accept-payments/components/",
     icon: "images/components.jpg",
     description: <>

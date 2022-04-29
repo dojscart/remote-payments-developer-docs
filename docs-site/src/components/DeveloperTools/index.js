@@ -15,7 +15,7 @@ const data = [
     link: "accept-payments/payment-links/",
     description: <>
     <div>
-        <p>Embed or share a link to to Dojo Online Checkout page to accept payments without a website.</p>
+        <p>Embed or share a link to to Dojo Checkout Page to accept payments without a website.</p>
        <ul>
        <li>No coding</li>
        <li>No website required</li>

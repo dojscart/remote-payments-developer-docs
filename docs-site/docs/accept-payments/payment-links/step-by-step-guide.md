@@ -13,6 +13,20 @@ In terms of implementation, integration contains:
 
 - Webhooks: server-side endpoint to receive information about the payment.
 
+The payment flow is:
+
+1. Your server-side sends the payment information to our server to [create a payment intent](#step-1-create-a-payment-link).
+
+2. Your server-side generates a payment link and [sends it to the customer](#step-2-send-the-payment-link-to-your-customer).
+
+3. The customer opens the payment link and redirects to Prebuilt Checkout Page that's hosted on our side.
+
+4. Prebuilt Checkout Page collects the customer's payment details, sends them to our servers, and redirects the customer to the result page.
+
+5. Your server receives a [webhook notification](#step-3-handle-post-payment-events) when the customer uses the payment link to complete a payment.
+
+![](/images/flow-payment-links.jpg)
+
 ## How to process a payment
 
 Step-by-step guide:
@@ -77,7 +91,7 @@ Return this id to the client-side and use it to create a link in the following f
 
 `https://pay.dojo.tech/checkout/{{id}}`
 
-Send the link to your customer through chat or email. When the customer opens the link, they'll redirect to the Dojo online checkout page. After the customer fills payment information on the checkout page, Dojo processes the payment and redirects the customer to the success page.
+Send the link to your customer through chat or email. When the customer opens the link, they'll redirect to Dojo Prebuilt Checkout Page. After the customer fills payment information on the checkout page, Dojo processes the payment and redirects the customer to the success page.
 
 ### Step 3. Handle post-payment events
 
@@ -107,7 +121,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 [![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../../development-resources/webhooks.md)
 
-[![](/images/dojo-icons/Settings.svg) **Configure Dojo Online Checkout page** Find out how to add another payment method or shipping address form to the page.](../online-checkout/configuration.md)
+[![](/images/dojo-icons/Settings.svg) **Configure Dojo Checkout Page** Find out how to add another payment method or shipping address form to the page.](../checkout-page/configuration.md)
 
 [![](/images/dojo-icons/Filters.svg) **Manage payments** Learn how to capture or reverse payments, retrieve payment details or change payments amount.](../../manage-payments/manage-payments.md)
 
