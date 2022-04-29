@@ -5,7 +5,7 @@
 const config = {
   title: 'Dojo Developer Portal',
   tagline: '',
-  url: 'https://dev-docs.dojo.dev/',
+  url: 'https://docs.dojo.tech/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
