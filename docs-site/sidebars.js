@@ -38,6 +38,7 @@ const sidebars = {
           items: [
             'accept-payments/online-checkout/step-by-step-guide',
             'accept-payments/online-checkout/configuration',
+            'accept-payments/online-checkout/integration-checklist',
           ],
         },
         {
