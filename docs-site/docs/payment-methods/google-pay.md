@@ -20,11 +20,6 @@ If you already add [Apple Pay](/payment-methods/apple-pay), Google Pay will work
 
 You can find a complete example of the Google Pay code in [GitHub](link).
 
-<p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="js,result" data-user="myafka" data-slug-hash="NWapZbz" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/myafka/pen/NWapZbz"></a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
 ## Testing Google Pay
 
 The Google Pay [Test Card Suite](https://developers.google.com/pay/api/android/guides/resources/test-card-suite) allows you to test Google Pay without the need of adding real cards to Google accounts.

@@ -144,7 +144,19 @@ const sidebars = {
         'development-resources/data-types',
         'development-resources/webhooks',
         'development-resources/testing',
-        'development-resources/sdk'
+        'development-resources/sdk',
+        {
+          type: 'category',
+          label: 'Developer portal',
+          link: {
+            type: 'doc', id: 'development-resources/developer-portal/developer-portal'
+          },
+          items: [
+            'development-resources/developer-portal/generate-keys',
+            'development-resources/developer-portal/manage-webhooks',
+            'development-resources/developer-portal/logs',
+          ],
+        },
         
       ],
     },
@@ -158,7 +170,7 @@ const sidebars = {
       items: [
         'risk-management/3ds',
         'risk-management/avs',
-        
+        'risk-management/pci',
       ],
     },
   ],
