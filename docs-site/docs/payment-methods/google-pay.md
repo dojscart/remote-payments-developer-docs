@@ -1,12 +1,12 @@
 ---
 title: "Google Pay"
-weight: 3
 
 ---
 
-{{< lead >}}Google Pay provides a fast, simple and secure way to pay using the cards saved on Google accounts.{{< /lead >}}
+>Google Pay provides a fast, simple and secure way to pay using the cards saved on Google accounts.
 
-You can accept Google Pay payments on your site using the [Online checkout](/accept-payments/online-checkout/). Using Google Pay in the Online checkout requires to add Wallet.
+## How it works
+
 
 **Supported Card Networks:**
 

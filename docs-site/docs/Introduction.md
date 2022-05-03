@@ -1,5 +1,5 @@
 ---
-title: "Online payments"
+title: "Card-not-present payments"
 sidebar_position: 1
 slug: /
 id: introduction

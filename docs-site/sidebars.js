@@ -36,9 +36,9 @@ const sidebars = {
             type: 'doc', id: 'accept-payments/checkout-page/checkout-page'
           },
           items: [
-            'accept-payments/online-checkout/step-by-step-guide',
-            'accept-payments/online-checkout/configuration',
-            'accept-payments/online-checkout/integration-checklist',
+            'accept-payments/checkout-page/step-by-step-guide',
+            'accept-payments/checkout-page/configuration',
+            'accept-payments/checkout-page/integration-checklist',
           ],
         },
         {
@@ -49,6 +49,7 @@ const sidebars = {
           },
           items: [
             'accept-payments/payment-links/step-by-step-guide',
+            'accept-payments/payment-links/integration-checklist',
           ],
         },
         {
@@ -61,6 +62,17 @@ const sidebars = {
             'accept-payments/components/card',
             'accept-payments/components/wallet',
             'accept-payments/components/configuration',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Mail or telephone order',
+          link: {
+            type: 'doc', id: 'accept-payments/moto/moto'
+          },
+          items: [
+            'accept-payments/moto/step-by-step-guide',
+            'accept-payments/moto/integration-checklist',
           ],
         },
         'accept-payments/api-only',
@@ -107,6 +119,21 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Payment methods',
+      link: {
+        type: 'doc', id: 'payment-methods/payment-methods'
+      },
+      collapsed: true,
+      items: [
+        'payment-methods/payment-methods',
+        'payment-methods/cards',
+        'payment-methods/apple-pay',
+        'payment-methods/google-pay',
+        
+      ],
+    },
+    {
+      type: 'category',
       label: 'Development resources',
       link: {
         type: 'doc', id: 'development-resources/development-resources'
@@ -118,6 +145,19 @@ const sidebars = {
         'development-resources/webhooks',
         'development-resources/testing',
         'development-resources/sdk'
+        
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Risk management',
+      link: {
+        type: 'doc', id: 'risk-management/risk-management'
+      },
+      collapsed: true,
+      items: [
+        'risk-management/3ds',
+        'risk-management/avs',
         
       ],
     },
