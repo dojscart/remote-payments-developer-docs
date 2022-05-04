@@ -91,6 +91,11 @@ const config = {
             position: 'left',
             to: '/api'
           },
+          {
+            label: 'Developer Portal',
+            position: 'left',
+            to: 'https://dev-portal.dojo.dev/master/login'
+          },
           {type: 'search', position: 'right'},
           {to: 'https://support.dojo.tech/hc/en-gb', label: 'Support', position: 'right'},
           {to: 'https://status.dojo.tech/', label: 'System status', position: 'right'},
