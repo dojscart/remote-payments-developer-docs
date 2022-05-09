@@ -23,7 +23,7 @@ properties:
   customerEmail:
     nullable: true
     oneOf:
-      - $ref: ./PaymentIntentConfigUserEmail.yaml
+      - $ref: ./PaymentIntentConfigCustomerEmail.yaml
     description:   
      $ref: ../../../prose/parameters/customerEmail.md
   details:

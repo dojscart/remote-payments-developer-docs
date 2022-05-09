@@ -2205,10 +2205,10 @@
         "title": "TransactionSource",
         "example": null
       },
-      "PaymentIntentConfigUserEmail": {
+      "PaymentIntentConfigCustomerEmail": {
         "type": "object",
         "additionalProperties": false,
-        "title": "PaymentIntentConfigUserEmail",
+        "title": "PaymentIntentConfigCustomerEmail",
         "description": "",
         "properties": {
           "collectionRequired": {
@@ -2296,7 +2296,7 @@
             "nullable": true,
             "oneOf": [
               {
-                "$ref": "#/components/schemas/PaymentIntentConfigUserEmail"
+                "$ref": "#/components/schemas/PaymentIntentConfigCustomerEmail"
               }
             ],
             "description": "Configuration of the client's email address."

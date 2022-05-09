@@ -1,6 +1,6 @@
 type: object
 additionalProperties: false
-title: PaymentIntentConfigUserEmail
+title: PaymentIntentConfigCustomerEmail
 description: ''
 properties:
   collectionRequired:
