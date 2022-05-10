@@ -23,7 +23,7 @@ post:
       schema:
         type: string
       x-position: 1
-      example: 'pi_SMqqJwmMTk6o44wmXde3KA'
+      example: 'pi_sandbox_RBMHTJ4fIkmSppDILZVCGw'
   requestBody:
     x-name: request
     content:

@@ -17,15 +17,15 @@ In terms of implementation, integration contains:
 
 The payment flow is:
 
-1. The customer visits your site and clicks the button Checkout.
+1. The customer visits the merchant's site and clicks the button Checkout.
 
-2. Your client-side sends the customer's purchases information to your server-side, your server-side sends this information to our server to [create a payment intent](#step-1-create-a-payment-intent).
+2. The merchant client-side sends the customer's purchases information to the merchant server-side, the merchant server-side sends this information to Dojo server to [create a payment intent](#step-1-create-a-payment-intent).
 
-3. You [redirect the customer](#step-2-redirect-your-customer-to-dojo-checkout-page) to Prebuilt Checkout Page that's hosted on our side.
+3. The merchant client-side [redirect the customer](#step-2-redirect-your-customer-to-dojo-checkout-page) to Prebuilt Checkout Page that's hosted on our side.
 
-4. Prebuilt Checkout Page collects the customer's payment details, sends them to our servers, and redirects the customer to the result page.
+4. Prebuilt Checkout Page collects the customer's payment details, sends them to Dojo servers, and redirects the customer to the result page.
 
-5. Your server receives a [webhook notification](#step-3-handle-post-payment-events) when the payment is completed.
+5. The merchant server receives a [webhook notification](#step-3-handle-post-payment-events) when the payment is completed.
 
 ![](/images/flow-checkout-page.jpg)
 

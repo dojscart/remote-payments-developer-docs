@@ -11,7 +11,7 @@ get:
       description: 
         $ref: ../../prose/parameters/paymentIntentId.md
       x-position: 1
-      example: 'pi_SMqqJwmMTk6o44wmXde3KA'
+      example: 'pi_sandbox_RBMHTJ4fIkmSppDILZVCGw'
     - name: version
       in: header
       required: true
@@ -75,7 +75,7 @@ delete:
       schema:
         type: string
       x-position: 1
-      example: 'pi_SMqqJwmMTk6o44wmXde3KA'
+      example: 'pi_sandbox_RBMHTJ4fIkmSppDILZVCGw'
   responses:
     '200':
       description: OK

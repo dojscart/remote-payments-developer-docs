@@ -21,17 +21,17 @@ In terms of implementation, integration contains:
 
 The payment flow is:
 
-1. The customer visits your site and clicks the button Checkout.
+1. The customer visits the merchant's site and clicks the button Checkout.
 
-2. Your client-side sends the customer's purchases information to your server-side, your server-side sends this information to our server to [create a payment intent](#step-3-create-a-payment-intent).
+2. The merchant client-side sends the customer's purchase information to the merchant server-side, the merchant server-side sends this information to Dojo server to [create a payment intent](#step-3-create-a-payment-intent).
 
-3. Your client-side creates an instance of the [card component](#step-1-add-the-component-to-your-checkout-page) using the `clientSessionSecret`.
+3. The merchant client-side creates an instance of the [card component](#step-1-add-the-component-to-your-checkout-page) using the `clientSessionSecret`.
 
-4. Your customer enters payment details directly on your checkout page to the card component.
+4. The customer enters payment details directly on the merchant checkout page to the card component.
 
-5. The card component collects the customer's payment details, sends them to our servers, and redirects the customer to the result page.
+5. The card component collects the customer's payment details, sends them to Dojo servers, and redirects the customer to the result page.
 
-6. Your server receives a [webhook notification](#step-4-handle-post-payment-events) when the payment is completed.
+6. The merchant server receives a [webhook notification](#step-4-handle-post-payment-events) when the payment is completed.
 
 ![](/images/flow-card.jpg)
 

@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Use a refund if you need to return money to your customer, for example if they returned a purchase, you need to refund the payment. You can refund the full payment amount, part of the amount, or make several partial refunds if their amount doesn't exceed the full payment amount.
 
-You can only refund a payment after it has already been [captured](../capture.md). Payments that haven't yet been captured have to be [reversed](reversal.md) instead.
+You can only refund a payment after it has already been [captured](../capture.md). 
 
 If you want to use the Dojo Merchant app for a refund, see [Refunding online checkout transactions](https://support.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1SZJWY37BZKNMN0BQ3EYKF).
 

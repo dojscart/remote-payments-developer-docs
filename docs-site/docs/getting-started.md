@@ -26,7 +26,7 @@ If your API key is lost or compromised, you need to ask for a new one.
 ## Step 2. Make a test API call
 
 To verify that your key is working correctly, let's create a test API call.
-Copy the code below, replace `YOUR_API_KEY_HERE` with your test API key (with the prefix `sk_sandbox_`), and run the code.
+Copy the code below, replace the API key with your test API key (with the prefix `sk_sandbox_`), and run the code.
 
 <Tabs groupId="codeGroup">
   <TabItem value="curl" label="curl" default>
@@ -53,6 +53,23 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/getting-started/cs/cr
 </Tabs>
 
 If your account is set up correctly, you receive a response: `200 OK`.
+
+## Step 3. Check the result
+
+After receiving the request, Dojo creates a payment intent and returns its unique id:
+
+```json
+{
+    "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
+    ...
+}
+```
+
+Use this `id` to create a link in the following format:
+
+`https://pay.dojo.tech/checkout/{id}`
+
+Follow the link to see the result.
 
 ---
 
