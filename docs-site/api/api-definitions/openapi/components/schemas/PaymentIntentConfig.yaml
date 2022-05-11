@@ -30,7 +30,8 @@ properties:
     nullable: true
     oneOf:
       - $ref: ./PaymentIntentConfigDetails.yaml
-    description: ' '
+    description:
+      $ref: ../../../prose/parameters/paymentIntentConfigDetails.md
   billingAddress:
     nullable: true
     oneOf:
