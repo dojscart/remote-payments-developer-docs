@@ -2308,7 +2308,7 @@
                 "$ref": "#/components/schemas/PaymentIntentConfigDetails"
               }
             ],
-            "description": " "
+            "description": "The following configuration details of the payment intent.\n\n- The total amount including tax, displayed during checkout.\n- The order reference number, displayed after payment completed.\n"
           },
           "billingAddress": {
             "nullable": true,

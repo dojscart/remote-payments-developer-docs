@@ -31,7 +31,7 @@ properties:
     oneOf:
       - $ref: ./PaymentIntentConfigDetails.yaml
     description:
-      $ref: ../../../prose/parameters/PaymentIntentConfigDetails.md
+      $ref: ../../../prose/parameters/paymentIntentConfigDetails.md
   billingAddress:
     nullable: true
     oneOf:
