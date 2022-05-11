@@ -2224,11 +2224,11 @@
         "properties": {
           "showTotal": {
             "type": "boolean",
-            "description": "If has the value `true` the total will be showed."
+            "description": "If has the value `true`, the total order amount will be showed."
           },
           "showReference": {
             "type": "boolean",
-            "description": "If has the value true the order id  will be showed."
+            "description": "If has the value `true`, the order reference id will be showed."
           }
         }
       },
@@ -2308,7 +2308,7 @@
                 "$ref": "#/components/schemas/PaymentIntentConfigDetails"
               }
             ],
-            "description": "The following configuration details of the payment intent.\n\n- The total amount including tax, displayed during checkout.\n- The order reference number, displayed after payment completed.\n"
+            "description": "The following configuration details of the payment intent. See [detailed information about the order and taxes](https://docs.dojo.tech/docs/accept-payments/checkout-page/configuration#show-detailed-information-about-the-order-and-taxes).\n\n- The total order amount including tax.\n- The order reference ID.\n"
           },
           "billingAddress": {
             "nullable": true,
