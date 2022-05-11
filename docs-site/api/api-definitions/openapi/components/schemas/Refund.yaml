@@ -24,7 +24,7 @@ properties:
 description: The refund response object.
 title: Refund
 example:
-  paymentIntentId: 'pi_gfygdkh34261d'
+  paymentIntentId: 'pi_sandbox_RBMHTJ4fIkmSppDILZVCGw'
   refundId: 'rfnd_127usj'
   refundReason: 'Demo refund'
   notes: null

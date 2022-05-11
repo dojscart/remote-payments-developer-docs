@@ -98,7 +98,7 @@
                   "$ref": "#/components/schemas/PaymentIntent"
                 },
                 "example": {
-                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
                   "captureMode\"": "Auto",
                   "clientSessionSecret": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
                   "clientSessionSecretExpirationDate": "2022-02-21T15:09:21Z",
@@ -169,7 +169,7 @@
             },
             "description": "Unique identifier for the payment intent.\n",
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           },
           {
             "name": "version",
@@ -192,7 +192,7 @@
                   "$ref": "#/components/schemas/PaymentIntent"
                 },
                 "example": {
-                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
                   "captureMode\"": "Auto",
                   "clientSessionSecret": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
                   "clientSessionSecretExpirationDate": "2022-02-21T15:09:21Z",
@@ -284,7 +284,7 @@
               "type": "string"
             },
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           }
         ],
         "responses": {
@@ -296,7 +296,7 @@
                   "$ref": "#/components/schemas/PaymentIntent"
                 },
                 "example": {
-                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
                   "captureMode\"": "Auto",
                   "clientSessionSecret": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
                   "clientSessionSecretExpirationDate": "2022-02-21T15:09:21Z",
@@ -392,7 +392,7 @@
               "type": "string"
             },
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           }
         ],
         "requestBody": {
@@ -483,7 +483,7 @@
             },
             "description": "Unique identifier for the payment intent.\n",
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           }
         ],
         "responses": {
@@ -495,7 +495,7 @@
                   "$ref": "#/components/schemas/PaymentIntent"
                 },
                 "example": {
-                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
                   "captureMode\"": "Auto",
                   "clientSessionSecret": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
                   "clientSessionSecretExpirationDate": "2022-02-21T15:09:21Z",
@@ -651,7 +651,7 @@
               "type": "string"
             },
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           }
         ],
         "requestBody": {
@@ -675,7 +675,7 @@
                   "$ref": "#/components/schemas/PaymentIntent"
                 },
                 "example": {
-                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
                   "captureMode\"": "Auto",
                   "clientSessionSecret": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
                   "clientSessionSecretExpirationDate": "2022-02-21T15:09:21Z",
@@ -769,7 +769,7 @@
               "type": "string"
             },
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           }
         ],
         "requestBody": {
@@ -793,7 +793,7 @@
                   "$ref": "#/components/schemas/PaymentIntent"
                 },
                 "example": {
-                  "id": "pi_SMqqJwmMTk6o44wmXde3KA",
+                  "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
                   "captureMode\"": "Auto",
                   "clientSessionSecret": "lmoFsbTJxoiOBgeWkEoFS05ADIQ6STJfJE3oGVNO2cFSb9kza06wGan2DVNceOYCsmZ5I1SiEioFausOAkecUPz8BKSmMV96ecXZZ4-NzoiYZJF0uVYeW8xosG6blQKtZ6HqIIF8--2a7DC_iQ==",
                   "clientSessionSecretExpirationDate": "2022-02-21T15:09:21Z",
@@ -889,7 +889,7 @@
               "type": "string"
             },
             "x-position": 1,
-            "example": "pi_SMqqJwmMTk6o44wmXde3KA"
+            "example": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw"
           }
         ],
         "responses": {
@@ -2053,7 +2053,7 @@
           "Auto",
           "Manual"
         ],
-        "description": "The type of capture for the payment.",
+        "description": "",
         "default": "Auto"
       },
       "Money": {
@@ -2205,10 +2205,10 @@
         "title": "TransactionSource",
         "example": null
       },
-      "PaymentIntentConfigUserEmail": {
+      "PaymentIntentConfigCustomerEmail": {
         "type": "object",
         "additionalProperties": false,
-        "title": "PaymentIntentConfigUserEmail",
+        "title": "PaymentIntentConfigCustomerEmail",
         "description": "",
         "properties": {
           "collectionRequired": {
@@ -2228,7 +2228,7 @@
           },
           "showReference": {
             "type": "boolean",
-            "description": "If has the value true the order id  will be showed."
+            "description": "If has the value `true` the order id  will be showed."
           }
         }
       },
@@ -2296,7 +2296,7 @@
             "nullable": true,
             "oneOf": [
               {
-                "$ref": "#/components/schemas/PaymentIntentConfigUserEmail"
+                "$ref": "#/components/schemas/PaymentIntentConfigCustomerEmail"
               }
             ],
             "description": "Configuration of the client's email address."
@@ -2505,7 +2505,7 @@
         "title": "CreatePaymentIntentRequest",
         "properties": {
           "captureMode": {
-            "description": "The type of capture for the payment.",
+            "description": "The type of capture for the payment:\n\n- `Auto`-(Default) payments are captured automatically after authorisation\n\n- `Manual`-payments are captured by making a request [POST /payment-intents/{paymentIntentId}/captures](https://docs.dojo.tech/api#operation/Captures_Create)",
             "oneOf": [
               {
                 "$ref": "#/components/schemas/CaptureMode"
@@ -3240,7 +3240,7 @@
         "description": "The refund response object.",
         "title": "Refund",
         "example": {
-          "paymentIntentId": "pi_gfygdkh34261d",
+          "paymentIntentId": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
           "refundId": "rfnd_127usj",
           "refundReason": "Demo refund",
           "notes": null

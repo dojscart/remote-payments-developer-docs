@@ -203,8 +203,8 @@ If your request is successful, the response will return information about the ch
 
 ## Change request fails
 
- If a request fails, the unmodified payment can still be completed. If you want to increase the payment or tips amount, you might consider alternative options:
+ If a request fails, the unmodified payment intent can still be completed. If you want to increase the payment or tips amount, you might consider alternative options:
 
-* complete the unmodified payment and create a new to pay the additional amount
+* capture the unmodified payment intent and create a new payment intent to pay the additional amount
 
-* create a new payment with the same payments details, but with a new payment amount. After the payment is authorized, cancel the original payment
+* create a new payment intent with the same payments details, but with a new amount. After the payment intent is captured, cancel the original payment intent

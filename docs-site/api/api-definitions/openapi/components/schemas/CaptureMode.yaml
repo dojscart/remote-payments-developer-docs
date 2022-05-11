@@ -6,6 +6,5 @@ x-enumNames:
 enum:
   - Auto
   - Manual
-description:   
-  $ref: ../../../prose/parameters/captureMode.md
+description: ''
 default: Auto

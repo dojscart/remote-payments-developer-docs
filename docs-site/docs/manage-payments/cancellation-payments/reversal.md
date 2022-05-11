@@ -7,11 +7,15 @@ import TabItem from '@theme/TabItem';
 
 >Learn how to reverse a payment with the Dojo API.
 
-Use a reversal if you need to cancel a payment, for example if you mistakenly initiated a payment, or a customer has requested a payment to be canceled. You can reverse the full payment amount only. Reversals can only be actioned on the same calendar day as the original payment.
+Use a reversal if you need to cancel a payment, for example if a customer has requested a payment to be canceled. You can reverse the full payment amount only.
 
-You can only reverse a payment before it has been [captured](../capture.md). Payments that have already been captured have to be [refunded](refund.md) instead.
+ Reversals can only be actioned on the same calendar day as the original payment. You can only reverse a payment:
 
-If you want to use the Dojo Merchant app for a reversal, see [Reversing online checkout transactions](https://support.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1T29A54JCYNZ9ZE4HK3G7T).
+* in case `captureMode:Manual`—when it's in one of these statuses: `Created` or `Authorized`. Payments are in the status `Captured` have to be [refunded](refund.md) instead
+
+* in case `captureMode:Auto`—when it's in the status `Captured`
+
+If you want to use the Dojo App for a reversal, see [Reversing online checkout transactions](https://support.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1T29A54JCYNZ9ZE4HK3G7T).
 
 ## Reverse using the Dojo API
 
