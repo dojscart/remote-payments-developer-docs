@@ -1,1 +1,1 @@
-If has the value `true` the total will be showed.
+If has the value `true`, the total order amount will be showed.
