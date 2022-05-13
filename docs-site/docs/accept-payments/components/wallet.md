@@ -114,20 +114,22 @@ To create a payment intent, the following parameters are required:
 
 - `reference`. Your unique reference for the payment intent.
 
+- `paymentMethods: "Wallet"`. The payment method that customers can use to pay.
+
 Here's an example of how to create a payment intent on your server-side:
 
 <Tabs groupId="codeGroup">
   <TabItem value="python" label="Python">
 
 ```py reference title="server.py"
-https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/server/python/server.py#L36-L61
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/server/python/server.py#L36-L62
 ```
 
   </TabItem>
   <TabItem value="C#" label="C#">
 
 ```csharp reference title="server.cs"
-https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/server/cs/server.cs
+https://github.com/dojo-engineering/dojo-samples/blob/main/wallet-component/server/cs/server.cs#L30-L60
 ```
   </TabItem>
 </Tabs>

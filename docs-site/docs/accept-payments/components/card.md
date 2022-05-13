@@ -86,7 +86,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client
  For an unsuccessful payment, Dojo returns an error. The error event returns an object which contains details about the error:
 
 ```js reference title="script.js"
-https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/static/script.js#L61-L75
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/client/html/static/script.js#L61-L73
 ```
 
 See the [Optional configuration](./configuration.md) for a complete list of parameters that you can use.
@@ -105,20 +105,22 @@ To create a payment intent, the following parameters are required:
 
 - `reference`. Your unique reference for the payment intent.
 
+- `paymentMethods: "Card"`. The payment method that customers can use to pay.
+
 Here's an example of how to create a payment intent on your server-side:
 
 <Tabs groupId="codeGroup">
   <TabItem value="python" label="Python">
 
 ```py reference title="server.py"
-https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/server/python/server.py#L36-L61
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/server/python/server.py#L36-L62
 ```
 
   </TabItem>
   <TabItem value="C#" label="C#">
 
 ```csharp reference title="server.cs"
-https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/server/cs/server.cs
+https://github.com/dojo-engineering/dojo-samples/blob/main/card-component/server/cs/server.cs#L31-L65
 ```
 
   </TabItem>

@@ -53,7 +53,7 @@ To create a payment link call a server-side endpoint to create a payment intent,
 
 - `reference`. Your unique reference for the payment intent.
 
-- `paymentSource: "payment-links"`. Information regarding the payment source type. Without this parameter, you will not be able to filter the transaction by type.
+- `paymentSource: "payment-links"`. Information regarding the payment source type. Without this parameter, you won't be able to filter the transaction by type.
 
 Here's an example of how to create a payment intent for 10 GBP on your server-side:
 
@@ -61,14 +61,14 @@ Here's an example of how to create a payment intent for 10 GBP on your server-si
   <TabItem value="python" label="Python">
 
 ```py reference title="server.py"
-https://github.com/dojo-engineering/dojo-samples/blob/main/payment-links/server/python/server.py#L7-L39
+https://github.com/dojo-engineering/dojo-samples/blob/main/payment-links/server/python/server.py#L11-L34
 ```
 
   </TabItem>
   <TabItem value="C#" label="C#">
 
 ```csharp reference title="server.cs"
-https://github.com/dojo-engineering/dojo-samples/blob/main/payment-links/server/cs/server.cs
+https://github.com/dojo-engineering/dojo-samples/blob/main/payment-links/server/cs/server.cs#L16-L45
 ```
 
   </TabItem>
@@ -82,7 +82,7 @@ After receiving the request, Dojo creates a payment intent and returns its uniqu
 
 ```json
 {
-    "id": "pi_CggWPWfehUWgVNnDdsdLMQ",
+    "id": "pi_sandbox_RBMHTJ4fIkmSppDILZVCGw",
     ...
 }
 ```

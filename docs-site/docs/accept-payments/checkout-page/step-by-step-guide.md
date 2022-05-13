@@ -67,14 +67,14 @@ Here's an example of how to create a payment intent for 10 GBP on your server-si
   <TabItem value="python" label="Python">
 
 ```py reference title="server.py"
-https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/server/python/server.py
+https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/server/python/server.py#L9-L42
 ```
 
   </TabItem>
   <TabItem value="C#" label="C#">
 
 ```csharp reference title="server.cs"
-https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/server/cs/server.cs
+https://github.com/dojo-engineering/dojo-samples/blob/main/online-checkout/server/cs/server.cs#L16-L50
 ```
 
   </TabItem>
