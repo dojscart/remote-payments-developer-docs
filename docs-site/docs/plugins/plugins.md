@@ -11,7 +11,7 @@ A custom integration requires you to either be or hire a developer. But you can 
 
 :::tip If we don’t support your platform
 
-[Let us know](https://support.dojo.tech/hc/en-gb/requests/new).
+[Let us know](https://devportal.dojo.tech/plugin-request).
 
 :::
 
