@@ -7,6 +7,7 @@ id: getting-started
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import CardGrid from "@site/src/components/CardGrid"
+import CardSnippet from './snippets/_generate-keys.mdx';
 
 >Generate API keys and make a first API call.
 
@@ -22,12 +23,8 @@ Get started by creating a [free developer account](https://portal.dojo.tech/logi
 
 ## Step 2. Generate your API keys
 
-To submit payments, you'll be making API requests that are authenticated with an API key. To generate your API keys, go to **Developer portal** --> **API keys** and select **+Create new key**.
+To submit payments, you'll be making API requests that are authenticated with an API key. <CardSnippet />
 
-<img src="/images/api-keys.png" alt="drawing" width="1000"/>
-
-Copy and securely store the API key in your system—you won't be able to restore it later.
-If your API key is lost or compromised, you need to ask for a new one.
 
 ## Step 3. Make a test API call
 
