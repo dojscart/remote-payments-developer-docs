@@ -16,14 +16,19 @@ Check out our [plugins](/plugins/plugins.md).
 
 :::
 
-## Step 1. Get your API keys
+## Step 1. Create a developer account
 
-To submit payments, you'll be making API requests that are authenticated with an API key. To generate your API keys, send a request to our [support team](https://support.dojo.tech/hc/en-gb/requests/new).
+Get started by creating a [free developer account](https://portal.dojo.tech/login).
+## Step 2. Generate your API keys
+
+To submit payments, you'll be making API requests that are authenticated with an API key. To generate your API keys, go to **Developer portal** --> **API keys** and select **+Create new key**.
+
+<img src="/images/api-keys.png" alt="drawing" width="1000"/>
 
 Copy and securely store the API key in your system—you won't be able to restore it later.
 If your API key is lost or compromised, you need to ask for a new one.
 
-## Step 2. Make a test API call
+## Step 3. Make a test API call
 
 To verify that your key is working correctly, let's create a test API call.
 Copy the code below, replace the API key with your test API key (with the prefix `sk_sandbox_`), and run the code.
@@ -54,7 +59,7 @@ https://github.com/dojo-engineering/dojo-samples/blob/main/getting-started/cs/cr
 
 If your account is set up correctly, you receive a response: `200 OK`.
 
-## Step 3. Check the result
+## Step 4. Check the result
 
 After receiving the request, Dojo creates a payment intent and returns its unique id:
 
