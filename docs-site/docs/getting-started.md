@@ -19,6 +19,7 @@ Check out our [plugins](/plugins/plugins.md).
 ## Step 1. Create a developer account
 
 Get started by creating a [free developer account](https://portal.dojo.tech/login).
+
 ## Step 2. Generate your API keys
 
 To submit payments, you'll be making API requests that are authenticated with an API key. To generate your API keys, go to **Developer portal** --> **API keys** and select **+Create new key**.
