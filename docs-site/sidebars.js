@@ -118,8 +118,18 @@ const sidebars = {
         'development-resources/testing',
         'development-resources/sdk',
         'development-resources/api-keys',
-        'development-resources/portal'
         
+        {
+          type: 'category',
+          label: 'Developer Portal',
+          link: {
+            type: 'doc', id: 'development-resources/portal/portal'
+          },
+          items: [
+            'development-resources/portal/manage-api-keys',
+            'development-resources/portal/register-webhooks'
+          ],
+        },
       ],
     },
   ],
