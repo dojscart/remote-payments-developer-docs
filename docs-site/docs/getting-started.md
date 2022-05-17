@@ -25,7 +25,6 @@ Get started by creating a [free developer account](https://portal.dojo.tech/logi
 
 To submit payments, you'll be making API requests that are authenticated with an API key. <CardSnippet />
 
-
 ## Step 3. Make a test API call
 
 To verify that your key is working correctly, let's create a test API call.
