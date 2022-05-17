@@ -116,7 +116,9 @@ const sidebars = {
         'development-resources/data-types',
         'development-resources/webhooks',
         'development-resources/testing',
-        'development-resources/sdk'
+        'development-resources/sdk',
+        'development-resources/api-keys',
+        'development-resources/portal'
         
       ],
     },
