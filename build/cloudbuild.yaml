@@ -1,3 +1,4 @@
+timeout: '1200s' # extend timeout for build to 20 minutes
 steps:
 - name: 'gcr.io/cloud-builders/git'
   entrypoint: '/bin/sh'
