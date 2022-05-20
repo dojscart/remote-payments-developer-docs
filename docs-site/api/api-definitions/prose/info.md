@@ -15,7 +15,7 @@ Try one of our [pre-builded solutions](../docs/plugins/) for your site.
 
 # Authentication
 
-The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). You can generate API keys in [Developer Portal](https://portal.dojo.tech/).
+The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication). You can generate API keys in [Developer Portal](https://developer.dojo.tech).
 Secret keys for the test environment have the prefix `sk_sandbox_` and for production have the prefix `sk_prod_`.
 
 You must include your secret API key in the header of all requests, for example:
