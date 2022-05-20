@@ -1,5 +1,5 @@
 ---
-title: Developer portal
+title: Developer Portal
 id: portal
 ---
 
@@ -15,10 +15,9 @@ To get started using Dojo Developer Portal you need to have a Dojo account. If y
 
 There are two environments for you to choose on Developer Portal:
 
-* **Test mode**—sandbox environment that allows you to safely create and test an integration with Dojo API.
-Use this mode when you develop and test your integration. In this mode you don’t modify your live data
+* **Test mode**—sandbox environment that allows you to safely test integrations before using them in production. In this mode you don’t modify your live data. Use this mode when you develop your integration
 
-* **Live mode**—production environment that enables you to monitor your business's performance in real time.
+* **Live mode**—production environment that gives you access to the real data.
 Use this mode when you’re ready to launch your integration
 
 To switch between these modes use the toggle in the left menu.
@@ -29,11 +28,11 @@ To switch between these modes use the toggle in the left menu.
 
 With Dojo, you have a single company account, and one or more sub-accounts called location accounts.
 
-* Company account-represents your business entity with us, holds all your location accounts.
+* Company account—represents your business entity with us, holds all your location accounts.
 
-* Location accounts-represents your unique shop, cafe, or another point of sale.
+* Location accounts—represents your unique business item, like shop, cafe, or another point of sale.
 
-Each location account has a total of two keys: secret key pair for sandbox and production. Learn how to [manage your API keys](../api-keys.md).
+Each location account has a total of two keys: secret key pair for [sandbox and production environments](#sandbox-and-production-environments). You can find your keys in the Developer Portal. Learn how to [manage your API keys](../api-keys.md).
 
 To view data related to a specific location account, select the drop-down menu in the top left and choose a location account.
 
