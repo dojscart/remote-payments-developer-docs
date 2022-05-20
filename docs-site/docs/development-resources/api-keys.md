@@ -7,7 +7,7 @@ id: api-keys
 
 import CardSnippet from '../snippets/_generate-keys.mdx';
 
-The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication), to authenticate requests you'll need to provide your API key. Use [Developer Portal](portal/portal.md) to create a key, or delete an existing key.
+The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication), to authenticate requests you'll need to provide your API key. Use [Developer Portal](portal.md) to create a key, or delete an existing key.
 
 ## Key format
 
@@ -35,7 +35,7 @@ API requests without authentication will fail.
 
 When you generate a new API key, you can use it immediately.
 
-If your company account has different [location accounts](portal/portal.md#account-structure), make sure you have selected the correct one before generating the key.
+If your company account has different [location accounts](portal.md#account-structure), make sure you have selected the correct one before generating the key.
 
 <CardSnippet />
 
@@ -43,4 +43,16 @@ If your company account has different [location accounts](portal/portal.md#accou
 
 You may delete API keys at any time. The deleted key stops working immediately. Key deletion can't be undone.
 
-To delete a key click the three dots next to your secret key (<img src="/images/dots.png" width="20"/>) and choose **Delete key**
+To delete a key click the three dots next to your secret key (<img src="/images/dots.png" width="20"/>) and choose **Delete key**.
+
+---
+
+## Learn more
+
+import CardGrid from "@site/src/components/CardGrid"
+
+<CardGrid home>
+
+[![](/images/dojo-icons/Planet.svg) **Developer Portal** Find out more about Developer Portal and how you can use it.](portal.md)
+
+</CardGrid>

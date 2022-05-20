@@ -9,17 +9,21 @@ import CardGrid from "@site/src/components/CardGrid"
 
 <CardGrid home>
 
+[![](/images/dojo-icons/Planet.svg) **Developer Portal** Find out more about Developer Portal and how you can use it.](portal.md)
+
 [![](/images/dojo-icons/TerminalWindow.svg) **API Reference** Learn about API and integrate with API endpoints.](/api)
+
+[![](/images/dojo-icons/Key.svg) **API keys** Learn how to manage your API keys.](api-keys.md)
 
 [![](/images/dojo-icons/AnchorSimple.svg) **Webhooks** Subscribe to events and get notified.](webhooks.md)
 
 [![](/images/dojo-icons/Cube.svg) **SDKs** Check our software development kits.](sdk.md)
 
+[![](/images/dojo-icons/Copy.svg) **Sample integrations** Clone examples integrations.](https://github.com/dojo-engineering/dojo-samples)
+
 [![](/images/dojo-icons/Paste.svg) **Test cards** Use the card details to test your integrations.](testing.md)
 
 [![](/images/dojo-icons/Rocket.svg) **Postman collection** You can run the API collection in Postman.](https://god.gw.postman.com/run-collection/16735701-b218f555-a7ad-46c4-8ad8-1f11c0aee443?action=collection%2Ffork&collection-url=entityId%3D16735701-b218f555-a7ad-46c4-8ad8-1f11c0aee443%26entityType%3Dcollection%26workspaceId%3Dfdd152df-0154-428c-aeb4-1b90e46b8523)
-
-[![](/images/dojo-icons/Copy.svg) **Sample integrations** Clone examples integrations.](https://github.com/dojo-engineering/dojo-samples)
 
 [![](/images/dojo-icons/Message.svg) **Stack Overflow** Practical questions and answers.](https://stackoverflow.com/tags/dojo.tech)
 
