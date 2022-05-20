@@ -4,20 +4,26 @@ id: portal
 ---
 
 > Find out more about Developer Portal and how you can use it.
- 
- From your dashboard you can access everything you need to manage your business, including payments data, customer details, reports, statements and much more.
 
-If you haven't got an account yet, [sign up now](https://portal.dojo.tech/login).
+The developer portal contains a set of tools that developers can use to manage their integrations with Dojo APIs, including API keys and webhooks.
+
+**[Login to developer account→](https://developer.dojo.tech/login)**
+
+To get started using Dojo Developer Portal you need to have a Dojo account. If you haven't got an account yet, [sign up now](https://account.dojo.tech/register?redirectLink=https:%2F%2Faccount.dojo.tech%2Flogin).
 
 ## Sandbox and production environments
 
 There are two environments for you to choose on Developer Portal:
 
-* the sandbox environment-allows you to safely create and test an integration with Dojo API.
+* **Test mode**—sandbox environment that allows you to safely create and test an integration with Dojo API.
+Use this mode when you develop and test your integration. In this mode you don’t modify your live data
 
-* the production environment-enables you to monitor your business's performance in real time.
+* **Live mode**—production environment that enables you to monitor your business's performance in real time.
+Use this mode when you’re ready to launch your integration
 
-To switch between these modes  
+To switch between these modes use the toggle in the left menu.
+
+![](/images/test-mode.png)
 
 ## Account structure
 
@@ -27,4 +33,22 @@ With Dojo, you have a single company account, and one or more sub-accounts calle
 
 * Location accounts-represents your unique shop, cafe, or another point of sale.
 
+Each location account has a total of two keys: secret key pair for sandbox and production. Learn how to [manage your API keys](../api-keys.md).
+
 To view data related to a specific location account, select the drop-down menu in the top left and choose a location account.
+
+![](/images/account-menu.png)
+
+---
+
+## Learn more
+
+import CardGrid from "@site/src/components/CardGrid"
+
+<CardGrid home>
+
+[![](/images/dojo-icons/AnchorSimple.svg) **Set up notification webhooks** Use webhooks to receive updates related to your payments.](../webhooks.md)
+
+[![](/images/dojo-icons/Key.svg) **Generate API keys** Learn how to manage your API keys.](../api-keys.md)
+
+</CardGrid>
