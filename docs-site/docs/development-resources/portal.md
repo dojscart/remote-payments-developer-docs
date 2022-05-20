@@ -9,7 +9,7 @@ The developer portal contains a set of tools that developers can use to manage t
 
 **[Login to developer account→](https://developer.dojo.tech/login)**
 
-To get started using Dojo Developer Portal you need to have a Dojo account. If you haven't got an account yet, [sign up now](https://account.dojo.tech/register?redirectLink=https:%2F%2Faccount.dojo.tech%2Flogin).
+To get started using Dojo Developer Portal you need to have a Dojo account. If you don't have an account yet, [sign up now](https://account.dojo.tech/register?redirectLink=https:%2F%2Faccount.dojo.tech%2Flogin).
 
 ## Sandbox and production environments
 
