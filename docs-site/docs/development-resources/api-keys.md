@@ -7,7 +7,7 @@ id: api-keys
 
 import CardSnippet from '../snippets/_generate-keys.mdx';
 
-The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication), to authenticate requests you'll need to provide your API key.
+The Dojo API uses [Basic HTTP auth](https://en.wikipedia.org/wiki/Basic_access_authentication), to authenticate requests you'll need to provide your API key. Use [Developer Portal](portal/portal.md) to create a key, or delete an existing key.
 
 ## Key format
 
@@ -35,7 +35,7 @@ API requests without authentication will fail.
 
 When you generate a new API key, you can use it immediately.
 
-If your account has different locations, make sure you have selected the correct one before generating the key.
+If your company account has different [location accounts](portal/portal.md#account-structure), make sure you have selected the correct one before generating the key.
 
 <CardSnippet />
 
