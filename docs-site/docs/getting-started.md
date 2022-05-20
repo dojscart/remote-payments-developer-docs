@@ -19,7 +19,9 @@ Check out our [plugins](/plugins/plugins.md).
 
 ## Step 1. Create a developer account
 
-Get started by creating a [free developer account](https://developer.dojo.tech/login).
+To get started, log in to [Dojo Developer Portal](https://developer.dojo.tech/login).
+
+To do this, you need to have a Dojo account. If you don't have an account yet, [sign up now](https://account.dojo.tech/register?redirectLink=https:%2F%2Faccount.dojo.tech%2Flogin).
 
 ## Step 2. Generate your API keys
 
