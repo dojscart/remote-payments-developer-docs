@@ -92,6 +92,7 @@ const config = {
             to: '/api'
           },
           {type: 'search', position: 'right'},
+          {to: 'https://github.com/orgs/dojo-engineering/discussions', label: 'Community', position: 'right'},
           {to: 'https://support.dojo.tech/hc/en-gb', label: 'Support', position: 'right'},
           {to: 'https://status.dojo.tech/', label: 'System status', position: 'right'},
           {to: 'https://account.dojo.tech/login', label: 'Log in', position: 'right'},
