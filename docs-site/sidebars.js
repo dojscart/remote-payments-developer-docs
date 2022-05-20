@@ -113,23 +113,12 @@ const sidebars = {
       collapsed: true,
       items: [
         'development-resources/versioning-overview',
-        'development-resources/data-types',
-        'development-resources/webhooks',
-        'development-resources/testing',
-        'development-resources/sdk',
+        'development-resources/portal',
         'development-resources/api-keys',
-        
-        {
-          type: 'category',
-          label: 'Developer Portal',
-          link: {
-            type: 'doc', id: 'development-resources/portal/portal'
-          },
-          items: [
-            'development-resources/portal/manage-api-keys',
-            'development-resources/portal/register-webhooks'
-          ],
-        },
+        'development-resources/testing',
+        'development-resources/webhooks',
+        'development-resources/sdk',
+        'development-resources/data-types'
       ],
     },
   ],
