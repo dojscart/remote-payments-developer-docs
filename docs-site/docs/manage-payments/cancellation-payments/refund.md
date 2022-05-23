@@ -11,7 +11,7 @@ Use a refund if you need to return money to your customer, for example if they r
 
 You can only refund a payment after it has already been [captured](../capture.md). 
 
-If you want to use the Dojo Merchant app for a refund, see [Refunding online checkout transactions](https://support.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1SZJWY37BZKNMN0BQ3EYKF).
+If you want to use the Dojo Merchant app for a refund, see [Refunding online checkout transactions](https://suport.dojo.tech/hc/en-gb/articles/4408826217106-Refunding-and-reversing-online-checkout-transactions#h_01FK1SZJWY37BZKNMN0BQ3EYKF).
 
 ## Refund using the Dojo API
 
