@@ -1,0 +1,3 @@
+EnforceHTTPS: true
+CacheExpires: "6h"
+CheckMeta: false
