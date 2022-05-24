@@ -164,7 +164,7 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/tags/dojo.tech',
+                href: 'https://stackoverflow.com/questions/tagged/dojo.tech',
               },
               {
                 label: 'GitHub',
