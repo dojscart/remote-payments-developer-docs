@@ -18,14 +18,14 @@ const sidebars = {
 
   // But you can create a sidebar manually
   
-  tutorialSidebar: [
-   'introduction',
-   'getting-started',
+  OnlinePaymentsSidebar: [
+   'online-payments/introduction',
+   'online-payments/getting-started',
     {
       type: 'category',
       label: 'Accept payments',
       link: {
-        type: 'doc', id: 'accept-payments/accept-payments'
+        type: 'doc', id: 'online-payments/accept-payments/accept-payments'
       },
       collapsed: false,
       items: [
@@ -33,59 +33,59 @@ const sidebars = {
           type: 'category',
           label: 'Checkout page',
           link: {
-            type: 'doc', id: 'accept-payments/checkout-page/checkout-page'
+            type: 'doc', id: 'online-payments/accept-payments/checkout-page/checkout-page'
           },
           items: [
-            'accept-payments/checkout-page/step-by-step-guide',
-            'accept-payments/checkout-page/configuration',
+            'online-payments/accept-payments/checkout-page/step-by-step-guide',
+            'online-payments/accept-payments/checkout-page/configuration',
           ],
         },
         {
           type: 'category',
           label: 'Payment links',
           link: {
-            type: 'doc', id: 'accept-payments/payment-links/payment-links'
+            type: 'doc', id: 'online-payments/accept-payments/payment-links/payment-links'
           },
           items: [
-            'accept-payments/payment-links/step-by-step-guide',
+            'online-payments/accept-payments/payment-links/step-by-step-guide',
           ],
         },
         {
           type: 'category',
           label: 'Components',
           link: {
-            type: 'doc', id: 'accept-payments/components/components'
+            type: 'doc', id: 'online-payments/accept-payments/components/components'
           },
           items: [
-            'accept-payments/components/card',
-            'accept-payments/components/wallet',
-            'accept-payments/components/configuration',
+            'online-payments/accept-payments/components/card',
+            'online-payments/accept-payments/components/wallet',
+            'online-payments/accept-payments/components/configuration',
           ],
         },
-        'accept-payments/api-only',
+        'online-payments/accept-payments/api-only',
       ],
     },
     {
       type: 'category',
       label: 'Manage payments',
       link: {
-        type: 'doc', id: 'manage-payments/manage-payments'
+        type: 'doc', id: 'online-payments/manage-payments/manage-payments'
       },
       collapsed: true,
       items: [
-        'manage-payments/capture',
-        'manage-payments/change-amount',
-        'manage-payments/send-receipt',
+        'online-payments/manage-payments/capture',
+        'online-payments/manage-payments/change-amount',
+        'online-payments/manage-payments/send-receipt',
         {
           type: 'category',
           label: 'Cancellation payments',
           link: {
-            type: 'doc', id: 'manage-payments/cancellation-payments/cancellation-payments'
+            type: 'doc', id: 'online-payments/manage-payments/cancellation-payments/cancellation-payments'
           },
           items: [
-            'manage-payments/cancellation-payments/cancel',
-            'manage-payments/cancellation-payments/reversal',
-            'manage-payments/cancellation-payments/refund',
+            'online-payments/manage-payments/cancellation-payments/cancel',
+            'online-payments/manage-payments/cancellation-payments/reversal',
+            'online-payments/manage-payments/cancellation-payments/refund',
           ],
         },
       ],
@@ -94,34 +94,39 @@ const sidebars = {
       type: 'category',
       label: 'Plugins',
       link: {
-        type: 'doc', id: 'plugins/plugins'
+        type: 'doc', id: 'online-payments/plugins/plugins'
       },
       collapsed: true,
       items: [
-        'plugins/magento',
-        'plugins/opencart',
-        'plugins/prestashop',
-        'plugins/woocommerce',
+        'online-payments/plugins/magento',
+        'online-payments/plugins/opencart',
+        'online-payments/plugins/prestashop',
+        'online-payments/plugins/woocommerce',
       ],
     },
     {
       type: 'category',
       label: 'Development resources',
       link: {
-        type: 'doc', id: 'development-resources/development-resources'
+        type: 'doc', id: 'online-payments/development-resources/development-resources'
       },
       collapsed: true,
       items: [
-        'development-resources/versioning-overview',
-        'development-resources/data-types',
-        'development-resources/webhooks',
-        'development-resources/testing',
-        'development-resources/sdk'
+        'online-payments/development-resources/versioning-overview',
+        'online-payments/development-resources/data-types',
+        'online-payments/development-resources/webhooks',
+        'online-payments/development-resources/testing',
+        'online-payments/development-resources/sdk'
         
       ],
     },
   ],
-
+  Tables: [
+    {
+      type: 'autogenerated',
+      dirName: 'tables',
+    },
+  ],
 };
 
 

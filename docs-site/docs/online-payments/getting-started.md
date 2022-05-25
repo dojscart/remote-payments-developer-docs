@@ -12,7 +12,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 :::info Not a developer?
 
-Check out our [plugins](/plugins/plugins.md).
+Check out our [plugins](plugins/plugins.md).
 
 :::
 
@@ -79,12 +79,12 @@ You're now ready to start building your payment integration. You can integrate w
 
 <CardGrid home>
 
-[![](/images/dojo-icons/ShoppingBag.svg) **Checkout Page** A prebuilt payment page for accepting payments on your website.](/accept-payments/checkout-page/checkout-page.md)
+[![](/images/dojo-icons/ShoppingBag.svg) **Checkout Page** A prebuilt payment page for accepting payments on your website.](accept-payments/checkout-page/checkout-page.md)
 
-[![](/images/dojo-icons/Link.svg) **Payment Links** Links that you send to your customer and accept payments without a website.](/accept-payments/payment-links/payment-links.md)
+[![](/images/dojo-icons/Link.svg) **Payment Links** Links that you send to your customer and accept payments without a website.](accept-payments/payment-links/payment-links.md)
 
-[![](/images/dojo-icons/Layout.svg) **Components** Our ready-made JavaScript components that you can combine with your own components.](/accept-payments/components/components.md)
+[![](/images/dojo-icons/Layout.svg) **Components** Our ready-made JavaScript components that you can combine with your own components.](accept-payments/components/components.md)
 
-[![](/images/dojo-icons/Code.svg) **API only** A solution for creating your own UI and having full control over your payment page.](/accept-payments/api-only.md)
+[![](/images/dojo-icons/Code.svg) **API only** A solution for creating your own UI and having full control over your payment page.](accept-payments/api-only.md)
 
 </CardGrid>

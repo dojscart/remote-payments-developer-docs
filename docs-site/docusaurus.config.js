@@ -84,10 +84,10 @@ const config = {
             to: "/docs",
             activeBasePath: "/",
             position: 'left',
-            label: 'Documentation',
+            label: 'Online Payments',
           },
           {
-            label: 'API Reference',
+            label: 'Tables',
             position: 'left',
             to: '/api'
           },
