@@ -13,6 +13,6 @@ import Plugins from "@site/src/components/Plugins"
 import DeveloperTools from "@site/src/components/DeveloperTools/"
 
 
-## Recommended integrations
+## First page
 
 <RecommendedIntegrations/>

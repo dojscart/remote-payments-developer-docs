@@ -77,19 +77,19 @@ const config = {
           alt: 'DojoDocs',
           src: 'images/logo.svg',
 		      srcDark: 'images/logo_dark.svg',
-          href: '/docs',
+          href: '/',
         },
         items: [
           {
-            to: "/docs",
-            activeBasePath: "/",
+            to: "/docs/online-payments",
+            activeBasePath: "/online-payments",
             position: 'left',
             label: 'Online Payments',
           },
           {
             label: 'Tables',
             position: 'left',
-            to: '/api'
+            to: 'https://docs.tables.dojo.tech/'
           },
           {type: 'search', position: 'right'},
           {to: 'https://github.com/orgs/dojo-engineering/discussions', label: 'Community', position: 'right'},
