@@ -15,7 +15,7 @@ const data = [
           <li><a href="payments/getting-started">Getting started</a></li>
           <li><a href="payments/accept-payments/payment-links/">Payment links</a></li>
           <li><a href="payments/accept-payments/checkout-page/">Prebuilt Checkout Page</a></li>
-          <li><a href="/api">API Reference</a></li>
+          <li><a href="payments/api">API Reference</a></li>
         </ul>
        </div>,
   },

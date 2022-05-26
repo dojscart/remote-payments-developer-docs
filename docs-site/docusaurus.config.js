@@ -12,19 +12,14 @@ const config = {
   favicon: 'images/favicon.ico',
   organizationName: 'Dojo', // Usually your GitHub org/user name.
   projectName: 'remote-payments-developer-docs', // Usually your repo name.
-  customFields: {
-    asyncApiSpec: {
-      api: "openapi-with-examples.json",
-    }
-  },
   presets: [
     [
       'redocusaurus',
       {
         specs: [
           {
-            specUrl: 'openapi-with-examples.json',
-            routePath: "/api"
+            specUrl: '../openapi-with-examples.json',
+            routePath: "/payments/api"
           },
         ],
         theme: {
@@ -88,7 +83,7 @@ const config = {
             label: 'Payments Docs',
           },
           {
-            to: '/api',
+            to: 'payments/api',
             position: 'left',
             label: 'Payments API',
           },
