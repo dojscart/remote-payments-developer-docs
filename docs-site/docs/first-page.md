@@ -7,12 +7,14 @@ hide_table_of_contents: true
 ---
 
 import CardGrid from "@site/src/components/CardGrid"
-import RecommendedIntegrations from "@site/src/components/RecommendedIntegrations/"
-import OneCard from "@site/src/components/OneCard"
-import Plugins from "@site/src/components/Plugins"
-import DeveloperTools from "@site/src/components/DeveloperTools/"
+import FirstPage from "@site/src/components/FirstPage/"
 
+<FirstPage/>
 
-## First page
+<CardGrid home>
 
-<RecommendedIntegrations/>
+[![](/images/dojo-icons/Message.svg) **Stack Overflow** Practical questions and answers.](https://stackoverflow.com/tags/dojo.tech)
+
+[![](/images/dojo-icons/Headset.svg) **Need a hand?** Our support team is always happy to help with any questions you have.](https://support.dojo.tech/hc/en-gb)
+
+</CardGrid>
