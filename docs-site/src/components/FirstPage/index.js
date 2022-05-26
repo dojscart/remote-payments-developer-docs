@@ -5,12 +5,12 @@ import styles from "./styles.module.css";
 
 const data = [
   {
-    title: "Online payments",
-    link: "docs/online-payments/",
-    icon: "images/online-payments.svg",
+    title: "Remote payments",
+    link: "docs/remote-payments/",
+    icon: "images/remote-payments.svg",
     description: <>
     <div>
-        <p>Embed or share a link to Dojo Prebuilt Checkout Page to accept payments without a website.</p>
+        <p>Build a payment integration or use a pre-built checkout page and payment links to accept remote payments.</p>
        </div>
        </>,
   },
@@ -20,7 +20,7 @@ const data = [
     icon: "images/tables.svg",
     description: <>
     <div>
-       <p>Send your customers to Dojo Prebuilt Checkout Page to pay.</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
        </div>
        </>,
   },

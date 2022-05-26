@@ -1,7 +1,7 @@
 ---
-title: "Online payments"
+title: "Remote payments"
 sidebar_position: 1
-slug: /online-payments
+slug: /remote-payments
 id: introduction
 hide_table_of_contents: true
 ---

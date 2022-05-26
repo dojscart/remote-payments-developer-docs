@@ -81,10 +81,10 @@ const config = {
         },
         items: [
           {
-            to: "/docs/online-payments",
-            activeBasePath: "/online-payments",
+            to: "/docs/remote-payments",
+            activeBasePath: "/remote-payments",
             position: 'left',
-            label: 'Online Payments',
+            label: 'Remote Payments',
           },
           {
             label: 'Tables',
