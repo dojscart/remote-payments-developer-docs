@@ -1,7 +1,7 @@
 ---
 title: "Dojo Documentation"
 sidebar_position: 1
-slug: /
+slug: /docs
 id: firs-page
 hide_table_of_contents: true
 ---

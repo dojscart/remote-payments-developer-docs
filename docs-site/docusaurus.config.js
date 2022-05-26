@@ -5,7 +5,7 @@
 const config = {
   title: 'Dojo Developer Portal',
   tagline: '',
-  url: 'https://docs.dojo.tech/',
+  url: 'https://docs.dojo.tech',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
@@ -45,6 +45,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/dojo-engineering/remote-payments-developer-docs/tree/feature/master/docs-site',
@@ -81,7 +82,7 @@ const config = {
         },
         items: [
           {
-            to: "/docs/payments",
+            to: "/payments",
             activeBasePath: "/payments",
             position: 'left',
             label: 'Payments Docs',
