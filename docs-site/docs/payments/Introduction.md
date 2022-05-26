@@ -1,5 +1,5 @@
 ---
-title: "Remote payments"
+title: "Payments"
 sidebar_position: 1
 slug: /payments
 id: introduction
@@ -12,7 +12,7 @@ import OneCard from "@site/src/components/OneCard"
 import Plugins from "@site/src/components/Plugins"
 import DeveloperTools from "@site/src/components/DeveloperTools/"
 
->Learn about Dojo's integration options for accepting online payments.
+>Learn about Dojo's integration options for accepting payments.
 
 ## Recommended integrations
 
