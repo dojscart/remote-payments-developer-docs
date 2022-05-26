@@ -8,16 +8,21 @@ const data = [
     title: "Remote payments",
     link: "docs/remote-payments/",
     icon: "images/remote-payments.svg",
-    description: <>
+    description:
     <div>
         <p>Build a payment integration or use a pre-built checkout page and payment links to accept remote payments.</p>
-       </div>
-       </>,
+        <ul>
+          <li><a href="docs/remote-payments/getting-started">Getting started</a></li>
+          <li><a href="docs/remote-payments/accept-payments/payment-links/">Payment links</a></li>
+          <li><a href="docs/remote-payments/accept-payments/checkout-page/">Prebuilt Checkout Page</a></li>
+          <li><a href="/api">API Reference</a></li>
+        </ul>
+       </div>,
   },
   {
-    title: "Tables",
+    title: "Tables API",
     link: "https://docs.tables.dojo.tech/",
-    icon: "images/tables.svg",
+    icon: "images/tables.png",
     description: <>
     <div>
        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
@@ -33,7 +38,7 @@ function Resource({ title, link, icon, description }) {
       <img
         className="margin-left--xs"
         alt="icons"
-        style={{ height: "200px", width: "350px" }}
+        style={{ height: "250px", width: "350px" }}
         src={useBaseUrl(icon)}
       />
        <h3><a className={clsx("margin-top--sm", styles.posRelative)} href={useBaseUrl(link)}>

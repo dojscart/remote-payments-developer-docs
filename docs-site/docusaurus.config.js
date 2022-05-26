@@ -84,10 +84,15 @@ const config = {
             to: "/docs/remote-payments",
             activeBasePath: "/remote-payments",
             position: 'left',
-            label: 'Remote Payments',
+            label: 'Remote Payments Docs',
           },
           {
-            label: 'Tables',
+            to: '/api',
+            position: 'left',
+            label: 'Remote Payments API',
+          },
+          {
+            label: 'Tables API',
             position: 'left',
             to: 'https://docs.tables.dojo.tech/'
           },

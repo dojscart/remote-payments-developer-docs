@@ -1,5 +1,5 @@
 ---
-title: "Dojo docs"
+title: "Dojo Documentation"
 sidebar_position: 1
 slug: /
 id: firs-page
