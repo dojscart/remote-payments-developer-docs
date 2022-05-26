@@ -11,12 +11,20 @@ const data = [
     description:
     <div>
         <p>Build a payment integration or use a pre-built checkout page and payment links to accept payments.</p>
+        <div class="row">
+          <div class="column">
         <ul>
           <li><a href="payments/getting-started">Getting started</a></li>
-          <li><a href="payments/accept-payments/payment-links/">Payment links</a></li>
-          <li><a href="payments/accept-payments/checkout-page/">Prebuilt Checkout Page</a></li>
           <li><a href="payments/api">API Reference</a></li>
         </ul>
+        </div>
+        <div class="column">
+        <ul>
+          <li><a href="payments/accept-payments/payment-links/">Payment links</a></li>
+          <li><a href="payments/accept-payments/checkout-page/">Prebuilt Checkout Page</a></li>
+        </ul>
+        </div>
+        </div>
        </div>,
   },
   {
