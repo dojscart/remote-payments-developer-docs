@@ -5,22 +5,22 @@ import styles from "./styles.module.css";
 
 const data = [
   {
-    title: "Remote payments",
-    link: "docs/remote-payments/",
+    title: "Payments",
+    link: "docs/payments/",
     icon: "images/remote-payments.svg",
     description:
     <div>
-        <p>Build a payment integration or use a pre-built checkout page and payment links to accept remote payments.</p>
+        <p>Build a payment integration or use a pre-built checkout page and payment links to accept payments.</p>
         <ul>
-          <li><a href="docs/remote-payments/getting-started">Getting started</a></li>
-          <li><a href="docs/remote-payments/accept-payments/payment-links/">Payment links</a></li>
-          <li><a href="docs/remote-payments/accept-payments/checkout-page/">Prebuilt Checkout Page</a></li>
+          <li><a href="docs/payments/getting-started">Getting started</a></li>
+          <li><a href="docs/payments/accept-payments/payment-links/">Payment links</a></li>
+          <li><a href="docs/payments/accept-payments/checkout-page/">Prebuilt Checkout Page</a></li>
           <li><a href="/api">API Reference</a></li>
         </ul>
        </div>,
   },
   {
-    title: "Tables API",
+    title: "Tables",
     link: "https://docs.tables.dojo.tech/",
     icon: "images/tables.png",
     description: <>

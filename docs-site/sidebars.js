@@ -19,13 +19,13 @@ const sidebars = {
   // But you can create a sidebar manually
   
   RemotePaymentsSidebar: [
-   'remote-payments/introduction',
-   'remote-payments/getting-started',
+   'payments/introduction',
+   'payments/getting-started',
     {
       type: 'category',
       label: 'Accept payments',
       link: {
-        type: 'doc', id: 'remote-payments/accept-payments/accept-payments'
+        type: 'doc', id: 'payments/accept-payments/accept-payments'
       },
       collapsed: false,
       items: [
@@ -33,59 +33,59 @@ const sidebars = {
           type: 'category',
           label: 'Checkout page',
           link: {
-            type: 'doc', id: 'remote-payments/accept-payments/checkout-page/checkout-page'
+            type: 'doc', id: 'payments/accept-payments/checkout-page/checkout-page'
           },
           items: [
-            'remote-payments/accept-payments/checkout-page/step-by-step-guide',
-            'remote-payments/accept-payments/checkout-page/configuration',
+            'payments/accept-payments/checkout-page/step-by-step-guide',
+            'payments/accept-payments/checkout-page/configuration',
           ],
         },
         {
           type: 'category',
           label: 'Payment links',
           link: {
-            type: 'doc', id: 'remote-payments/accept-payments/payment-links/payment-links'
+            type: 'doc', id: 'payments/accept-payments/payment-links/payment-links'
           },
           items: [
-            'remote-payments/accept-payments/payment-links/step-by-step-guide',
+            'payments/accept-payments/payment-links/step-by-step-guide',
           ],
         },
         {
           type: 'category',
           label: 'Components',
           link: {
-            type: 'doc', id: 'remote-payments/accept-payments/components/components'
+            type: 'doc', id: 'payments/accept-payments/components/components'
           },
           items: [
-            'remote-payments/accept-payments/components/card',
-            'remote-payments/accept-payments/components/wallet',
-            'remote-payments/accept-payments/components/configuration',
+            'payments/accept-payments/components/card',
+            'payments/accept-payments/components/wallet',
+            'payments/accept-payments/components/configuration',
           ],
         },
-        'remote-payments/accept-payments/api-only',
+        'payments/accept-payments/api-only',
       ],
     },
     {
       type: 'category',
       label: 'Manage payments',
       link: {
-        type: 'doc', id: 'remote-payments/manage-payments/manage-payments'
+        type: 'doc', id: 'payments/manage-payments/manage-payments'
       },
       collapsed: true,
       items: [
-        'remote-payments/manage-payments/capture',
-        'remote-payments/manage-payments/change-amount',
-        'remote-payments/manage-payments/send-receipt',
+        'payments/manage-payments/capture',
+        'payments/manage-payments/change-amount',
+        'payments/manage-payments/send-receipt',
         {
           type: 'category',
           label: 'Cancellation payments',
           link: {
-            type: 'doc', id: 'remote-payments/manage-payments/cancellation-payments/cancellation-payments'
+            type: 'doc', id: 'payments/manage-payments/cancellation-payments/cancellation-payments'
           },
           items: [
-            'remote-payments/manage-payments/cancellation-payments/cancel',
-            'remote-payments/manage-payments/cancellation-payments/reversal',
-            'remote-payments/manage-payments/cancellation-payments/refund',
+            'payments/manage-payments/cancellation-payments/cancel',
+            'payments/manage-payments/cancellation-payments/reversal',
+            'payments/manage-payments/cancellation-payments/refund',
           ],
         },
       ],
@@ -94,29 +94,29 @@ const sidebars = {
       type: 'category',
       label: 'Plugins',
       link: {
-        type: 'doc', id: 'remote-payments/plugins/plugins'
+        type: 'doc', id: 'payments/plugins/plugins'
       },
       collapsed: true,
       items: [
-        'remote-payments/plugins/magento',
-        'remote-payments/plugins/opencart',
-        'remote-payments/plugins/prestashop',
-        'remote-payments/plugins/woocommerce',
+        'payments/plugins/magento',
+        'payments/plugins/opencart',
+        'payments/plugins/prestashop',
+        'payments/plugins/woocommerce',
       ],
     },
     {
       type: 'category',
       label: 'Development resources',
       link: {
-        type: 'doc', id: 'remote-payments/development-resources/development-resources'
+        type: 'doc', id: 'payments/development-resources/development-resources'
       },
       collapsed: true,
       items: [
-        'remote-payments/development-resources/versioning-overview',
-        'remote-payments/development-resources/data-types',
-        'remote-payments/development-resources/webhooks',
-        'remote-payments/development-resources/testing',
-        'remote-payments/development-resources/sdk'
+        'payments/development-resources/versioning-overview',
+        'payments/development-resources/data-types',
+        'payments/development-resources/webhooks',
+        'payments/development-resources/testing',
+        'payments/development-resources/sdk'
         
       ],
     },

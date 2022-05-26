@@ -81,18 +81,18 @@ const config = {
         },
         items: [
           {
-            to: "/docs/remote-payments",
-            activeBasePath: "/remote-payments",
+            to: "/docs/payments",
+            activeBasePath: "/payments",
             position: 'left',
-            label: 'Remote Payments Docs',
+            label: 'Payments Docs',
           },
           {
             to: '/api',
             position: 'left',
-            label: 'Remote Payments API',
+            label: 'Payments API',
           },
           {
-            label: 'Tables API',
+            label: 'Tables',
             position: 'left',
             to: 'https://docs.tables.dojo.tech/'
           },

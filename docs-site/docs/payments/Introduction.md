@@ -1,7 +1,7 @@
 ---
 title: "Remote payments"
 sidebar_position: 1
-slug: /remote-payments
+slug: /payments
 id: introduction
 hide_table_of_contents: true
 ---
