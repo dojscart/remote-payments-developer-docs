@@ -10,5 +10,4 @@ Each API request that you make to Dojo is processed through an API credential li
 ## API authentication type
 
 
-
 ## Generate API keys
