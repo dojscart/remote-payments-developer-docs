@@ -23,3 +23,7 @@ properties:
     pattern: ^https://*.+
     description:   
      $ref: ../../../prose/parameters/urlWebhook.md
+  description:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/descriptionEvents.md
