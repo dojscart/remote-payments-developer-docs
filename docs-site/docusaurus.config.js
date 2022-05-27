@@ -142,20 +142,20 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Getting started',
-                to: '/docs/getting-started/',
+                label: 'Payments Docs',
+                to: '/payments',
               },
               {
-                label: 'Accept payments',
-                to: '/docs/accept-payments/',
-              },
-              {
-                label: 'API Reference',
-                to: '/api',
+                label: 'Payments API',
+                to: '/payments/api',
               },
               {
                 label: 'Plugins',
-                to: '/docs/plugins/',
+                to: '/payments/plugins',
+              },
+              {
+                label: 'Tables',
+                to: 'https://docs.tables.dojo.tech/',
               },
             ],
             
@@ -166,6 +166,10 @@ const config = {
               {
                 label: 'Stack Overflow',
                 href: 'https://stackoverflow.com/tags/dojo.tech',
+              },
+              {
+                label: 'Discussions',
+                href: 'https://github.com/orgs/dojo-engineering/discussions',
               },
               {
                 label: 'GitHub',
