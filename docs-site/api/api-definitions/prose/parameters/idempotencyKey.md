@@ -1,1 +1,1 @@
- An optional idempotency key to recognize subsequent retries of the same request. How you generate the idempotency key is up to you. Must be unique for each new refund for the payment intent.
+ An idempotency key to recognize subsequent retries of the same request. How you generate the idempotency key is up to you. Must be unique for each new refund for the payment intent.

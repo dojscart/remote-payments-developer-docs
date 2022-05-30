@@ -989,7 +989,7 @@
             "x-originalName": "idempotencyKey",
             "in": "header",
             "required": true,
-            "description": " An optional idempotency key to recognize subsequent retries of the same request. How you generate the idempotency key is up to you. Must be unique for each new refund for the payment intent.",
+            "description": " An idempotency key to recognize subsequent retries of the same request. How you generate the idempotency key is up to you. Must be unique for each new refund for the payment intent.",
             "schema": {
               "type": "string"
             },
@@ -1328,6 +1328,7 @@
                       "payment_intent.status_updated"
                     ],
                     "url": "https://example.com.com/incoming-events",
+                    "description": "Demo webhooks",
                     "secrets": [
                       {
                         "id": "sc_qNkU6yob0vOMxUlb2oynUw",
@@ -3338,6 +3339,10 @@
             "minLength": 1,
             "pattern": "^https://*.+"
           },
+          "description": {
+            "type": "string",
+            "description": "The subscription description."
+          },
           "secrets": {
             "type": "array",
             "description": "The list of subscription’s secrets, used to generate signatures.",
@@ -3386,6 +3391,10 @@
             "minLength": 1,
             "pattern": "^https://*.+",
             "description": "The URL of your webhook endpoint."
+          },
+          "description": {
+            "type": "string",
+            "description": "The subscription description."
           }
         }
       },
@@ -3428,6 +3437,10 @@
             "description": "The URL of your webhook endpoint.",
             "format": "uri",
             "pattern": "^https://*.+"
+          },
+          "description": {
+            "type": "string",
+            "description": "The subscription description."
           }
         }
       }
