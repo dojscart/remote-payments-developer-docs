@@ -17,3 +17,8 @@ properties:
      $ref: ../../../prose/parameters/urlWebhook.md
     format: uri
     pattern: ^https://*.+
+  description:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/descriptionEvents.md
+      
