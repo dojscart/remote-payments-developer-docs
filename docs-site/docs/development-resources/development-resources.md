@@ -21,7 +21,7 @@ import CardGrid from "@site/src/components/CardGrid"
 
 [![](/images/dojo-icons/Copy.svg) **Sample integrations** Clone examples integrations.](https://github.com/dojo-engineering/dojo-samples)
 
-[![](/images/dojo-icons/Message.svg) **Stack Overflow** Practical questions and answers.](https://stackoverflow.com/tags/dojo.tech)
+[![](/images/dojo-icons/Message.svg) **Stack Overflow** Practical questions and answers.](https://stackoverflow.com/questions/tagged/dojo.tech)
 
 [![](/images/dojo-icons/Headset.svg) **Need a hand?** Our support team is always happy to help with any questions you have.](https://support.dojo.tech/hc/en-gb)
 

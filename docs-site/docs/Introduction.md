@@ -46,6 +46,6 @@ Dojo supports plugins to bring payments into your website. These plugins are off
 
 [![](/images/dojo-icons/Headset.svg) **Support** Our support team is always happy to help with any questions you have.](https://support.dojo.tech/hc/en-gb)
 
-[![](/images/dojo-icons/Message.svg) **Stack Overflow** Practical questions and answers.](https://stackoverflow.com/tags/dojo.tech)
+[![](/images/dojo-icons/Message.svg) **Stack Overflow** Practical questions and answers.](https://stackoverflow.com/questions/tagged/dojo.tech)
 
 </CardGrid>
