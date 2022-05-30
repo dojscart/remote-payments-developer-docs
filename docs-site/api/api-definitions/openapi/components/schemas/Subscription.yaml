@@ -26,6 +26,10 @@ properties:
     format: uri
     minLength: 1
     pattern: ^https://*.+
+  description:
+    type: string
+    description:   
+     $ref: ../../../prose/parameters/descriptionEvents.md
   secrets:
     type: array
     description:   

@@ -33,6 +33,7 @@ get:
                 - payment_intent.created
                 - payment_intent.status_updated
               url: https://example.com.com/incoming-events
+              description: Demo webhooks
               secrets:
                 - id: sc_qNkU6yob0vOMxUlb2oynUw
                   value: >-
